@@ -149,6 +149,5 @@ export const products: Product[] = [
     price: "Sob consulta",
     images: ["https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800"],
     category: 'plantas'
-  },
   }
 ];
