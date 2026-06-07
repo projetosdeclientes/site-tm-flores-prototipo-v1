@@ -10,12 +10,11 @@ export function ProductPage() {
   const { slug } = useParams({ from: '/buques/$slug' });
   const productIndex = productsData.findIndex(p => p.id === slug);
   const product = productIndex !== -1 ? productsData[productIndex] : productsData[0];
-  const [mainImage, setMainImage] = useState(product.images[0]);
   const [activeThumb, setActiveThumb] = useState(0);
+  const mainImage = product.images[activeThumb] || product.images[0];
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setMainImage(product.images[0]);
     setActiveThumb(0);
   }, [product.id]);
 
@@ -52,12 +51,12 @@ export function ProductPage() {
   const minSwipeDistance = 50;
 
   const nextImage = () => {
-    const nextIdx = (activeThumb + 1) % thumbnails.length;
+    const nextIdx = (activeThumb + 1) % product.images.length;
     setActiveThumb(nextIdx);
   };
 
   const prevImage = () => {
-    const prevIdx = (activeThumb - 1 + thumbnails.length) % thumbnails.length;
+    const prevIdx = (activeThumb - 1 + product.images.length) % product.images.length;
     setActiveThumb(prevIdx);
   };
 
@@ -105,11 +104,6 @@ export function ProductPage() {
                       src={mainImage} 
                       alt={product.name} 
                       className="w-full h-full object-cover transition-all duration-500"
-                      style={{ 
-                        filter: thumbnails[activeThumb].filter,
-                        objectPosition: thumbnails[activeThumb].objectPosition,
-                        transform: thumbnails[activeThumb].transform
-                      }}
                     />
                     {/* Navigation Arrows for Mobile and Desktop */}
                     <button 
@@ -127,7 +121,7 @@ export function ProductPage() {
                     
                     {/* Dots for mobile */}
                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10 md:hidden">
-                      {thumbnails.map((_, i) => (
+                      {product.images.map((_, i) => (
                         <div 
                           key={i} 
                           className={`w-2 h-2 rounded-full transition-all ${i === activeThumb ? 'bg-gold-main w-4' : 'bg-white/60'}`} 
@@ -143,7 +137,7 @@ export function ProductPage() {
                 )}
               </div>
               <div className="hidden md:flex gap-4">
-                {thumbnails.map((thumb, i) => (
+                {product.images.map((img, i) => (
                   <button 
                     key={i}
                     onClick={() => setActiveThumb(i)}
@@ -153,14 +147,9 @@ export function ProductPage() {
                   >
                     <div className="w-full h-full overflow-hidden">
                       <img 
-                        src={product.images[0]} 
-                        alt={`${product.name} - ${thumb.label}`} 
+                        src={img} 
+                        alt={`${product.name} - Foto ${i + 1}`} 
                         className="w-full h-full object-cover"
-                        style={{ 
-                          filter: thumb.filter,
-                          objectPosition: thumb.objectPosition,
-                          transform: i === 1 ? 'scale(1.2)' : 'none'
-                        }}
                       />
                     </div>
                   </button>
