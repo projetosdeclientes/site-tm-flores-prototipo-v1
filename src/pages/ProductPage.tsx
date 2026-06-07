@@ -10,12 +10,12 @@ export function ProductPage() {
   const { slug } = useParams({ from: '/buques/$slug' });
   const productIndex = productsData.findIndex(p => p.id === slug);
   const product = productIndex !== -1 ? productsData[productIndex] : productsData[0];
-  const [mainImage, setMainImage] = useState(product.image);
+  const [mainImage, setMainImage] = useState(product.images[0]);
   const [activeThumb, setActiveThumb] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setMainImage(product.image);
+    setMainImage(product.images[0]);
     setActiveThumb(0);
   }, [product.id]);
 
@@ -153,7 +153,7 @@ export function ProductPage() {
                   >
                     <div className="w-full h-full overflow-hidden">
                       <img 
-                        src={product.image} 
+                        src={product.images[0]} 
                         alt={`${product.name} - ${thumb.label}`} 
                         className="w-full h-full object-cover"
                         style={{ 

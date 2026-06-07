@@ -113,12 +113,12 @@ function Hero() {
             className="w-full h-full object-cover hero-parallax-layer"
           />
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6 hero-content">
-            <span className="text-gold-main font-sans font-bold uppercase tracking-[0.3em] text-sm md:text-base mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700 hero-eyebrow drop-shadow-md">
+            <span className="text-gold-main font-sans font-bold uppercase tracking-[0.3em] text-sm md:text-base mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700 hero-eyebrow drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               {slide.eyebrow}
             </span>
             <h1 
-              className="font-serif text-white text-[28px] md:text-7xl lg:text-8xl italic font-light leading-tight mb-8 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200 hero-headline drop-shadow-xl"
-              dangerouslySetInnerHTML={{ __html: slide.headline.replace(/\*(.*?)\*/g, '<span class="gold-text">$1</span>') }}
+              className="font-serif text-white text-[28px] md:text-7xl lg:text-8xl italic font-light leading-tight mb-8 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200 hero-headline drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]"
+              dangerouslySetInnerHTML={{ __html: slide.headline.replace(/\*(.*?)\*/g, '<span class="text-gold-main drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">$1</span>') }}
             />
             <div className="flex justify-center w-full animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-400">
               {slide.link.startsWith('http') ? (
@@ -126,7 +126,7 @@ function Hero() {
                   href={slide.link}
                   target="_blank"
                   rel="noopener"
-                  className="btn btn-whatsapp px-8 py-4 text-base hero-cta w-full max-w-[320px] md:w-auto"
+                  className="btn btn-whatsapp px-8 py-4 text-base hero-cta w-full max-w-[320px] md:w-auto relative z-50"
                 >
                   <MessageCircle size={20} />
                   {slide.cta}
@@ -134,7 +134,7 @@ function Hero() {
               ) : (
                 <Link
                   to={slide.link as any}
-                  className="bg-white text-text-dark px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-gold-main hover:text-white transition-all shadow-xl hero-cta w-full max-w-[320px] md:w-auto text-center flex items-center justify-center"
+                  className="bg-white text-text-dark px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-gold-main hover:text-white transition-all shadow-xl hero-cta w-full max-w-[320px] md:w-auto text-center flex items-center justify-center relative z-50"
                 >
                   {slide.cta}
                 </Link>
@@ -147,21 +147,21 @@ function Hero() {
       {/* Navigation Arrows */}
       <button 
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-40 w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 bg-black/10 text-white flex items-center justify-center backdrop-blur-sm hover:bg-white hover:text-text-dark transition-all duration-300 md:opacity-0 md:group-hover/hero:opacity-100"
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-50 w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 bg-black/20 text-white flex items-center justify-center backdrop-blur-sm hover:bg-white hover:text-text-dark transition-all duration-300 md:opacity-0 md:group-hover/hero:opacity-100"
         aria-label="Slide anterior"
       >
         <ArrowRight size={24} className="rotate-180" />
       </button>
       <button 
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-40 w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 bg-black/10 text-white flex items-center justify-center backdrop-blur-sm hover:bg-white hover:text-text-dark transition-all duration-300 md:opacity-0 md:group-hover/hero:opacity-100"
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 bg-black/20 text-white flex items-center justify-center backdrop-blur-sm hover:bg-white hover:text-text-dark transition-all duration-300 md:opacity-0 md:group-hover/hero:opacity-100"
         aria-label="Próximo slide"
       >
         <ArrowRight size={24} />
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-40 flex gap-3 hero-dots">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex gap-3 hero-dots">
         {slides.map((_, idx) => (
           <button
             key={idx}
@@ -282,7 +282,7 @@ function Index() {
                 { name: "Cesta Presente", image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800", desc: "Kit gourmet em bandeja elegante com laço. Perfeito para datas especiais." }
               ].map((p, i) => (
                 <div key={i} className="snap-center min-w-[78vw] md:min-w-[260px] lg:min-w-0">
-                  <ProductCard id={p.name.toLowerCase().replace(' ', '-')} name={p.name} description={p.desc} price="Sob consulta" image={p.image} />
+                  <ProductCard id={p.name.toLowerCase().replace(' ', '-')} name={p.name} description={p.desc} price="Sob consulta" images={[p.image]} />
                 </div>
               ))}
               <div className="snap-center min-w-[78vw] md:min-w-[260px] lg:min-w-0">

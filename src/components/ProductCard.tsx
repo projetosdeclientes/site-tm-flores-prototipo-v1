@@ -8,7 +8,7 @@ interface ProductCardProps {
   description: string;
   price?: string;
   priceLabel?: string;
-  image: string;
+  images: string[];
 }
 
 export function ProductCard({
@@ -16,14 +16,14 @@ export function ProductCard({
   name,
   price,
   priceLabel,
-  image,
+  images,
 }: ProductCardProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
   // Simulando galeria se houver (por enquanto usamos a mesma imagem ou variações)
-  const images = [image]; // Se o banco de dados suportasse mais imagens, carregaríamos aqui
+  // Usando a galeria de imagens do produto
   
   const minSwipeDistance = 50;
 
@@ -81,13 +81,13 @@ export function ProductCard({
           <>
             <button 
               onClick={prevImage}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white/80 text-purple-deep flex items-center justify-center shadow-md md:opacity-0 md:group-hover:opacity-100 transition-opacity"
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white/80 text-purple-deep flex items-center justify-center shadow-md transition-opacity"
             >
               <ArrowLeft size={16} />
             </button>
             <button 
               onClick={nextImage}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white/80 text-purple-deep flex items-center justify-center shadow-md md:opacity-0 md:group-hover:opacity-100 transition-opacity"
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white/80 text-purple-deep flex items-center justify-center shadow-md transition-opacity"
             >
               <ArrowRight size={16} />
             </button>
