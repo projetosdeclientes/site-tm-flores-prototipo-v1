@@ -122,14 +122,14 @@ function Hero() {
       {/* Navigation Arrows */}
       <button 
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-40 w-12 h-12 rounded-full border border-white/20 bg-black/10 text-white flex items-center justify-center backdrop-blur-sm hover:bg-white hover:text-text-dark transition-all duration-300 opacity-0 group-hover/hero:opacity-100 hidden md:flex"
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-40 w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 bg-black/10 text-white flex items-center justify-center backdrop-blur-sm hover:bg-white hover:text-text-dark transition-all duration-300 md:opacity-0 md:group-hover/hero:opacity-100"
         aria-label="Slide anterior"
       >
         <ArrowRight size={24} className="rotate-180" />
       </button>
       <button 
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-40 w-12 h-12 rounded-full border border-white/20 bg-black/10 text-white flex items-center justify-center backdrop-blur-sm hover:bg-white hover:text-text-dark transition-all duration-300 opacity-0 group-hover/hero:opacity-100 hidden md:flex"
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-40 w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 bg-black/10 text-white flex items-center justify-center backdrop-blur-sm hover:bg-white hover:text-text-dark transition-all duration-300 md:opacity-0 md:group-hover/hero:opacity-100"
         aria-label="Próximo slide"
       >
         <ArrowRight size={24} />
