@@ -131,7 +131,7 @@ export const products: Product[] = [
     badge: "✦ Premium",
     description: "Um gesto imponente para quem deseja impressionar e emocionar. Este buquê reúne 25 rosas frescas e deslumbrantes, formando um arranjo exuberante, cheio de charme e significado. É perfeito para momentos únicos: pedidos de namoro, aniversários de relacionamento, declarações especiais ou para presentear alguém inesquecível. Com folhagens ornamentais e acabamento sofisticado em papel decorativo e laço de cetim, o buquê transmite luxo, romantismo e intensidade em cada detalhe.", 
     price: "R$ 354,90", 
-    images: ["/products/images/Captura_de_tela_2026-06-06_225529.png"],
+    images: ["/products/images/buque-25-rosas-1.png", "/products/images/buque-25-rosas-2.png", "/products/images/buque-25-rosas-3.png"],
     category: 'buques'
   },
   {
