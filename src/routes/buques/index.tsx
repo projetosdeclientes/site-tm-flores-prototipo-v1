@@ -47,14 +47,16 @@ function ProductSection({ title, products, initialCount = 8 }: { title: string; 
         ))}
       </div>
       
-      {products.length > initialCount && !showAll && (
+      {products.length > initialCount && (
         <div className="flex justify-center mt-8">
           <button 
-            onClick={() => setShowAll(true)}
+            onClick={() => setShowAll(!showAll)}
             className="group flex items-center gap-2 font-serif text-xl font-semibold text-purple-main hover:text-purple-deep transition-all duration-300 py-3 px-8 rounded-full border-2 border-purple-main/20 hover:border-purple-main hover:bg-purple-main/5"
           >
-            Ver mais {title}
-            <span className="group-hover:translate-y-1 transition-transform duration-300">↓</span>
+            {showAll ? `Ver menos ${title}` : `Ver mais ${title}`}
+            <span className={`transition-transform duration-300 ${showAll ? 'rotate-180' : 'group-hover:translate-y-1'}`}>
+              {showAll ? '↑' : '↓'}
+            </span>
           </button>
         </div>
       )}
