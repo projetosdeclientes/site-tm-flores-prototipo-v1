@@ -13,7 +13,7 @@ export const Route = createFileRoute('/buques/')({
 function CategoryHero({ eyebrow, title, subtitle }: { eyebrow: string; title: string; subtitle: string }) {
   return (
     <section className="category-hero bg-gradient-to-br from-cream to-lavender-ultra pt-40 pb-20 relative overflow-hidden text-center">
-      <div className="container mx-auto px-6 relative z-10 category-hero-content reveal-fade">
+      <div className="container mx-auto px-6 relative z-10 category-hero-content">
         <span className="section-eyebrow text-gold-main font-sans font-bold uppercase tracking-widest text-xs mb-4 block">
           {eyebrow}
         </span>
@@ -47,14 +47,14 @@ function BuquesPage() {
         subtitle="Rosas frescas e composições exclusivas, selecionadas com cuidado para emocionar."
       />
 
-      <section className="py-24 bg-cream products-catalog-section">
+      <section className="py-24 bg-cream products-catalog-section relative z-10">
         <div className="container mx-auto px-6">
           {/* Section: Buquês de Rosas */}
           <div className="mb-20">
             <h2 className="font-serif text-3xl md:text-4xl text-purple-deep mb-10 pb-4 border-b border-purple-main/10 italic">
               Buquês de Rosas
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 products-catalog-grid reveal-stagger">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
               {buquesRosas.map((buque) => (
                 <ProductCard key={buque.id} {...buque} />
               ))}
@@ -67,7 +67,7 @@ function BuquesPage() {
               <h2 className="font-serif text-3xl md:text-4xl text-purple-deep mb-10 pb-4 border-b border-purple-main/10 italic">
                 Buquês Mistos
               </h2>
-              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 products-catalog-grid reveal-stagger">
+              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
                 {buquesMistos.map((buque) => (
                   <ProductCard key={buque.id} {...buque} />
                 ))}
