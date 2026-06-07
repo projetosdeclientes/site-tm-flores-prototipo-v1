@@ -254,13 +254,22 @@ function Index() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center store-teaser-grid">
             <div className="relative group store-teaser-image reveal-left lg:order-1">
-              <div className="aspect-[4/3] md:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl store-teaser-img-wrapper">
-
+              <div className="aspect-[4/3] md:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl store-teaser-img-wrapper relative">
                 <img 
                   src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=1000&auto=format&fit=crop" 
                   alt="Interior da Loja" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 store-teaser-img"
                 />
+                
+                {/* Floating Logo Overlay */}
+                <div className="absolute top-6 left-6 w-24 h-24 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-xl animate-float">
+                  <img 
+                    src="/src/assets/logo.png" 
+                    alt="Logo TM Flores" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+
                 <div className="absolute bottom-6 right-6 bg-gold-gradient p-3 px-5 rounded-full shadow-xl text-text-dark font-sans font-bold text-xs uppercase tracking-widest store-teaser-badge">
                   Fundada em 2024
                 </div>

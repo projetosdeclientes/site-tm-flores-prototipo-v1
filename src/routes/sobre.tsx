@@ -97,8 +97,17 @@ function SobrePage() {
 
             <div className="about-story-images reveal-right">
               <div className="about-images-grid grid grid-cols-2 gap-4">
-                <div className="about-image-main col-span-2 aspect-video rounded-3xl overflow-hidden shadow-2xl bg-lavender-ultra">
+                <div className="about-image-main col-span-2 aspect-video rounded-3xl overflow-hidden shadow-2xl bg-lavender-ultra relative">
                   <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=1000&auto=format&fit=crop" className="about-img w-full h-full object-cover" alt="Interior" />
+                  
+                  {/* Logo Watermark */}
+                  <div className="absolute top-4 left-4 w-20 h-20 bg-white/40 backdrop-blur-xs p-2 rounded-full shadow-lg border border-white/20">
+                    <img 
+                      src="/src/assets/logo.png" 
+                      alt="Logo TM Flores" 
+                      className="w-full h-full object-contain opacity-80"
+                    />
+                  </div>
                   <div className="about-img-placeholder hidden" data-label="Foto interior principal" />
                 </div>
                 <div className="about-image-secondary aspect-square rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
