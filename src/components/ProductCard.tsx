@@ -57,10 +57,10 @@ export function ProductCard({
           )}
         </div>
 
-        <div className="mt-auto flex flex-col sm:flex-row gap-2">
+        <div className="mt-auto flex flex-col gap-2">
           <Link
             to={`/buques/${id}`}
-            className="flex-1 justify-center text-[13px] py-2 px-4 border-[1.5px] border-purple-main text-purple-main rounded-full font-semibold flex items-center gap-1 hover:bg-purple-main hover:text-white transition-all"
+            className="w-full justify-center text-[13px] py-2.5 px-4 border-[1.5px] border-purple-main text-purple-main rounded-full font-semibold flex items-center gap-1 hover:bg-purple-main hover:text-white transition-all"
           >
             Ver produto →
           </Link>
@@ -69,10 +69,10 @@ export function ProductCard({
             target="_blank"
             rel="noopener"
             onClick={(e) => e.stopPropagation()}
-            className="flex-1 justify-center text-[13px] py-2 px-4 bg-whatsapp text-white rounded-full font-semibold flex items-center gap-1 transition-all hover:scale-105"
+            className="w-full justify-center text-[13px] py-2.5 px-4 bg-whatsapp text-white rounded-full font-semibold flex items-center gap-1 transition-all hover:scale-105 active:scale-95"
           >
             <MessageCircle size={16} />
-            WhatsApp
+            Pedir no WhatsApp
           </a>
         </div>
       </div>
