@@ -97,7 +97,7 @@ function Hero() {
                 href={slide.link}
                 target="_blank"
                 rel="noopener"
-                className="btn btn-whatsapp px-8 py-4 text-base hero-cta w-full max-w-[320px] md:w-auto"
+                className="btn btn-whatsapp px-8 py-4 text-base hero-cta w-full max-w-[320px] md:w-auto relative z-30"
               >
                 <MessageCircle size={20} />
                 {slide.cta}
@@ -105,7 +105,7 @@ function Hero() {
             ) : (
               <Link
                 to={slide.link as any}
-                className="bg-white text-text-dark px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-gold-main hover:text-white transition-all shadow-xl hero-cta w-full max-w-[320px] md:w-auto text-center flex items-center justify-center"
+                className="bg-white text-text-dark px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-gold-main hover:text-white transition-all shadow-xl hero-cta w-full max-w-[320px] md:w-auto text-center flex items-center justify-center relative z-30"
               >
                 {slide.cta}
               </Link>
