@@ -304,6 +304,24 @@ function Index() {
       <section className="py-24 bg-cream-warm store-teaser-section">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center store-teaser-grid">
+            <div className="flex flex-col items-start store-teaser-content reveal-right lg:order-2">
+              <SectionHeader eyebrow="Nossa história" title="Ainda não conhece a nossa loja?" centered={false} />
+              <p className="text-lg text-text-medium mb-8 leading-relaxed store-teaser-text">
+                Nascemos em 2024 com um sonho: levar beleza, emoção e cuidado para a vida das pessoas. 
+                Cada buquê que sai daqui carrega uma história, um sentimento, uma memória.
+              </p>
+              <p className="font-script text-4xl text-purple-main mb-12 store-teaser-script">
+                "Florescendo histórias e fortalecendo laços."
+              </p>
+              <Link 
+                to="/sobre" 
+                className="btn btn-primary btn-magnetic bg-purple-deep text-white px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-purple-main transition-all shadow-xl group flex items-center gap-3"
+              >
+                Conheça nossa história
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
             <div className="relative group store-teaser-image reveal-left lg:order-1">
               <div className="aspect-[4/3] md:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl store-teaser-img-wrapper relative">
                 <img 
@@ -320,24 +338,6 @@ function Index() {
                   Fundada em 2024
                 </div>
               </div>
-            </div>
-
-            <div className="flex flex-col items-start store-teaser-content reveal-right">
-              <SectionHeader eyebrow="Nossa história" title="Ainda não conhece a nossa loja?" centered={false} />
-              <p className="text-lg text-text-medium mb-8 leading-relaxed store-teaser-text">
-                Nascemos em 2024 com um sonho: levar beleza, emoção e cuidado para a vida das pessoas. 
-                Cada buquê que sai daqui carrega uma história, um sentimento, uma memória.
-              </p>
-              <p className="font-script text-4xl text-purple-main mb-12 store-teaser-script">
-                "Florescendo histórias e fortalecendo laços."
-              </p>
-              <Link 
-                to="/sobre" 
-                className="btn btn-primary btn-magnetic bg-purple-deep text-white px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-purple-main transition-all shadow-xl group flex items-center gap-3"
-              >
-                Conheça nossa história
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
             </div>
           </div>
         </div>
