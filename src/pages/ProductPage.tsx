@@ -193,13 +193,13 @@ export function ProductPage() {
               <div className="bg-[#F8F7FF] border border-[#E8E4F5] rounded-xl p-5 mb-10 w-full max-w-lg">
                 <h4 className="text-[13px] font-bold text-[#4A1575] uppercase tracking-wider mb-3 flex items-center gap-2">
                   <Check size={14} className="text-[#C9A040]" />
-                  Destaques deste Buquê
+                  Destaques dos nossos buquês
                 </h4>
                 <ul className="grid grid-cols-1 gap-2">
                   {[
-                    "Flores frescas colhidas no dia",
+                    "Feito com amor e carinho",
                     "Embalagem luxuosa e artesanal",
-                    "Cartão de mensagem incluso",
+                    "Cartão de mensagem incluso (opcional)",
                     "Durabilidade garantida"
                   ].map((item, idx) => (
                     <li key={idx} className="text-[13px] text-[#6B4E8A] flex items-center gap-2">
