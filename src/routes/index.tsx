@@ -4,7 +4,8 @@ import { products } from '@/data/products'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { ProductCard, MoreCard } from '@/components/ProductCard'
-import { MessageCircle, ArrowRight, Star } from 'lucide-react'
+import { ArrowRight, Star } from 'lucide-react'
+import { WhatsAppIcon } from '@/components/WhatsAppIcon'
 import { useEffect, useState } from 'react'
 import { LogoCircle } from '@/components/LogoCircle'
 
@@ -128,7 +129,7 @@ function Hero() {
                   rel="noopener"
                   className="btn btn-whatsapp px-8 py-4 text-base hero-cta w-full max-w-[320px] md:w-auto relative z-50"
                 >
-                  <MessageCircle size={20} />
+                  <WhatsAppIcon size={20} />
                   {slide.cta}
                 </a>
               ) : (

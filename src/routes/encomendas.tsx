@@ -2,7 +2,8 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { useEffect } from 'react'
-import { MessageCircle, Camera, MessageSquare, Flower2, Gift } from 'lucide-react'
+import { Camera, MessageSquare, Flower2, Gift } from 'lucide-react'
+import { WhatsAppIcon } from '@/components/WhatsAppIcon'
 import { LogoCircle } from '@/components/LogoCircle'
 
 
@@ -117,7 +118,7 @@ function EncomendasPage() {
               target="_blank"
               rel="noopener"
             >
-              <MessageCircle size={24} />
+              <WhatsAppIcon size={24} />
               Mandar minha foto agora
             </a>
           </div>
@@ -202,7 +203,7 @@ function EncomendasPage() {
               <span className="text-[#C9A040] text-xs font-bold uppercase tracking-[0.2em] mb-4 block">Tudo começa com uma mensagem</span>
               <h2 className="font-serif text-[42px] md:text-[52px] italic text-white leading-tight">Manda a foto.</h2>
               <h2 className="font-serif text-[42px] md:text-[52px] italic text-[#DDD0F0] leading-tight mb-12">A gente cuida do resto.</h2>
-              <a href="https://wa.me/5511918475136" className="inline-block bg-[#25D366] text-white px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform">Iniciar meu pedido personalizado</a>
+              <a href="https://wa.me/5511918475136" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform"><WhatsAppIcon size={24} /> Iniciar meu pedido personalizado</a>
               <p className="text-[12px] text-white/40 mt-8">Seg a Sáb 10h–22h · Dom 12h–20h</p>
           </div>
       </section>
