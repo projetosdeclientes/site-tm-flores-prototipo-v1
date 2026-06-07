@@ -103,7 +103,7 @@ export const products: Product[] = [
     tagline: "Um gesto clássico que diz tudo — sem precisar de palavras.",
     description: "O buquê com 12 rosas é um verdadeiro símbolo de amor, admiração e elegância. Cada rosa é cuidadosamente escolhida para compor um arranjo harmonioso e impactante, perfeito para declarações românticas, aniversários, pedidos de desculpas ou qualquer momento que mereça ser inesquecível. Acompanhado de folhagens verdes e acabamento refinado com papel decorativo e laço de cetim, esse buquê une tradição e sofisticação em um presente que impressiona.", 
     price: "R$ 234,90", 
-    images: ["/products/images/Captura_de_tela_2026-06-06_225504.png"],
+    images: ["/products/images/buque-12-rosas-1.png", "/products/images/buque-12-rosas-2.png", "/products/images/buque-12-rosas-3.png"],
     category: 'buques'
   },
   { 
