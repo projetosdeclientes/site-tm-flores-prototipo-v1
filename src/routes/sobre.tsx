@@ -103,7 +103,7 @@ function SobrePage() {
                   {/* Logo Watermark */}
                   <div className="absolute top-4 left-4 w-20 h-20 bg-white/40 backdrop-blur-xs p-2 rounded-full shadow-lg border border-white/20">
                     <img 
-                      src="/src/assets/logo.png" 
+                      src="/assets/logo.png" 
                       alt="Logo TM Flores" 
                       className="w-full h-full object-contain opacity-80"
                     />
