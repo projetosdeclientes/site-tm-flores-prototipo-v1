@@ -40,15 +40,15 @@ function Hero() {
       headline: "Flores que *falam pelo coração*",
       cta: "Ver nossos buquês",
       link: "/buques",
-      overlay: "bg-black/40"
+      overlay: "bg-black/45"
     },
     {
       image: "https://images.unsplash.com/photo-1561181286-d3fee7d55364?q=80&w=2000&auto=format&fit=crop",
       eyebrow: "Para quem você ama",
       headline: "Um gesto *simples* que fica para sempre",
-      cta: "Ver nossos buquês",
+      cta: "Presentear agora",
       link: "/buques",
-      overlay: "bg-black/30"
+      overlay: "bg-black/35"
     },
     {
       image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2000&auto=format&fit=crop",
@@ -56,7 +56,7 @@ function Hero() {
       headline: "Flores que marcam *histórias reais*",
       cta: "Fazer um pedido especial",
       link: "/encomendas",
-      overlay: "bg-black/50"
+      overlay: "bg-black/55"
     }
   ]
 
@@ -65,17 +65,20 @@ function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length)
-    }, 5000)
+    }, 6000)
     return () => clearInterval(timer)
   }, [slides.length])
 
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length)
+  const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)
+
   return (
-    <section className="relative h-[65vh] min-h-[480px] md:h-[90vh] overflow-hidden bg-text-dark hero-carousel">
+    <section className="relative h-[65vh] min-h-[480px] md:h-[90vh] overflow-hidden bg-text-dark hero-carousel group/hero">
       {slides.map((slide, idx) => (
         <div
           key={idx}
           className={`absolute inset-0 transition-all duration-1000 ease-silk hero-slide ${
-            idx === current ? "opacity-100 scale-105 active" : "opacity-0 scale-100"
+            idx === current ? "opacity-100 scale-105 z-20" : "opacity-0 scale-100 z-10 pointer-events-none"
           }`}
         >
           <div className={`absolute inset-0 z-10 ${slide.overlay}`} />
@@ -85,52 +88,69 @@ function Hero() {
             className="w-full h-full object-cover hero-parallax-layer"
           />
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6 hero-content">
-            <span className="text-gold-main font-sans font-bold uppercase tracking-[0.3em] text-sm md:text-base mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700 hero-eyebrow">
+            <span className="text-gold-main font-sans font-bold uppercase tracking-[0.3em] text-sm md:text-base mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700 hero-eyebrow drop-shadow-md">
               {slide.eyebrow}
             </span>
             <h1 
-              className="font-serif text-white text-[28px] md:text-7xl lg:text-8xl italic font-light leading-tight mb-8 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200 hero-headline"
+              className="font-serif text-white text-[28px] md:text-7xl lg:text-8xl italic font-light leading-tight mb-8 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200 hero-headline drop-shadow-xl"
               dangerouslySetInnerHTML={{ __html: slide.headline.replace(/\*(.*?)\*/g, '<span class="gold-text">$1</span>') }}
             />
-            {slide.link.startsWith('http') ? (
-              <a
-                href={slide.link}
-                target="_blank"
-                rel="noopener"
-                className="btn btn-whatsapp px-8 py-4 text-base hero-cta w-full max-w-[320px] md:w-auto relative z-30"
-              >
-                <MessageCircle size={20} />
-                {slide.cta}
-              </a>
-            ) : (
-              <Link
-                to={slide.link as any}
-                className="bg-white text-text-dark px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-gold-main hover:text-white transition-all shadow-xl hero-cta w-full max-w-[320px] md:w-auto text-center flex items-center justify-center relative z-30"
-              >
-                {slide.cta}
-              </Link>
-            )}
+            <div className="flex justify-center w-full animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-400">
+              {slide.link.startsWith('http') ? (
+                <a
+                  href={slide.link}
+                  target="_blank"
+                  rel="noopener"
+                  className="btn btn-whatsapp px-8 py-4 text-base hero-cta w-full max-w-[320px] md:w-auto"
+                >
+                  <MessageCircle size={20} />
+                  {slide.cta}
+                </a>
+              ) : (
+                <Link
+                  to={slide.link as any}
+                  className="bg-white text-text-dark px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-gold-main hover:text-white transition-all shadow-xl hero-cta w-full max-w-[320px] md:w-auto text-center flex items-center justify-center"
+                >
+                  {slide.cta}
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       ))}
 
+      {/* Navigation Arrows */}
+      <button 
+        onClick={prevSlide}
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-40 w-12 h-12 rounded-full border border-white/20 bg-black/10 text-white flex items-center justify-center backdrop-blur-sm hover:bg-white hover:text-text-dark transition-all duration-300 opacity-0 group-hover/hero:opacity-100 hidden md:flex"
+        aria-label="Slide anterior"
+      >
+        <ArrowRight size={24} className="rotate-180" />
+      </button>
+      <button 
+        onClick={nextSlide}
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-40 w-12 h-12 rounded-full border border-white/20 bg-black/10 text-white flex items-center justify-center backdrop-blur-sm hover:bg-white hover:text-text-dark transition-all duration-300 opacity-0 group-hover/hero:opacity-100 hidden md:flex"
+        aria-label="Próximo slide"
+      >
+        <ArrowRight size={24} />
+      </button>
+
       {/* Slide Indicators */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-3 hero-dots">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-40 flex gap-3 hero-dots">
         {slides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`w-12 h-[44px] flex items-center justify-center cursor-pointer hero-dot-container`}
+            className="w-12 h-[44px] flex items-center justify-center cursor-pointer hero-dot-container group/dot"
             aria-label={`Ir para slide ${idx + 1}`}
           >
-             <div className={`w-full h-1 rounded-full transition-all duration-500 hero-dot ${
-              idx === current ? "bg-gold-main w-16 active" : "bg-white/30"
+             <div className={`h-1 rounded-full transition-all duration-500 hero-dot ${
+              idx === current ? "bg-gold-main w-16" : "bg-white/30 w-8 group-hover/dot:bg-white/60"
             }`} />
           </button>
         ))}
       </div>
     </section>
-
   )
 }
 
