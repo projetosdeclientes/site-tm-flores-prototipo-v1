@@ -31,8 +31,8 @@ function CategoryHero({ eyebrow, title, subtitle }: { eyebrow: string; title: st
 }
 
 function BuquesPage() {
-  const buques = products.filter(p => p.category === 'buques');
-
+  const buquesRosas = products.filter(p => p.category === 'buques');
+  const buquesMistos = products.filter(p => p.category === 'buques-mistos');
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -44,16 +44,36 @@ function BuquesPage() {
       <CategoryHero 
         eyebrow="Nossa coleção"
         title="Buquês"
-        subtitle="Rosas frescas, selecionadas com cuidado, prontas para emocionar. Do gesto simples à declaração inesquecível."
+        subtitle="Rosas frescas e composições exclusivas, selecionadas com cuidado para emocionar."
       />
 
       <section className="py-24 bg-cream products-catalog-section">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 products-catalog-grid reveal-stagger">
-            {buques.map((buque) => (
-              <ProductCard key={buque.id} {...buque} />
-            ))}
+          {/* Section: Buquês de Rosas */}
+          <div className="mb-20">
+            <h2 className="font-serif text-3xl md:text-4xl text-purple-deep mb-10 pb-4 border-b border-purple-main/10 italic">
+              Buquês de Rosas
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 products-catalog-grid reveal-stagger">
+              {buquesRosas.map((buque) => (
+                <ProductCard key={buque.id} {...buque} />
+              ))}
+            </div>
           </div>
+
+          {/* Section: Buquês Mistos */}
+          {buquesMistos.length > 0 && (
+            <div className="mt-20">
+              <h2 className="font-serif text-3xl md:text-4xl text-purple-deep mb-10 pb-4 border-b border-purple-main/10 italic">
+                Buquês Mistos
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 products-catalog-grid reveal-stagger">
+                {buquesMistos.map((buque) => (
+                  <ProductCard key={buque.id} {...buque} />
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
