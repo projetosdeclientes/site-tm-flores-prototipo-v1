@@ -39,7 +39,7 @@ function Hero() {
       eyebrow: "TM Flores e Plantas",
       headline: "Flores que *falam pelo coração*",
       cta: "Ver nossos buquês",
-      link: "https://wa.me/5511918475136",
+      link: "/buques",
       overlay: "bg-black/40"
     },
     {
