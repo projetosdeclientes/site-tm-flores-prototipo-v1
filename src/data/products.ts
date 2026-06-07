@@ -150,12 +150,5 @@ export const products: Product[] = [
     images: ["https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800"],
     category: 'plantas'
   },
-  {
-    id: "cesta-presente",
-    name: "Cesta Presente",
-    description: "Kit gourmet em bandeja elegante com laço. Perfeito para datas especiais.",
-    price: "Sob consulta",
-    images: ["https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800"],
-    category: 'plantas'
   }
 ];
