@@ -10,9 +10,9 @@ export function Footer() {
           <Link to="/" className="flex flex-col items-center md:items-start gap-4 group">
             <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-full p-0 shadow-md transition-transform duration-300 group-hover:scale-105 overflow-hidden border-2 border-gold-main/20 flex items-center justify-center">
               <img 
-                src="/logo.png?v=3" 
+                src="/logo.png?v=4" 
                 alt="TM Flores e Plantas Logo" 
-                className="w-[100%] h-[100%] object-cover logo-pixel-perfect"
+                className="w-full h-full object-contain logo-pixel-perfect p-[5%]"
               />
             </div>
             <span className="text-2xl font-serif font-bold gold-text tracking-wider">
