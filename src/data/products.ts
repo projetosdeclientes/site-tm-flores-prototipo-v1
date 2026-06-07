@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   description: string;
   price: string;
-  image: string;
+  images: string[];
   category: 'buques' | 'plantas';
   tagline?: string;
   badge?: string;
@@ -40,7 +40,7 @@ export const products: Product[] = [
     tagline: "Um gesto simples, mas cheio de emoção.",
     description: "Encante com um gesto cheio de significado. O Buquê Três Rosas representa um sentimento completo: amor, respeito e admiração. Composto por três rosas frescas e selecionadas, acompanhadas de folhagens verdes e acabamento refinado, é a escolha ideal para expressar carinho verdadeiro. Com embalagem delicada e um toque de sofisticação, esse buquê é perfeito para aniversários, agradecimentos, início de relacionamento ou apenas para surpreender alguém especial.", 
     price: "R$ 69,90", 
-    image: "/products/images/Captura_de_tela_2026-06-06_225344.png",
+    images: ["/products/images/Captura_de_tela_2026-06-06_225344.png", "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=800&auto=format&fit=crop"],
     category: 'buques'
   },
   { 
