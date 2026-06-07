@@ -4,7 +4,7 @@ export interface Product {
   description: string;
   price: string;
   images: string[];
-  category: 'buques' | 'plantas';
+  category: 'buques' | 'plantas' | 'buques-mistos';
   tagline?: string;
   badge?: string;
 }
@@ -149,5 +149,13 @@ export const products: Product[] = [
     price: "Sob consulta",
     images: ["https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800"],
     category: 'plantas'
+  },
+  {
+    id: "buque-misto-primavera",
+    name: "Buquê Misto Primavera",
+    description: "Uma explosão de cores e aromas com as melhores flores da estação. Composição vibrante e alegre.",
+    price: "R$ 189,90",
+    images: ["https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=800"],
+    category: 'buques-mistos'
   }
 ];
