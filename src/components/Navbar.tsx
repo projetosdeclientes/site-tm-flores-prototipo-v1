@@ -33,8 +33,10 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 overflow-x-hidden ${
-          isScrolled ? "glass-nav py-3" : "py-6"
+        className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 overflow-x-hidden ${
+          isScrolled 
+            ? "glass-nav py-3 opacity-100 translate-y-0" 
+            : "py-6 opacity-0 -translate-y-full pointer-events-none"
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
