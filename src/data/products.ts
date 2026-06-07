@@ -112,7 +112,7 @@ export const products: Product[] = [
     tagline: "Mais que flores — é sentimento entregue em forma de beleza.",
     description: "Impressione com intensidade e beleza. Este buquê é composto por 15 rosas frescas, selecionadas com cuidado para criar um arranjo marcante, romântico e cheio de significado. Ideal para celebrações especiais, aniversários, pedidos importantes ou para surpreender alguém que merece o melhor. Com folhagens verdes e acabamento sofisticado em papel decorativo e laço de cetim, ele une elegância e emoção em cada detalhe.", 
     price: "R$ 255,90", 
-    images: ["/products/images/Captura_de_tela_2026-06-06_225511.png"],
+    images: ["/products/images/buque-15-rosas-1.png", "/products/images/buque-15-rosas-2.png", "/products/images/buque-15-rosas-3.png"],
     category: 'buques'
   },
   { 
