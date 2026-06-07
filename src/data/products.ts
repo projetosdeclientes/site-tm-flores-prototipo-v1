@@ -67,7 +67,7 @@ export const products: Product[] = [
     tagline: "Simples, direto e cheio de estilo — como o amor deve ser.",
     description: "Seis rosas frescas e selecionadas com cuidado para expressar sentimentos de forma elegante e marcante. Com visual moderno e acabamento clean, este buquê é perfeito para presentear em momentos especiais ou surpreender no cotidiano. Acompanhado de folhagens naturais e embalado com papel decorativo contemporâneo e laço de cetim, ele transmite charme, afeto e estilo.", 
     price: "R$ 119,90", 
-    images: ["/products/images/Captura_de_tela_2026-06-06_225429.png"],
+    images: ["/products/images/buque-6-rosas-1.png", "/products/images/buque-6-rosas-2.png", "/products/images/buque-6-rosas-3.png"],
     category: 'buques'
   },
   { 
