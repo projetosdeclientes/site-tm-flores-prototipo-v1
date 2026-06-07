@@ -15,7 +15,7 @@ export const products: Product[] = [
     name: "Rosa Unitária", 
     description: "Uma rosa. Uma mensagem. Um sentimento profundo. Escolhida a dedo para garantir o frescor e a beleza.", 
     price: "R$ 10,00", 
-    images: ["https://images.unsplash.com/photo-1496062031456-07b8f162a322?q=80&w=800&auto=format&fit=crop"],
+    images: ["/products/images/rosa-unitaria-1.png", "/products/images/rosa-unitaria-2.png", "/products/images/rosa-unitaria-3.png"],
     category: 'buques'
   },
   { 
