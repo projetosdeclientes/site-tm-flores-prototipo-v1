@@ -10,7 +10,7 @@ interface ProductModalProps {
     name: string;
     description: string;
     price?: string;
-    image: string;
+    images: string[];
     tagline?: string;
     typeBadge?: string;
     unitLabel?: string;
@@ -40,54 +40,27 @@ export function ProductModal({ product, open, onOpenChange }: ProductModalProps)
           <div className="grid grid-cols-1 md:grid-cols-[60%_40%] h-full max-h-[90vh] overflow-y-auto md:overflow-hidden">
             {/* Lado Esquerdo: Galeria */}
             <div className="p-6 md:p-8 flex flex-col gap-6 bg-white/50">
-              <Tabs defaultValue="main" className="w-full flex flex-col gap-6">
+              <Tabs defaultValue="0" className="w-full flex flex-col gap-6">
                 <div className="aspect-square w-full rounded-xl overflow-hidden shadow-lg bg-lavender-ultra/20">
-                  <TabsContent value="main" className="m-0 w-full h-full animate-in fade-in duration-500">
-                    <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
-                  </TabsContent>
-                  <TabsContent value="details" className="m-0 w-full h-full animate-in fade-in duration-500">
-                    <img 
-                      src={product.image} 
-                      alt={`${product.name} - Detalhes`} 
-                      className="w-full h-full object-cover saturate-[1.4] brightness-[1.1]" 
-                    />
-                  </TabsContent>
-                  <TabsContent value="scene" className="m-0 w-full h-full animate-in fade-in duration-500">
-                    <img 
-                      src={product.image} 
-                      alt={`${product.name} - Cena`} 
-                      className="w-full h-full object-cover sepia-[0.3] brightness-[0.95]" 
-                    />
-                  </TabsContent>
+                  {product.images.map((img, idx) => (
+                    <TabsContent key={idx} value={idx.toString()} className="m-0 w-full h-full animate-in fade-in duration-500">
+                      <img src={img} alt={`${product.name} - Foto ${idx + 1}`} className="w-full h-full object-cover" />
+                    </TabsContent>
+                  ))}
+                  {/* Se não houver 3 fotos, mantemos o padrão visual do site para as abas vazias se necessário, 
+                      mas como o usuário disse que TODOS têm 3 fotos, vamos mapear o que existir. */}
                 </div>
 
                 <TabsList className="bg-transparent h-auto p-0 flex justify-start gap-4">
-                  <TabsTrigger 
-                    value="main" 
-                    className="p-0 border-2 border-transparent data-[state=active]:border-[#C9A040] rounded-lg overflow-hidden transition-all w-20 md:w-24 aspect-square bg-white shadow-sm"
-                  >
-                    <img src={product.image} alt="Thumbnail 1" className="w-full h-full object-cover" />
-                  </TabsTrigger>
-                  <TabsTrigger 
-                    value="details" 
-                    className="p-0 border-2 border-transparent data-[state=active]:border-[#C9A040] rounded-lg overflow-hidden transition-all w-20 md:w-24 aspect-square bg-white shadow-sm"
-                  >
-                    <img 
-                      src={product.image} 
-                      alt="Thumbnail 2" 
-                      className="w-full h-full object-cover saturate-[1.4] brightness-[1.1]" 
-                    />
-                  </TabsTrigger>
-                  <TabsTrigger 
-                    value="scene" 
-                    className="p-0 border-2 border-transparent data-[state=active]:border-[#C9A040] rounded-lg overflow-hidden transition-all w-20 md:w-24 aspect-square bg-white shadow-sm"
-                  >
-                    <img 
-                      src={product.image} 
-                      alt="Thumbnail 3" 
-                      className="w-full h-full object-cover sepia-[0.3] brightness-[0.95]" 
-                    />
-                  </TabsTrigger>
+                  {product.images.map((img, idx) => (
+                    <TabsTrigger 
+                      key={idx}
+                      value={idx.toString()} 
+                      className="p-0 border-2 border-transparent data-[state=active]:border-[#C9A040] rounded-lg overflow-hidden transition-all w-20 md:w-24 aspect-square bg-white shadow-sm"
+                    >
+                      <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
+                    </TabsTrigger>
+                  ))}
                 </TabsList>
               </Tabs>
             </div>

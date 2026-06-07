@@ -58,7 +58,7 @@ export const products: Product[] = [
     tagline: "Cinco rosas, cinco motivos para encantar quem você ama.",
     description: "O Buquê Cinco Rosas é a combinação perfeita entre beleza, elegância e emoção. Com cinco rosas selecionadas cuidadosamente, acompanhadas de folhagens frescas e embaladas com delicadeza, esse arranjo transmite sentimentos sinceros com um charme único. Ideal para celebrar momentos especiais, surpreender alguém querido ou demonstrar carinho de forma delicada e marcante.", 
     price: "R$ 99,90", 
-    images: ["/products/images/Captura_de_tela_2026-06-06_225415.png"],
+    images: ["/products/images/buque-5-rosas-1.png", "/products/images/buque-5-rosas-2.png", "/products/images/buque-5-rosas-3.png"],
     category: 'buques'
   },
   { 
