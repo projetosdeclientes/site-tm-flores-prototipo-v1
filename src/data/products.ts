@@ -76,7 +76,7 @@ export const products: Product[] = [
     tagline: "Simples, marcante e inesquecível — como quem recebe.",
     description: "Com 7 rosas frescas e selecionadas à mão, este buquê é a escolha ideal para transmitir sentimentos sinceros com delicadeza e elegância. Acompanhado de folhagens naturais e embalado em papel decorativo com acabamento em laço de cetim, ele une beleza, sofisticação e emoção em um só presente. Perfeito para aniversários, surpresas românticas, agradecimentos ou qualquer momento especial.", 
     price: "R$ 134,90", 
-    images: ["/products/images/Captura_de_tela_2026-06-06_225438.png"],
+    images: ["/products/images/buque-7-rosas-1.png", "/products/images/buque-7-rosas-2.png", "/products/images/buque-7-rosas-3.png"],
     category: 'buques'
   },
   { 
