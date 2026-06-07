@@ -8,11 +8,11 @@ export function Footer() {
         {/* Brand */}
         <div className="flex flex-col gap-6 items-center md:items-start">
           <Link to="/" className="flex flex-col items-center md:items-start gap-4 group">
-            <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-full p-0 shadow-md transition-transform duration-300 group-hover:scale-105 overflow-hidden border-2 border-gold-main/20 flex items-center justify-center">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full p-0 transition-transform duration-300 group-hover:scale-105 overflow-hidden flex items-center justify-center">
               <img 
-                src="/logo.png?v=4" 
+                src="/logo.png?v=5" 
                 alt="TM Flores e Plantas Logo" 
-                className="w-full h-full object-contain logo-pixel-perfect p-[5%]"
+                className="w-full h-full object-cover logo-pixel-perfect"
               />
             </div>
             <span className="text-2xl font-serif font-bold gold-text tracking-wider">
