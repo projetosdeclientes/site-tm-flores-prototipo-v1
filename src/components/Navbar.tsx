@@ -38,11 +38,11 @@ export function Navbar() {
         <div className="container mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="relative w-14 h-14 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-110">
+            <div className="relative w-14 h-14 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-110 overflow-hidden rounded-full border border-gold-main/10 shadow-sm flex items-center justify-center bg-white/50 backdrop-blur-sm">
               <img 
-                src="/logo.png?v=2" 
+                src="/logo.png?v=3" 
                 alt="TM Flores e Plantas Logo" 
-                className="w-full h-full object-contain filter drop-shadow-sm logo-pixel-perfect"
+                className="w-[90%] h-[90%] object-cover logo-pixel-perfect"
               />
             </div>
             <span className="text-xl md:text-2xl font-serif font-bold gold-text tracking-wider hidden sm:block">
