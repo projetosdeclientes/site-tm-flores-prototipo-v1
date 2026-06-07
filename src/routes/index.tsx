@@ -35,25 +35,28 @@ function AnnouncementBar() {
 function Hero() {
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=2000&auto=format&fit=crop", // placeholder banner-01
+      image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=2000&auto=format&fit=crop",
       eyebrow: "TM Flores e Plantas",
       headline: "Flores que *falam pelo coração*",
-      cta: "Fazer meu pedido",
-      link: "https://wa.me/5511918475136"
+      cta: "Ver nossos buquês",
+      link: "https://wa.me/5511918475136",
+      overlay: "bg-black/40"
     },
     {
-      image: "https://images.unsplash.com/photo-1561181286-d3fee7d55364?q=80&w=2000&auto=format&fit=crop", // placeholder banner-02
+      image: "https://images.unsplash.com/photo-1561181286-d3fee7d55364?q=80&w=2000&auto=format&fit=crop",
       eyebrow: "Para quem você ama",
       headline: "Um gesto *simples* que fica para sempre",
       cta: "Ver nossos buquês",
-      link: "/buques"
+      link: "/buques",
+      overlay: "bg-black/30"
     },
     {
-      image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2000&auto=format&fit=crop", // placeholder banner-03
+      image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2000&auto=format&fit=crop",
       eyebrow: "Para os momentos únicos",
       headline: "Flores que marcam *histórias reais*",
       cta: "Fazer um pedido especial",
-      link: "/encomendas"
+      link: "/encomendas",
+      overlay: "bg-black/50"
     }
   ]
 
@@ -75,7 +78,7 @@ function Hero() {
             idx === current ? "opacity-100 scale-105 active" : "opacity-0 scale-100"
           }`}
         >
-          <div className="absolute inset-0 bg-black/40 z-10" />
+          <div className={`absolute inset-0 z-10 ${slide.overlay}`} />
           <img
             src={slide.image}
             alt=""
@@ -102,7 +105,7 @@ function Hero() {
             ) : (
               <Link
                 to={slide.link as any}
-                className="bg-white text-text-dark px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-gold-main hover:text-white transition-all shadow-xl hero-cta w-full max-w-[320px] md:w-auto text-center"
+                className="bg-white text-text-dark px-10 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-gold-main hover:text-white transition-all shadow-xl hero-cta w-full max-w-[320px] md:w-auto text-center flex items-center justify-center"
               >
                 {slide.cta}
               </Link>
