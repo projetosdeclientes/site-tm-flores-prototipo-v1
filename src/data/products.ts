@@ -174,12 +174,4 @@ export const products: Product[] = [
     images: ["/products/images/buque-misto-encanto-1.png", "/products/images/buque-misto-encanto-2.png", "/products/images/buque-misto-encanto-3.png"],
     category: 'buques-mistos'
   },
-  {
-    id: "buque-misto-primavera",
-    name: "Buquê Misto Primavera",
-    description: "Uma explosão de cores e aromas com as melhores flores da estação. Composição vibrante e alegre.",
-    price: "R$ 189,90",
-    images: ["https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=800"],
-    category: 'buques-mistos'
-  }
 ];
