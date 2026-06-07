@@ -71,7 +71,7 @@ function EncomendasPage() {
             <div className="orders-hero-frame relative w-80 h-80 bg-white rounded-3xl shadow-2xl flex flex-col items-center justify-center p-12 text-center">
               <div className="orders-hero-frame-inner flex flex-col items-center justify-center gap-4">
                 <div className="w-32 h-32 mb-4 animate-float">
-                  <img src="/assets/logo.png" alt="Logo TM Flores" className="w-full h-full object-contain" />
+                  <img src="/assets/logo.png" alt="Logo TM Flores" className="w-full h-full object-contain logo-pixel-perfect" />
                 </div>
                 <p className="orders-hero-frame-text font-script text-2xl text-purple-main">
                   "Manda a foto do buquê dos seus sonhos"

@@ -105,7 +105,7 @@ function SobrePage() {
                     <img 
                       src="/assets/logo.png" 
                       alt="Logo TM Flores" 
-                      className="w-full h-full object-contain opacity-80"
+                      className="w-full h-full object-contain opacity-80 logo-pixel-perfect"
                     />
                   </div>
                   <div className="about-img-placeholder hidden" data-label="Foto interior principal" />

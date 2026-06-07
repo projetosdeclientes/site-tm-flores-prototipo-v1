@@ -266,7 +266,7 @@ function Index() {
                   <img 
                     src="/assets/logo.png" 
                     alt="Logo TM Flores" 
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain logo-pixel-perfect"
                   />
                 </div>
 

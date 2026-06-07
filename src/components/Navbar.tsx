@@ -42,7 +42,7 @@ export function Navbar() {
               <img 
                 src="/assets/logo.png" 
                 alt="TM Flores e Plantas Logo" 
-                className="w-full h-full object-contain filter drop-shadow-sm"
+                className="w-full h-full object-contain filter drop-shadow-sm logo-pixel-perfect"
               />
             </div>
             <span className="text-xl md:text-2xl font-serif font-bold gold-text tracking-wider hidden sm:block">
