@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, Clock, Phone, Send } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 import { LogoCircle } from "./LogoCircle";
 
 
@@ -30,6 +31,15 @@ export function Footer() {
             >
               <Send size={20} />
             </a>
+            <a
+              href="https://wa.me/5511918475136"
+              target="_blank"
+              rel="noopener"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-[#25D366] text-white"
+              aria-label="WhatsApp"
+            >
+              <WhatsAppIcon size={20} />
+            </a>
           </div>
         </div>
 
@@ -54,7 +64,7 @@ export function Footer() {
           </h4>
           <ul className="flex flex-col gap-4 text-sm text-text-medium items-center md:items-start">
             <li className="flex gap-3">
-              <Phone size={18} className="text-gold-main shrink-0" />
+              <WhatsAppIcon size={18} className="text-gold-main shrink-0" />
               <a href="https://wa.me/5511918475136" target="_blank" rel="noopener" className="hover:text-purple-main">
                 +55 11 91847-5136
               </a>
