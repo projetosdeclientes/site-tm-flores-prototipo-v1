@@ -13,7 +13,7 @@ interface LogoCircleProps {
  * por isso aplicamos um zoom e um deslocamento negativo à esquerda para 
  * centralizar o círculo dourado e as letras "TM" visualmente.
  */
-export function LogoCircle({ className, imgClassName, version = "45" }: LogoCircleProps) {
+export function LogoCircle({ className, imgClassName, version = "50" }: LogoCircleProps) {
   return (
     <div 
       className={cn(
@@ -25,7 +25,7 @@ export function LogoCircle({ className, imgClassName, version = "45" }: LogoCirc
         src={`/logo.png?v=${version}`} 
         alt="TM Flores e Plantas Logo" 
         className={cn(
-          "w-full h-full object-cover scale-[1.3] pointer-events-none select-none",
+          "w-[101%] h-[101%] max-w-none object-cover pointer-events-none select-none",
           imgClassName
         )}
       />
