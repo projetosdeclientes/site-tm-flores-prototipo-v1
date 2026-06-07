@@ -20,16 +20,16 @@ function SobrePage() {
       <Navbar />
       
       {/* Hero */}
-      <section className="about-hero pt-48 pb-32 bg-purple-deep relative overflow-hidden text-center">
+      <section className="about-hero pt-32 md:pt-48 pb-20 md:pb-32 bg-purple-deep relative overflow-hidden text-center">
         <div className="container mx-auto px-6 relative z-10 about-hero-content reveal-fade">
-          <span className="section-eyebrow text-gold-main font-sans font-bold uppercase tracking-[0.3em] text-xs mb-6 block">
+          <span className="section-eyebrow text-gold-main font-sans font-bold uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4 md:mb-6 block">
             Conheça nossa história
           </span>
-          <h1 className="about-hero-title font-serif text-5xl md:text-8xl font-light text-white leading-tight mb-8">
+          <h1 className="about-hero-title font-serif text-4xl md:text-8xl font-light text-white leading-tight mb-6 md:mb-8">
             Sobre a<br />
             <em className="gold-text italic">TM Flores e Plantas</em>
           </h1>
-          <p className="about-hero-lead font-script text-2xl md:text-4xl text-lavender-light">
+          <p className="about-hero-lead font-script text-xl md:text-4xl text-lavender-light px-4">
             Nascemos de um sonho. Crescemos com amor.
             E estamos aqui para florescer junto com você.
           </p>
@@ -37,8 +37,8 @@ function SobrePage() {
         
         {/* Animated Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
-          <div className="absolute top-[-10%] left-[-5%] w-96 h-96 bg-purple-main blur-[120px] rounded-full animate-pulse" />
-          <div className="absolute bottom-[-10%] right-[-5%] w-96 h-96 bg-gold-main blur-[120px] rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-[-10%] left-[-5%] w-64 md:w-96 h-64 md:h-96 bg-purple-main blur-[80px] md:blur-[120px] rounded-full animate-pulse" />
+          <div className="absolute bottom-[-10%] right-[-5%] w-64 md:w-96 h-64 md:h-96 bg-gold-main blur-[80px] md:blur-[120px] rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
         </div>
         
         {/* Wave bottom */}
