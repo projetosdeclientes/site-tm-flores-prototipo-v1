@@ -277,12 +277,12 @@ function Index() {
           <div className="products-carousel-wrapper">
             <div className="flex overflow-x-auto pb-10 gap-3 scrollbar-hide snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:overflow-visible products-carousel reveal-stagger px-4 md:px-0">
               {[
-                { name: "Orquídea Rosa", image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800", desc: "Phalaenopsis rosa em vaso decorativo. Elegância que dura semanas." },
-                { name: "Orquídea Roxa", image: "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800", desc: "Em tom lilás intenso, sofisticação para qualquer ambiente." },
-                { name: "Cesta Presente", image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800", desc: "Kit gourmet em bandeja elegante com laço. Perfeito para datas especiais." }
+                products.find(p => p.id === "orquidea-rosa")!,
+                products.find(p => p.id === "orquidea-roxa")!,
+                products.find(p => p.id === "cesta-presente")!,
               ].map((p, i) => (
                 <div key={i} className="snap-center min-w-[78vw] md:min-w-[260px] lg:min-w-0">
-                  <ProductCard id={p.name.toLowerCase().replace(' ', '-')} name={p.name} description={p.desc} price="Sob consulta" images={[p.image]} />
+                  <ProductCard {...p} />
                 </div>
               ))}
               <div className="snap-center min-w-[78vw] md:min-w-[260px] lg:min-w-0">
