@@ -223,10 +223,10 @@ function SobrePage() {
                 </div>
               </div>
 
-              <div className="contact-block contact-hours p-8 bg-white rounded-3xl shadow-card border border-gold-main/5 flex gap-6">
-                <div className="contact-hours-icon text-3xl shrink-0">🕐</div>
+              <div className="contact-block contact-hours p-6 md:p-8 bg-white rounded-3xl shadow-card border border-gold-main/5 flex gap-4 md:gap-6">
+                <div className="contact-hours-icon text-2xl md:text-3xl shrink-0">🕐</div>
                 <div className="flex-grow">
-                  <strong className="text-xl font-bold text-text-dark block mb-4">Horário de Atendimento</strong>
+                  <strong className="text-lg md:text-xl font-bold text-text-dark block mb-4">Horário de Atendimento</strong>
                   <div className="hours-table space-y-2">
                     <div className="hours-row flex justify-between text-sm">
                       <span className="hours-day text-text-medium">Segunda a Sábado</span>
