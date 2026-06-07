@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, Instagram } from "lucide-react";
+import { LogoCircle } from "./LogoCircle";
+
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,13 +40,8 @@ export function Navbar() {
         <div className="container mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="relative w-14 h-14 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-110 overflow-hidden rounded-full flex items-center justify-center bg-transparent">
-              <img 
-                src="/logo.png?v=5" 
-                alt="TM Flores e Plantas Logo" 
-                className="w-full h-full object-cover logo-pixel-perfect"
-              />
-            </div>
+            <LogoCircle className="w-14 h-14 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-110" />
+
             <span className="text-xl md:text-2xl font-serif font-bold gold-text tracking-wider hidden sm:block">
               TM FLORES
             </span>

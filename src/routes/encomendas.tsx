@@ -3,6 +3,8 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { useEffect } from 'react'
 import { MessageCircle, Camera, MessageSquare, Flower2, Gift } from 'lucide-react'
+import { LogoCircle } from '@/components/LogoCircle'
+
 
 export const Route = createFileRoute('/encomendas')({
   component: EncomendasPage,
@@ -70,9 +72,8 @@ function EncomendasPage() {
           <div className="hidden lg:flex justify-center relative orders-hero-visual reveal-right">
             <div className="orders-hero-frame relative w-80 h-80 bg-white rounded-3xl shadow-2xl flex flex-col items-center justify-center p-12 text-center">
               <div className="orders-hero-frame-inner flex flex-col items-center justify-center gap-4">
-                <div className="w-32 h-32 mb-4 animate-float overflow-hidden rounded-full flex items-center justify-center">
-                  <img src="/logo.png?v=5" alt="Logo TM Flores" className="w-full h-full object-cover logo-pixel-perfect" />
-                </div>
+                <LogoCircle className="w-32 h-32 mb-4 animate-float shadow-xl" />
+
                 <p className="orders-hero-frame-text font-script text-2xl text-purple-main">
                   "Manda a foto do buquê dos seus sonhos"
                 </p>

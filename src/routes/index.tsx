@@ -6,6 +6,8 @@ import { Footer } from '@/components/Footer'
 import { ProductCard, MoreCard } from '@/components/ProductCard'
 import { MessageCircle, ArrowRight, Star } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { LogoCircle } from '@/components/LogoCircle'
+
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -262,13 +264,8 @@ function Index() {
                 />
                 
                 {/* Floating Logo Overlay */}
-                <div className="absolute top-6 left-6 w-24 h-24 p-0 rounded-full animate-float overflow-hidden flex items-center justify-center">
-                  <img 
-                    src="/logo.png?v=5" 
-                    alt="Logo TM Flores" 
-                    className="w-full h-full object-cover logo-pixel-perfect"
-                  />
-                </div>
+                <LogoCircle className="absolute top-6 left-6 w-24 h-24 animate-float" />
+
 
                 <div className="absolute bottom-6 right-6 bg-gold-gradient p-3 px-5 rounded-full shadow-xl text-text-dark font-sans font-bold text-xs uppercase tracking-widest store-teaser-badge">
                   Fundada em 2024
