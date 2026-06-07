@@ -7,8 +7,17 @@ export function Footer() {
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10 text-center md:text-left">
         {/* Brand */}
         <div className="flex flex-col gap-6 items-center md:items-start">
-          <Link to="/" className="text-2xl font-serif font-bold gold-text tracking-wider">
-            TM FLORES
+          <Link to="/" className="flex flex-col items-center md:items-start gap-4 group">
+            <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-full p-2 shadow-md transition-transform duration-300 group-hover:scale-105">
+              <img 
+                src="/src/assets/logo.png" 
+                alt="TM Flores e Plantas Logo" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <span className="text-2xl font-serif font-bold gold-text tracking-wider">
+              TM FLORES
+            </span>
           </Link>
           <p className="text-text-medium text-sm leading-relaxed max-w-[280px]">
             Especialistas em buquês artesanais e plantas ornamentais. 
