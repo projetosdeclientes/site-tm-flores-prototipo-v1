@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock, Phone, Send } from "lucide-react";
 import { LogoCircle } from "./LogoCircle";
 
 
@@ -28,7 +28,7 @@ export function Footer() {
               className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white"
               aria-label="Instagram"
             >
-              <Instagram size={20} />
+              <Send size={20} />
             </a>
           </div>
         </div>

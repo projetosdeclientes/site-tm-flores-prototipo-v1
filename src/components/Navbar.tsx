@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown, Instagram } from "lucide-react";
+import { Menu, X, ChevronDown, Send } from "lucide-react";
 import { LogoCircle } from "./LogoCircle";
 
 
@@ -99,7 +99,7 @@ export function Navbar() {
               className="p-2 text-purple-main hover:scale-110 transition-transform"
               aria-label="Instagram"
             >
-              <Instagram size={24} />
+              <Send size={24} />
             </a>
             <a
               href="https://wa.me/5511918475136"

@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { useEffect } from 'react'
-import { Instagram, MapPin, MessageCircle, Star, Clock } from 'lucide-react'
+import { MapPin, MessageCircle, Star, Clock, Send } from 'lucide-react'
 import { LogoCircle } from '@/components/LogoCircle'
 
 
@@ -198,7 +198,7 @@ function SobrePage() {
                   className="contact-btn contact-btn-instagram flex items-center gap-6 p-8 bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all border border-gold-main/5 group"
                 >
                   <div className="w-14 h-14 bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] rounded-2xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
-                    <Instagram size={32} />
+                    <Send size={32} />
                   </div>
                   <div>
                     <strong className="text-xl font-bold text-text-dark block">@tmfloreseplantas</strong>
