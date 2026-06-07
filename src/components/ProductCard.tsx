@@ -1,5 +1,6 @@
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import { useState } from "react";
 
 interface ProductCardProps {
   id: string;
@@ -17,25 +18,90 @@ export function ProductCard({
   priceLabel,
   image,
 }: ProductCardProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  // Simulando galeria se houver (por enquanto usamos a mesma imagem ou variações)
+  const images = [image]; // Se o banco de dados suportasse mais imagens, carregaríamos aqui
+  
+  const minSwipeDistance = 50;
+
   const whatsappUrl = `https://wa.me/5511918475136?text=${encodeURIComponent(
     `Olá! Tenho interesse no ${name}. Poderia me ajudar?`
   )}`;
 
+  const nextImage = (e?: React.MouseEvent) => {
+    e?.preventDefault();
+    e?.stopPropagation();
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = (e?: React.MouseEvent) => {
+    e?.preventDefault();
+    e?.stopPropagation();
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe && images.length > 1) nextImage();
+    if (isRightSwipe && images.length > 1) prevImage();
+  };
+
   return (
-    <article className="product-card group bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-500 border border-gold-main/5 flex flex-col h-full cursor-pointer">
-      <Link to={`/buques/${id}`} className="block">
-        <div className="product-card-gallery relative aspect-square overflow-hidden">
+    <article className="product-card group bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-500 border border-gold-main/5 flex flex-col h-full cursor-pointer relative">
+      <div 
+        className="product-card-gallery relative aspect-square overflow-hidden"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
+        <Link to={`/buques/${id}`} className="block w-full h-full">
           <img
-            src={image}
+            src={images[currentImageIndex]}
             alt={name}
             className="product-card-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             style={{ objectPosition: 'center 60%' }}
             loading="lazy"
           />
+        </Link>
 
-
-        </div>
-      </Link>
+        {images.length > 1 && (
+          <>
+            <button 
+              onClick={prevImage}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white/80 text-purple-deep flex items-center justify-center shadow-md md:opacity-0 md:group-hover:opacity-100 transition-opacity"
+            >
+              <ArrowLeft size={16} />
+            </button>
+            <button 
+              onClick={nextImage}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white/80 text-purple-deep flex items-center justify-center shadow-md md:opacity-0 md:group-hover:opacity-100 transition-opacity"
+            >
+              <ArrowRight size={16} />
+            </button>
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-10">
+              {images.map((_, i) => (
+                <div 
+                  key={i} 
+                  className={`w-1.5 h-1.5 rounded-full transition-all ${i === currentImageIndex ? 'bg-gold-main w-3' : 'bg-white/60'}`} 
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
 
       <div className="product-card-body p-4 flex flex-col flex-grow">
         <Link to={`/buques/${id}`} className="block">
@@ -60,7 +126,7 @@ export function ProductCard({
         <div className="mt-auto flex flex-col sm:flex-row gap-2">
           <Link
             to={`/buques/${id}`}
-            className="flex-1 justify-center text-[13px] py-2 px-4 border-[1.5px] border-purple-main text-purple-main rounded-full font-semibold flex items-center gap-1 hover:bg-purple-main hover:text-white transition-all"
+            className="flex-1 justify-center text-[13px] py-2 px-4 border-[1.5px] border-purple-main text-purple-main rounded-full font-semibold flex items-center gap-1 hover:bg-purple-main hover:text-white transition-all text-center"
           >
             Ver produto →
           </Link>
@@ -69,7 +135,7 @@ export function ProductCard({
             target="_blank"
             rel="noopener"
             onClick={(e) => e.stopPropagation()}
-            className="flex-1 justify-center text-[13px] py-2 px-4 bg-whatsapp text-white rounded-full font-semibold flex items-center gap-1 transition-all hover:scale-105"
+            className="flex-1 justify-center text-[13px] py-2 px-4 bg-whatsapp text-white rounded-full font-semibold flex items-center gap-1 transition-all hover:scale-105 flex justify-center"
           >
             <MessageCircle size={16} />
             WhatsApp
