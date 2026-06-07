@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import { products as productsData } from '@/data/products';
 
 export function ProductPage() {
-  const { slug } = useParams({ strict: false });
+  const { slug } = useParams({ strict: false }) as { slug: string };
   const productIndex = productsData.findIndex(p => p.id === slug);
   const product = productIndex !== -1 ? productsData[productIndex] : productsData[0];
   const [activeThumb, setActiveThumb] = useState(0);
