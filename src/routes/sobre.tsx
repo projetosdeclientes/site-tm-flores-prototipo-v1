@@ -2,7 +2,8 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { useEffect } from 'react'
-import { MapPin, MessageCircle, Star, Clock, Send } from 'lucide-react'
+import { MapPin, Star, Clock, Send } from 'lucide-react'
+import { WhatsAppIcon } from '@/components/WhatsAppIcon'
 import { LogoCircle } from '@/components/LogoCircle'
 
 
@@ -181,7 +182,7 @@ function SobrePage() {
                   className="contact-btn contact-btn-whatsapp flex items-center gap-6 p-8 bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all border border-gold-main/5 group"
                 >
                   <div className="w-14 h-14 bg-whatsapp rounded-2xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
-                    <MessageCircle size={32} />
+                    <WhatsAppIcon size={32} />
                   </div>
                   <div>
                     <strong className="text-xl font-bold text-text-dark block">(11) 91847-5136</strong>

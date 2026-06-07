@@ -4,7 +4,8 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { ProductCard } from '@/components/ProductCard'
 import { useEffect } from 'react'
-import { Sprout, MessageCircle } from 'lucide-react'
+import { Sprout } from 'lucide-react'
+import { WhatsAppIcon } from '@/components/WhatsAppIcon'
 
 export const Route = createFileRoute('/plantas')({
   component: PlantasPage,
@@ -67,7 +68,7 @@ function PlantasPage() {
                   href="https://wa.me/5511918475136?text=Olá! Quero saber quais plantas vocês têm disponíveis!" 
                   className="btn btn-whatsapp w-full justify-center text-sm py-3 px-6 bg-whatsapp text-white rounded-full font-semibold flex items-center gap-2 transition-all hover:scale-105"
                 >
-                  <MessageCircle size={18} />
+                  <WhatsAppIcon size={18} />
                   Ver disponibilidade
                 </a>
               </div>
@@ -90,7 +91,7 @@ function PlantasPage() {
               href="https://wa.me/5511918475136" 
               className="btn btn-whatsapp btn-magnetic px-10 py-4 mx-auto"
             >
-              <MessageCircle size={20} className="mr-2" />
+              <WhatsAppIcon size={20} className="mr-2" />
               Falar com a floricultura
             </a>
           </div>
