@@ -159,6 +159,14 @@ export const products: Product[] = [
     category: 'buques-mistos'
   },
   {
+    id: "buque-misto-girassol",
+    name: "Buquê Misto Alegria",
+    description: "Um arranjo vibrante e cheio de vida que combina a energia solar dos girassóis com a delicadeza de margaridas e crisântemos em tons de branco, rosa e laranja. Esta composição multicolorida é envolta em uma embalagem verde oliva moderna e finalizada com um laço de ráfia natural, criando um contraste elegante e rústico.",
+    price: "Sob consulta",
+    images: ["/products/images/buque-misto-girassol-1.png", "/products/images/buque-misto-girassol-2.png", "/products/images/buque-misto-girassol-3.png"],
+    category: 'buques-mistos'
+  },
+  {
     id: "buque-misto-primavera",
     name: "Buquê Misto Primavera",
     description: "Uma explosão de cores e aromas com as melhores flores da estação. Composição vibrante e alegre.",
