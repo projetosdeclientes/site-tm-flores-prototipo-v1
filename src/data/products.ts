@@ -174,4 +174,12 @@ export const products: Product[] = [
     images: ["/products/images/buque-misto-encanto-1.png", "/products/images/buque-misto-encanto-2.png", "/products/images/buque-misto-encanto-3.png"],
     category: 'buques-mistos'
   },
+  {
+    id: "buque-misto-sol-radiante",
+    name: "Buquê Misto Sol Radiante",
+    description: "Uma composição luminosa e sofisticada que une o brilho majestoso de um girassol central à elegância clássica de rosas brancas impecáveis. Envolto em uma nuvem de gypsophila delicada e folhagens de eucalipto, este arranjo é finalizado em uma embalagem de papel Kraft texturizado com laço de cetim amarelo, transmitindo calor, pureza e alegria.",
+    price: "Sob consulta",
+    images: ["/products/images/buque-misto-sol-radiante-1.png", "/products/images/buque-misto-sol-radiante-2.png", "/products/images/buque-misto-sol-radiante-3.png"],
+    category: 'buques-mistos'
+  },
 ];
