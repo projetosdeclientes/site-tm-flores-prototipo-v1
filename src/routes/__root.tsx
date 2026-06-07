@@ -6,7 +6,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { type ReactNode, useEffect, useState } from "react";
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 import "../styles.css";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -116,7 +116,7 @@ function WhatsappFloating() {
       className="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] z-[999] animate-in fade-in duration-500 hover:scale-110 transition-transform"
       style={{ animation: 'pulse-whatsapp 2.5s infinite' }}
     >
-      <MessageCircle size={26} />
+      <WhatsAppIcon size={26} />
       <style>{`
         @keyframes pulse-whatsapp {
           0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
