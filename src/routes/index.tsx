@@ -195,15 +195,15 @@ function SectionHeader({ eyebrow, title, centered = true }: { eyebrow: string; t
 
 function Index() {
   const maisVendidos = [
-    products.find(p => p.id === "buque-3-rosas")!,
+    products.find(p => p.id === "buque-misto-sol-radiante")!,
     products.find(p => p.id === "buque-6-rosas")!,
     products.find(p => p.id === "buque-12-rosas")!,
-    products.find(p => p.id === "buque-25-rosas")!
+    products.find(p => p.id === "buque-misto-girassol")!
   ];
 
   const buquesHome = [
     products.find(p => p.id === "buque-1-rosa")!,
-    products.find(p => p.id === "buque-4-rosas")!,
+    products.find(p => p.id === "buque-misto-encanto")!,
     products.find(p => p.id === "buque-8-rosas")!,
     products.find(p => p.id === "buque-15-rosas")!
   ];
