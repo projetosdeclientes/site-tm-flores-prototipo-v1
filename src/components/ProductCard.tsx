@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { Link } from "@tanstack/react-router";
+import { products as productsData } from "@/data/products";
 import { useState } from "react";
 
 interface ProductCardProps {
@@ -68,7 +69,10 @@ export function ProductCard({
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
-        <Link to={`/buques/${id}`} className="block w-full h-full">
+        <Link 
+          to={(productsData.find(p => p.id === id)?.category === 'plantas' ? `/plantas/${id}` : `/buques/${id}`) as any} 
+          className="block w-full h-full"
+        >
           <img
             src={images[currentImageIndex]}
             alt={name}
@@ -105,7 +109,10 @@ export function ProductCard({
       </div>
 
       <div className="product-card-body p-4 flex flex-col flex-grow">
-        <Link to={`/buques/${id}`} className="block">
+        <Link 
+          to={(productsData.find(p => p.id === id)?.category === 'plantas' ? `/plantas/${id}` : `/buques/${id}`) as any} 
+          className="block"
+        >
           <h3 className="product-card-name font-serif text-lg font-semibold text-text-dark mb-1 group-hover:text-purple-main transition-colors line-clamp-2">
             {name}
           </h3>
@@ -126,7 +133,7 @@ export function ProductCard({
 
         <div className="mt-auto flex flex-col sm:flex-row gap-2">
           <Link
-            to={`/buques/${id}`}
+            to={(productsData.find(p => p.id === id)?.category === 'plantas' ? `/plantas/${id}` : `/buques/${id}`) as any}
             className="flex-1 justify-center text-[13px] py-2 px-4 border-[1.5px] border-purple-main text-purple-main rounded-full font-semibold flex items-center gap-1 hover:bg-purple-main hover:text-white transition-all text-center"
           >
             Ver produto →
