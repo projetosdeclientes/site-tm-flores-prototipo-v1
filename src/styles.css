@@ -240,4 +240,11 @@
   scrollbar-width: none;
 }
 
+.logo-pixel-perfect {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
+}
 
