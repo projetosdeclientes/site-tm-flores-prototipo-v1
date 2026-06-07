@@ -40,7 +40,7 @@ export function Navbar() {
           <Link to="/" className="flex items-center gap-2 group">
             <div className="relative w-14 h-14 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-110">
               <img 
-                src="/assets/logo.png" 
+                src="/logo.png?v=2" 
                 alt="TM Flores e Plantas Logo" 
                 className="w-full h-full object-contain filter drop-shadow-sm logo-pixel-perfect"
               />
