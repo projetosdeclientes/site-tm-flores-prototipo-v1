@@ -101,11 +101,11 @@ function SobrePage() {
                   <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=1000&auto=format&fit=crop" className="about-img w-full h-full object-cover" alt="Interior" />
                   
                   {/* Logo Watermark */}
-                  <div className="absolute top-4 left-4 w-20 h-20 bg-white/40 backdrop-blur-xs p-2 rounded-full shadow-lg border border-white/20">
+                  <div className="absolute top-4 left-4 w-20 h-20 bg-white/60 backdrop-blur-sm p-0 rounded-full shadow-lg border border-white/40 overflow-hidden flex items-center justify-center">
                     <img 
-                      src="/logo.png?v=2" 
+                      src="/logo.png?v=3" 
                       alt="Logo TM Flores" 
-                      className="w-full h-full object-contain opacity-80 logo-pixel-perfect"
+                      className="w-full h-full object-cover opacity-90 logo-pixel-perfect"
                     />
                   </div>
                   <div className="about-img-placeholder hidden" data-label="Foto interior principal" />

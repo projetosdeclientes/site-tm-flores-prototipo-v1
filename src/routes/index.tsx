@@ -262,11 +262,11 @@ function Index() {
                 />
                 
                 {/* Floating Logo Overlay */}
-                <div className="absolute top-6 left-6 w-24 h-24 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-xl animate-float">
+                <div className="absolute top-6 left-6 w-24 h-24 bg-white p-0 rounded-full shadow-xl animate-float overflow-hidden border-2 border-gold-main/30 flex items-center justify-center">
                   <img 
-                    src="/logo.png?v=2" 
+                    src="/logo.png?v=3" 
                     alt="Logo TM Flores" 
-                    className="w-full h-full object-contain logo-pixel-perfect"
+                    className="w-full h-full object-cover logo-pixel-perfect"
                   />
                 </div>
 
