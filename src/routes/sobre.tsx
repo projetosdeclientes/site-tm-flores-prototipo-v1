@@ -3,6 +3,8 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { useEffect } from 'react'
 import { Instagram, MapPin, MessageCircle, Star, Clock } from 'lucide-react'
+import { LogoCircle } from '@/components/LogoCircle'
+
 
 export const Route = createFileRoute('/sobre')({
   component: SobrePage,
@@ -101,13 +103,8 @@ function SobrePage() {
                   <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=1000&auto=format&fit=crop" className="about-img w-full h-full object-cover" alt="Interior" />
                   
                   {/* Logo Watermark */}
-                  <div className="absolute top-4 left-4 w-20 h-20 p-0 rounded-full overflow-hidden flex items-center justify-center">
-                    <img 
-                      src="/logo.png?v=5" 
-                      alt="Logo TM Flores" 
-                      className="w-full h-full object-cover opacity-100 logo-pixel-perfect"
-                    />
-                  </div>
+                  <LogoCircle className="absolute top-4 left-4 w-20 h-20 opacity-90 shadow-lg border border-white/40" />
+
                   <div className="about-img-placeholder hidden" data-label="Foto interior principal" />
                 </div>
                 <div className="about-image-secondary aspect-square rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
