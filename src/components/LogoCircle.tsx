@@ -18,11 +18,12 @@ export function LogoCircle({ className, imgClassName, version = "10" }: LogoCirc
         src={`/logo.png?v=${version}`} 
         alt="TM Flores e Plantas Logo" 
         className={cn(
-          "w-[145%] h-[145%] max-w-none object-contain logo-pixel-perfect", 
-          "relative -left-[14%] -top-[1%] pointer-events-none select-none",
+          "w-full h-full object-contain logo-pixel-perfect", 
+          "pointer-events-none select-none p-[2%]",
           imgClassName
         )}
       />
+
 
 
 
