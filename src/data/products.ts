@@ -49,7 +49,7 @@ export const products: Product[] = [
     tagline: "Um buquê discreto, mas cheio de significado — porque às vezes, menos é mais.",
     description: "Delicado e cheio de charme, o Buquê Quatro Rosas é perfeito para quem deseja expressar carinho com sutileza e bom gosto. Composto por quatro rosas frescas e vibrantes, acompanhadas por folhagens ornamentais e uma embalagem sofisticada, esse arranjo transmite atenção, afeto e intenção verdadeira. Ideal para surpreender em datas especiais, aniversários, pequenos gestos românticos ou simplesmente dizer que está pensando em alguém.", 
     price: "R$ 84,90", 
-    images: ["/products/images/Captura_de_tela_2026-06-06_225405.png"],
+    images: ["/products/images/buque-4-rosas-1.png", "/products/images/buque-4-rosas-2.png", "/products/images/buque-4-rosas-3.png"],
     category: 'buques'
   },
   { 
