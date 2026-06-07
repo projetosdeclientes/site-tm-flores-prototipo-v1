@@ -85,7 +85,7 @@ export const products: Product[] = [
     tagline: "Mais que flores — uma forma de dizer o que palavras não conseguem.",
     description: "Elegante e cheio de significado, este buquê com 8 rosas frescas é perfeito para quem quer surpreender com estilo. Cada rosa é cuidadosamente selecionada e combinada with folhagens verdes que destacam sua beleza natural. A embalagem sofisticada e o laço em cetim completam o arranjo com um toque de charme. Ideal para momentos especiais como aniversários, celebrações, declarações de amor ou simplesmente para transformar o dia de alguém.", 
     price: "R$ 149,90", 
-    images: ["/products/images/Captura_de_tela_2026-06-06_225448.png"],
+    images: ["/products/images/buque-8-rosas-1.png", "/products/images/buque-8-rosas-2.png", "/products/images/buque-8-rosas-3.png"],
     category: 'buques'
   },
   { 
