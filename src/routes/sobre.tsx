@@ -207,11 +207,11 @@ function SobrePage() {
                 </a>
               </div>
 
-              <div className="contact-block contact-address p-8 bg-white rounded-3xl shadow-card border border-gold-main/5 flex gap-6">
-                <div className="contact-address-icon text-3xl shrink-0">📍</div>
+              <div className="contact-block contact-address p-6 md:p-8 bg-white rounded-3xl shadow-card border border-gold-main/5 flex gap-4 md:gap-6">
+                <div className="contact-address-icon text-2xl md:text-3xl shrink-0">📍</div>
                 <div>
-                  <strong className="text-xl font-bold text-text-dark block mb-2">Nossa Localização</strong>
-                  <p className="text-sm text-text-medium leading-relaxed mb-4">
+                  <strong className="text-lg md:text-xl font-bold text-text-dark block mb-2">Nossa Localização</strong>
+                  <p className="text-xs md:text-sm text-text-medium leading-relaxed mb-4">
                     Subsolo · Shopping Central Park Cotia<br />
                     Av. Ivo Mário Isaac Pires, 4040<br />
                     Tijuco Preto, Vargem Grande Paulista — SP<br />
