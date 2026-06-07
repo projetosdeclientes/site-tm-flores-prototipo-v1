@@ -282,7 +282,7 @@ function Index() {
                 { name: "Cesta Presente", image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800", desc: "Kit gourmet em bandeja elegante com laço. Perfeito para datas especiais." }
               ].map((p, i) => (
                 <div key={i} className="snap-center min-w-[78vw] md:min-w-[260px] lg:min-w-0">
-                  <ProductCard id={p.name.toLowerCase().replace(' ', '-')} name={p.name} description={p.desc} price="Sob consulta" image={p.image} />
+                  <ProductCard id={p.name.toLowerCase().replace(' ', '-')} name={p.name} description={p.desc} price="Sob consulta" images={[p.image]} />
                 </div>
               ))}
               <div className="snap-center min-w-[78vw] md:min-w-[260px] lg:min-w-0">
