@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Clock, Phone, Send } from "lucide-react";
+import { MapPin, Clock, Phone } from "lucide-react";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { InstagramIcon } from "./InstagramIcon";
 import { LogoCircle } from "./LogoCircle";
 
 
@@ -26,10 +27,10 @@ export function Footer() {
               href="https://www.instagram.com/tmfloreseplantas"
               target="_blank"
               rel="noopener"
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white hover:scale-110 transition-transform"
               aria-label="Instagram"
             >
-              <Send size={20} />
+              <InstagramIcon size={20} />
             </a>
             <a
               href="https://wa.me/5511918475136"
