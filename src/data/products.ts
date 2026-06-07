@@ -94,7 +94,7 @@ export const products: Product[] = [
     tagline: "Mais do que flores — um gesto que emociona.",
     description: "Com 10 rosas frescas, vibrantes e selecionadas com rigor, este buquê é a escolha ideal para quem deseja causar uma impressão marcante. Cada flor representa carinho, admiração e intensidade, criando um arranjo visualmente forte e emocionalmente significativo. Finalizado com folhagens nobres, embalagem moderna e laço em cetim, é perfeito para aniversários, pedidos de desculpas, datas românticas ou conquistas importantes.", 
     price: "R$ 174,90", 
-    images: ["/products/images/Captura_de_tela_2026-06-06_225457.png"],
+    images: ["/products/images/buque-10-rosas-1.png", "/products/images/buque-10-rosas-2.png", "/products/images/buque-10-rosas-3.png"],
     category: 'buques'
   },
   { 
