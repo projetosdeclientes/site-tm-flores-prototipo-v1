@@ -167,6 +167,14 @@ export const products: Product[] = [
     category: 'buques-mistos'
   },
   {
+    id: "buque-misto-encanto",
+    name: "Buquê Misto Encanto",
+    description: "Um arranjo exuberante e sofisticado que celebra a diversidade floral. Esta composição única destaca o contraste vibrante entre lírios em tons de rosa e amarelo, girassóis majestosos e alstroemérias coloridas. O mix é delicadamente finalizado com gypsophila branca e folhagens variadas, criando uma harmonia de cores e texturas envolta em uma embalagem clássica branca com laço de ráfia natural.",
+    price: "Sob consulta",
+    images: ["/products/images/buque-misto-encanto-1.png", "/products/images/buque-misto-encanto-2.png", "/products/images/buque-misto-encanto-3.png"],
+    category: 'buques-mistos'
+  },
+  {
     id: "buque-misto-primavera",
     name: "Buquê Misto Primavera",
     description: "Uma explosão de cores e aromas com as melhores flores da estação. Composição vibrante e alegre.",
