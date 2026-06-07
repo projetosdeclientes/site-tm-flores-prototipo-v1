@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown, Instagram } from "lucide-react";
+import { Menu, X, ChevronDown, Send } from "lucide-react";
 import { LogoCircle } from "./LogoCircle";
 
 
@@ -39,7 +39,7 @@ export function Navbar() {
             : "py-6 opacity-0 -translate-y-full pointer-events-none"
         }`}
       >
-        <div className="container mx-auto px-6 flex items-center justify-between">
+        <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <LogoCircle className="w-14 h-14 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-110" />
@@ -99,7 +99,7 @@ export function Navbar() {
               className="p-2 text-purple-main hover:scale-110 transition-transform"
               aria-label="Instagram"
             >
-              <Instagram size={24} />
+              <Send size={24} />
             </a>
             <a
               href="https://wa.me/5511918475136"

@@ -2,7 +2,7 @@ import { useParams, Link } from '@tanstack/react-router';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { ProductCard } from '@/components/ProductCard';
-import { MessageCircle, Check, Image as ImageIcon } from 'lucide-react';
+import { MessageCircle, Check, Image as ImageIcon, ArrowLeft, ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { products as productsData } from '@/data/products';
 
@@ -47,13 +47,43 @@ export function ProductPage() {
     }
   ];
 
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const minSwipeDistance = 50;
+
+  const nextImage = () => {
+    const nextIdx = (activeThumb + 1) % thumbnails.length;
+    setActiveThumb(nextIdx);
+  };
+
+  const prevImage = () => {
+    const prevIdx = (activeThumb - 1 + thumbnails.length) % thumbnails.length;
+    setActiveThumb(prevIdx);
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) nextImage();
+    if (isRightSwipe) prevImage();
+  };
+
   return (
     <main className="min-h-screen bg-[#FAF5EC] overflow-x-hidden">
       <Navbar />
       
-      <section className="pt-40 pb-24 bg-[#FAF5EC]">
+      <section className="pt-32 md:pt-40 pb-24 bg-[#FAF5EC]">
         <div className="container mx-auto px-6">
-          <nav className="flex items-center gap-2 text-[13px] text-[#9B8AB5] font-sans mb-12">
+          <nav className="flex items-center gap-2 text-[13px] text-[#9B8AB5] font-sans mb-8 md:mb-12">
             <Link to="/" className="hover:text-purple-main transition-colors">Início</Link>
             <span>&gt;</span>
             <Link to="/buques" className="hover:text-purple-main transition-colors">Buquês</Link>
@@ -61,20 +91,50 @@ export function ProductPage() {
             <span className="font-semibold text-text-dark">{product.name}</span>
           </nav>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
             <div className="flex flex-col gap-6">
-              <div className="relative h-[320px] md:h-[520px] rounded-[20px] overflow-hidden shadow-xl bg-white">
+              <div 
+                className="relative h-[320px] md:h-[520px] rounded-[20px] overflow-hidden shadow-xl bg-white group/gallery"
+                onTouchStart={onTouchStart}
+                onTouchMove={onTouchMove}
+                onTouchEnd={onTouchEnd}
+              >
                 {mainImage ? (
-                  <img 
-                    src={mainImage} 
-                    alt={product.name} 
-                    className="w-full h-full object-cover transition-all duration-500"
-                    style={{ 
-                      filter: thumbnails[activeThumb].filter,
-                      objectPosition: thumbnails[activeThumb].objectPosition,
-                      transform: thumbnails[activeThumb].transform
-                    }}
-                  />
+                  <>
+                    <img 
+                      src={mainImage} 
+                      alt={product.name} 
+                      className="w-full h-full object-cover transition-all duration-500"
+                      style={{ 
+                        filter: thumbnails[activeThumb].filter,
+                        objectPosition: thumbnails[activeThumb].objectPosition,
+                        transform: thumbnails[activeThumb].transform
+                      }}
+                    />
+                    {/* Navigation Arrows for Mobile and Desktop */}
+                    <button 
+                      onClick={prevImage}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/80 text-purple-deep flex items-center justify-center shadow-lg md:opacity-0 md:group-hover/gallery:opacity-100 transition-opacity"
+                    >
+                      <ArrowLeft size={20} />
+                    </button>
+                    <button 
+                      onClick={nextImage}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/80 text-purple-deep flex items-center justify-center shadow-lg md:opacity-0 md:group-hover/gallery:opacity-100 transition-opacity"
+                    >
+                      <ArrowRight size={20} />
+                    </button>
+                    
+                    {/* Dots for mobile */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10 md:hidden">
+                      {thumbnails.map((_, i) => (
+                        <div 
+                          key={i} 
+                          className={`w-2 h-2 rounded-full transition-all ${i === activeThumb ? 'bg-gold-main w-4' : 'bg-white/60'}`} 
+                        />
+                      ))}
+                    </div>
+                  </>
                 ) : (
                   <div className="w-full h-full flex flex-col items-center justify-center text-[#9B8AB5] gap-4 bg-[#F8F7FF]">
                     <ImageIcon size={48} strokeWidth={1} />
@@ -82,7 +142,7 @@ export function ProductPage() {
                   </div>
                 )}
               </div>
-              <div className="flex gap-4">
+              <div className="hidden md:flex gap-4">
                 {thumbnails.map((thumb, i) => (
                   <button 
                     key={i}
@@ -107,6 +167,7 @@ export function ProductPage() {
                 ))}
               </div>
             </div>
+
 
             <div className="flex flex-col items-start pt-4">
               {product.badge ? (
