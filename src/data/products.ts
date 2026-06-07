@@ -151,6 +151,14 @@ export const products: Product[] = [
     category: 'plantas'
   },
   {
+    id: "buque-misto-rosas-cravos",
+    name: "Buquê Misto Premium",
+    description: "Buquê sofisticado com um mix harmonioso de rosas vermelhas vibrantes e cravos rosa delicados. A composição é complementada por ramos de gypsophila, que trazem leveza e volume ao arranjo. Envolto em uma embalagem elegante com acabamento em tela vermelha e um imponente laço acetinado.",
+    price: "Sob consulta",
+    images: ["/products/images/buque-misto-especial-1.png", "/products/images/buque-misto-especial-2.png", "/products/images/buque-misto-especial-3.png"],
+    category: 'buques-mistos'
+  },
+  {
     id: "buque-misto-primavera",
     name: "Buquê Misto Primavera",
     description: "Uma explosão de cores e aromas com as melhores flores da estação. Composição vibrante e alegre.",
