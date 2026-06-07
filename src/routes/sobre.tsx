@@ -20,16 +20,16 @@ function SobrePage() {
       <Navbar />
       
       {/* Hero */}
-      <section className="about-hero pt-48 pb-32 bg-purple-deep relative overflow-hidden text-center">
+      <section className="about-hero pt-32 md:pt-48 pb-20 md:pb-32 bg-purple-deep relative overflow-hidden text-center">
         <div className="container mx-auto px-6 relative z-10 about-hero-content reveal-fade">
-          <span className="section-eyebrow text-gold-main font-sans font-bold uppercase tracking-[0.3em] text-xs mb-6 block">
+          <span className="section-eyebrow text-gold-main font-sans font-bold uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4 md:mb-6 block">
             Conheça nossa história
           </span>
-          <h1 className="about-hero-title font-serif text-5xl md:text-8xl font-light text-white leading-tight mb-8">
+          <h1 className="about-hero-title font-serif text-4xl md:text-8xl font-light text-white leading-tight mb-6 md:mb-8">
             Sobre a<br />
             <em className="gold-text italic">TM Flores e Plantas</em>
           </h1>
-          <p className="about-hero-lead font-script text-2xl md:text-4xl text-lavender-light">
+          <p className="about-hero-lead font-script text-xl md:text-4xl text-lavender-light px-4">
             Nascemos de um sonho. Crescemos com amor.
             E estamos aqui para florescer junto com você.
           </p>
@@ -37,8 +37,8 @@ function SobrePage() {
         
         {/* Animated Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
-          <div className="absolute top-[-10%] left-[-5%] w-96 h-96 bg-purple-main blur-[120px] rounded-full animate-pulse" />
-          <div className="absolute bottom-[-10%] right-[-5%] w-96 h-96 bg-gold-main blur-[120px] rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-[-10%] left-[-5%] w-64 md:w-96 h-64 md:h-96 bg-purple-main blur-[80px] md:blur-[120px] rounded-full animate-pulse" />
+          <div className="absolute bottom-[-10%] right-[-5%] w-64 md:w-96 h-64 md:h-96 bg-gold-main blur-[80px] md:blur-[120px] rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
         </div>
         
         {/* Wave bottom */}
@@ -178,14 +178,14 @@ function SobrePage() {
                   href="https://wa.me/5511918475136" 
                   target="_blank" 
                   rel="noopener"
-                  className="contact-btn contact-btn-whatsapp flex items-center gap-6 p-8 bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all border border-gold-main/5 group"
+                  className="contact-btn contact-btn-whatsapp flex items-center gap-4 md:gap-6 p-6 md:p-8 bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all border border-gold-main/5 group"
                 >
-                  <div className="w-14 h-14 bg-whatsapp rounded-2xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
-                    <MessageCircle size={32} />
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-whatsapp rounded-2xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                    <MessageCircle size={28} className="md:w-8 md:h-8" />
                   </div>
                   <div>
-                    <strong className="text-xl font-bold text-text-dark block">(11) 91847-5136</strong>
-                    <span className="text-sm text-text-medium">WhatsApp · Clique para falar</span>
+                    <strong className="text-lg md:text-xl font-bold text-text-dark block">(11) 91847-5136</strong>
+                    <span className="text-xs md:text-sm text-text-medium">WhatsApp · Clique para falar</span>
                   </div>
                 </a>
               </div>
@@ -195,23 +195,23 @@ function SobrePage() {
                   href="https://www.instagram.com/tmfloreseplantas" 
                   target="_blank" 
                   rel="noopener"
-                  className="contact-btn contact-btn-instagram flex items-center gap-6 p-8 bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all border border-gold-main/5 group"
+                  className="contact-btn contact-btn-instagram flex items-center gap-4 md:gap-6 p-6 md:p-8 bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all border border-gold-main/5 group"
                 >
-                  <div className="w-14 h-14 bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] rounded-2xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
-                    <Instagram size={32} />
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] rounded-2xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                    <Instagram size={28} className="md:w-8 md:h-8" />
                   </div>
                   <div>
-                    <strong className="text-xl font-bold text-text-dark block">@tmfloreseplantas</strong>
-                    <span className="text-sm text-text-medium">Instagram · Nos siga</span>
+                    <strong className="text-lg md:text-xl font-bold text-text-dark block">@tmfloreseplantas</strong>
+                    <span className="text-xs md:text-sm text-text-medium">Instagram · Nos siga</span>
                   </div>
                 </a>
               </div>
 
-              <div className="contact-block contact-address p-8 bg-white rounded-3xl shadow-card border border-gold-main/5 flex gap-6">
-                <div className="contact-address-icon text-3xl shrink-0">📍</div>
+              <div className="contact-block contact-address p-6 md:p-8 bg-white rounded-3xl shadow-card border border-gold-main/5 flex gap-4 md:gap-6">
+                <div className="contact-address-icon text-2xl md:text-3xl shrink-0">📍</div>
                 <div>
-                  <strong className="text-xl font-bold text-text-dark block mb-2">Nossa Localização</strong>
-                  <p className="text-sm text-text-medium leading-relaxed mb-4">
+                  <strong className="text-lg md:text-xl font-bold text-text-dark block mb-2">Nossa Localização</strong>
+                  <p className="text-xs md:text-sm text-text-medium leading-relaxed mb-4">
                     Subsolo · Shopping Central Park Cotia<br />
                     Av. Ivo Mário Isaac Pires, 4040<br />
                     Tijuco Preto, Vargem Grande Paulista — SP<br />
@@ -223,10 +223,10 @@ function SobrePage() {
                 </div>
               </div>
 
-              <div className="contact-block contact-hours p-8 bg-white rounded-3xl shadow-card border border-gold-main/5 flex gap-6">
-                <div className="contact-hours-icon text-3xl shrink-0">🕐</div>
+              <div className="contact-block contact-hours p-6 md:p-8 bg-white rounded-3xl shadow-card border border-gold-main/5 flex gap-4 md:gap-6">
+                <div className="contact-hours-icon text-2xl md:text-3xl shrink-0">🕐</div>
                 <div className="flex-grow">
-                  <strong className="text-xl font-bold text-text-dark block mb-4">Horário de Atendimento</strong>
+                  <strong className="text-lg md:text-xl font-bold text-text-dark block mb-4">Horário de Atendimento</strong>
                   <div className="hours-table space-y-2">
                     <div className="hours-row flex justify-between text-sm">
                       <span className="hours-day text-text-medium">Segunda a Sábado</span>
