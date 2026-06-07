@@ -23,7 +23,7 @@ export const products: Product[] = [
     name: "Buquê com 1 Rosa", 
     description: "Às vezes, um único gesto fala mais do que mil palavras. A expressão pura da delicadeza.", 
     price: "R$ 34,90", 
-    images: ["https://images.unsplash.com/photo-1548610762-7c6afe24c261?q=80&w=800&auto=format&fit=crop"],
+    images: ["/products/images/buque-1-rosa-1.png", "/products/images/buque-1-rosa-2.png", "/products/images/buque-1-rosa-3.png"],
     category: 'buques'
   },
   { 
