@@ -31,7 +31,7 @@ export const products: Product[] = [
     name: "Buquê com 2 Rosas", 
     description: "Simples, elegante e cheio de significado. Perfeito para gestos delicados e declarações sinceras.", 
     price: "R$ 54,90", 
-    images: ["https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?q=80&w=800&auto=format&fit=crop"],
+    images: ["/products/images/buque-2-rosas-1.png", "/products/images/buque-2-rosas-2.png", "/products/images/buque-2-rosas-3.png"],
     category: 'buques'
   },
   { 
