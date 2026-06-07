@@ -195,14 +195,14 @@ function SobrePage() {
                   href="https://www.instagram.com/tmfloreseplantas" 
                   target="_blank" 
                   rel="noopener"
-                  className="contact-btn contact-btn-instagram flex items-center gap-6 p-8 bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all border border-gold-main/5 group"
+                  className="contact-btn contact-btn-instagram flex items-center gap-4 md:gap-6 p-6 md:p-8 bg-white rounded-3xl shadow-card hover:shadow-card-hover transition-all border border-gold-main/5 group"
                 >
-                  <div className="w-14 h-14 bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] rounded-2xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
-                    <Instagram size={32} />
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] rounded-2xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                    <Instagram size={28} className="md:w-8 md:h-8" />
                   </div>
                   <div>
-                    <strong className="text-xl font-bold text-text-dark block">@tmfloreseplantas</strong>
-                    <span className="text-sm text-text-medium">Instagram · Nos siga</span>
+                    <strong className="text-lg md:text-xl font-bold text-text-dark block">@tmfloreseplantas</strong>
+                    <span className="text-xs md:text-sm text-text-medium">Instagram · Nos siga</span>
                   </div>
                 </a>
               </div>
