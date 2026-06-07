@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import { products as productsData } from '@/data/products';
 
 export function ProductPage() {
-  const { slug } = useParams({ from: '/buques/$slug' });
+  const { slug } = useParams({ strict: false });
   const productIndex = productsData.findIndex(p => p.id === slug);
   const product = productIndex !== -1 ? productsData[productIndex] : productsData[0];
   const [activeThumb, setActiveThumb] = useState(0);
@@ -20,7 +20,7 @@ export function ProductPage() {
   }, [product.id]);
 
   const relatedProducts = productsData
-    .filter(p => p.id !== product.id && p.category === 'buques')
+    .filter(p => p.id !== product.id && p.category === product.category)
     .slice(0, 4);
 
   const thumbnails = [
@@ -86,7 +86,12 @@ export function ProductPage() {
           <nav className="flex items-center gap-2 text-[13px] text-[#9B8AB5] font-sans mb-8 md:mb-12">
             <Link to="/" className="hover:text-purple-main transition-colors">Início</Link>
             <span>&gt;</span>
-            <Link to="/buques" className="hover:text-purple-main transition-colors">Buquês</Link>
+            <Link 
+              to={product.category === 'plantas' ? '/plantas' : '/buques'} 
+              className="hover:text-purple-main transition-colors"
+            >
+              {product.category === 'plantas' ? 'Plantas' : 'Buquês'}
+            </Link>
             <span>&gt;</span>
             <span className="font-semibold text-text-dark">{product.name}</span>
           </nav>
@@ -166,7 +171,7 @@ export function ProductPage() {
                 </span>
               ) : (
                 <span className="px-4 py-1.5 bg-[#F0EAFF] text-[#8B5AB6] border border-[#C4A8DC] rounded-full text-[11px] font-bold uppercase tracking-widest mb-6">
-                  Buquê Artesanal
+                  {product.category === 'plantas' ? 'Planta Natural' : 'Buquê Artesanal'}
                 </span>
               )}
               
@@ -194,7 +199,7 @@ export function ProductPage() {
               <div className="bg-[#F8F7FF] border border-[#E8E4F5] rounded-xl p-5 mb-10 w-full max-w-lg">
                 <h4 className="text-[13px] font-bold text-[#4A1575] uppercase tracking-wider mb-3 flex items-center gap-2">
                   <Check size={14} className="text-[#C9A040]" />
-                  Destaques dos nossos buquês
+                  Destaques {product.category === 'plantas' ? 'das nossas plantas' : 'dos nossos buquês'}
                 </h4>
                 <ul className="grid grid-cols-1 gap-2">
                   {[
