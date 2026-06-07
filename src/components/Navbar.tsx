@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, Send } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 import { LogoCircle } from "./LogoCircle";
 
 
@@ -105,8 +106,9 @@ export function Navbar() {
               href="https://wa.me/5511918475136"
               target="_blank"
               rel="noopener"
-              className="btn-whatsapp text-xs py-2 px-5"
+              className="btn-whatsapp text-xs py-2 px-5 flex items-center gap-1.5"
             >
+              <WhatsAppIcon size={14} />
               WhatsApp
             </a>
           </div>
@@ -173,10 +175,11 @@ export function Navbar() {
           <div className="mt-auto flex flex-col gap-4">
             <a
               href="https://wa.me/5511918475136"
-              className="btn-whatsapp justify-center py-4 w-full"
+              className="btn-whatsapp justify-center py-4 w-full flex items-center gap-2"
               target="_blank"
               rel="noopener"
             >
+              <WhatsAppIcon size={20} />
               Falar no WhatsApp
             </a>
             <a
