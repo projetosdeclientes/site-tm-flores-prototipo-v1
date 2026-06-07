@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown, Send } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { WhatsAppIcon } from "./WhatsAppIcon";
+import { InstagramIcon } from "./InstagramIcon";
 import { LogoCircle } from "./LogoCircle";
 
 
@@ -97,10 +98,10 @@ export function Navbar() {
               href="https://www.instagram.com/tmfloreseplantas"
               target="_blank"
               rel="noopener"
-              className="p-2 text-purple-main hover:scale-110 transition-transform"
+              className="p-2 text-white bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] rounded-lg hover:scale-110 transition-transform shadow-sm"
               aria-label="Instagram"
             >
-              <Send size={24} />
+              <InstagramIcon size={20} />
             </a>
             <a
               href="https://wa.me/5511918475136"
@@ -184,10 +185,11 @@ export function Navbar() {
             </a>
             <a
               href="https://www.instagram.com/tmfloreseplantas"
-              className="btn-instagram justify-center py-4 w-full"
+              className="btn-instagram justify-center py-4 w-full flex items-center gap-2"
               target="_blank"
               rel="noopener"
             >
+              <InstagramIcon size={20} />
               Seguir no Instagram
             </a>
           </div>
