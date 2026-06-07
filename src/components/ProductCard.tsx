@@ -1,4 +1,5 @@
-import { MessageCircle, ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 
@@ -137,7 +138,7 @@ export function ProductCard({
             onClick={(e) => e.stopPropagation()}
             className="flex-1 justify-center text-[13px] py-2 px-4 bg-whatsapp text-white rounded-full font-semibold flex items-center gap-1 transition-all hover:scale-105 flex justify-center"
           >
-            <MessageCircle size={16} />
+            <WhatsAppIcon size={16} />
             WhatsApp
           </a>
         </div>

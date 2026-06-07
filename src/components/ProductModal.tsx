@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { X, MessageCircle } from "lucide-react";
+import { X } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 import { cn } from "@/lib/utils";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -102,7 +103,7 @@ export function ProductModal({ product, open, onOpenChange }: ProductModalProps)
                   rel="noopener noreferrer"
                   className="bg-[#25D366] hover:bg-[#20ba5a] text-white w-full rounded-full py-4 px-6 flex items-center justify-center gap-3 font-bold transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-green-500/20"
                 >
-                  <MessageCircle size={22} />
+                  <WhatsAppIcon size={22} />
                   Pedir pelo WhatsApp
                 </a>
               </div>
