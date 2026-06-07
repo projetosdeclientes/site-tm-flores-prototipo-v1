@@ -121,7 +121,7 @@ export const products: Product[] = [
     tagline: "Presenteie com flores que impressionam e emocionam.",
     description: "Um presente grandioso para momentos que merecem ser inesquecíveis. Com 20 rosas frescas e deslumbrantes, este buquê transmite sentimentos profundos com intensidade, elegância e beleza. Ideal para celebrar o amor, marcar datas especiais ou surpreender com estilo e sofisticação. A composição é finalizada com folhagens selecionadas, embalagem refinada e laço em cetim, resultando em um arranjo de alto impacto visual e emocional.", 
     price: "R$ 299,90", 
-    images: ["/products/images/Captura_de_tela_2026-06-06_225519.png"],
+    images: ["/products/images/buque-20-rosas-1.png", "/products/images/buque-20-rosas-2.png", "/products/images/buque-20-rosas-3.png"],
     category: 'buques'
   },
   { 
