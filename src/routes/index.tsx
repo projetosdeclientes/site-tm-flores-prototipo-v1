@@ -162,7 +162,7 @@ function Index() {
 
   return (
     <main className="min-h-screen">
-      <AnnouncementBar />
+      {/* Removed AnnouncementBar */}
       <Navbar />
       <Hero />
 
