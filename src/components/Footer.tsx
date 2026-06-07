@@ -12,7 +12,7 @@ export function Footer() {
               <img 
                 src="/assets/logo.png" 
                 alt="TM Flores e Plantas Logo" 
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain logo-pixel-perfect"
               />
             </div>
             <span className="text-2xl font-serif font-bold gold-text tracking-wider">
