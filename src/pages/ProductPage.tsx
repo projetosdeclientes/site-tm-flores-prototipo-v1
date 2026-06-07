@@ -2,7 +2,8 @@ import { useParams, Link } from '@tanstack/react-router';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { ProductCard } from '@/components/ProductCard';
-import { MessageCircle, Check, Image as ImageIcon, ArrowLeft, ArrowRight } from 'lucide-react';
+import { Check, Image as ImageIcon, ArrowLeft, ArrowRight } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 import { useState, useEffect } from 'react';
 import { products as productsData } from '@/data/products';
 
@@ -217,7 +218,7 @@ export function ProductPage() {
                   rel="noopener"
                   className="w-full h-[54px] bg-[#25D366] text-white flex items-center justify-center rounded-full font-bold gap-3 shadow-[0_4px_20px_rgba(37,211,102,0.3)] hover:scale-[1.02] transition-transform"
                 >
-                  <MessageCircle size={22} />
+                  <WhatsAppIcon size={22} />
                   Pedir pelo WhatsApp
                 </a>
                 <p className="text-center text-[12px] text-[#9B8AB5] font-sans flex items-center justify-center gap-1.5">
