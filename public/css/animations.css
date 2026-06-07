@@ -1,0 +1,292 @@
+/* 🌫️ 1. Background de Orbs Animados */
+.bg-orbs-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: orb-breathe var(--dur) ease-in-out infinite alternate;
+}
+
+.orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(149, 106, 192, 0.13) 0%, transparent 70%);
+  top: -200px;
+  right: -150px;
+  --dur: 8s;
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(196, 168, 220, 0.10) 0%, transparent 70%);
+  bottom: 10%;
+  left: -100px;
+  --dur: 10s;
+  animation-delay: -3s;
+}
+
+.orb-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(201, 160, 64, 0.07) 0%, transparent 70%);
+  top: 40%;
+  right: 20%;
+  --dur: 12s;
+  animation-delay: -6s;
+}
+
+@keyframes orb-breathe {
+  0%   { transform: scale(1)    translateY(0px);    opacity: 0.7; }
+  50%  { transform: scale(1.15) translateY(-20px);  opacity: 1; }
+  100% { transform: scale(0.9)  translateY(10px);   opacity: 0.5; }
+}
+
+/* 🎠 2. Hero Banner — Parallax e Carrossel */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 560px;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.hero-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s var(--ease-silk);
+}
+
+.hero-slide {
+  flex: 0 0 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-parallax-layer {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+
+.hero-parallax-layer img {
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  transform: translateY(0);
+  will-change: transform;
+  filter: brightness(0.7);
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-16) var(--space-20);
+  background: linear-gradient(
+    to top,
+    rgba(26, 18, 32, 0.70) 0%,
+    rgba(26, 18, 32, 0.30) 50%,
+    transparent 100%
+  );
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: var(--space-10) var(--space-6);
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.hero-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--gold-main);
+  margin-bottom: var(--space-3);
+}
+
+.hero-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: var(--space-8);
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.hero-headline em {
+  font-style: italic;
+  color: var(--lavender);
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-2);
+  z-index: 20;
+}
+
+.hero-dot {
+  width: 8px; height: 8px;
+  border-radius: var(--radius-full);
+  background: rgba(255,255,255,0.4);
+  border: none;
+  cursor: pointer;
+  transition: all var(--dur-normal) var(--ease-spring);
+}
+
+.hero-dot.active {
+  width: 28px;
+  background: var(--gold-main);
+}
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all var(--dur-normal);
+  z-index: 20;
+}
+
+@media (max-width: 768px) {
+  .hero-arrow { display: none; }
+}
+
+.hero-arrow:hover { background: rgba(255,255,255,0.25); }
+.hero-arrow-prev { left: var(--space-8); }
+.hero-arrow-next { right: var(--space-8); }
+
+/* 📣 3. Barra de Aviso Animada */
+.announcement-bar {
+  background: linear-gradient(90deg, var(--purple-deep) 0%, var(--purple-main) 50%, var(--purple-deep) 100%);
+  color: var(--lavender-light);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  overflow: hidden;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 110;
+}
+
+
+.announcement-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee-slide 24s linear infinite;
+  align-items: center;
+}
+
+.announcement-text {
+  padding: 0 var(--space-12);
+  display: flex;
+  align-items: center;
+}
+
+.announcement-link {
+  color: var(--gold-main);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: var(--space-2);
+  transition: color var(--dur-fast);
+}
+.announcement-link:hover { color: var(--gold-bright); }
+
+.announcement-pulse {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold-main);
+  margin-right: var(--space-2);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes marquee-slide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.6); }
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-silk), transform 0.8s var(--ease-silk);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s var(--ease-silk), transform 0.8s var(--ease-silk);
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s var(--ease-silk), transform 0.8s var(--ease-silk);
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s var(--ease-silk), transform 0.8s var(--ease-silk);
+}
+
+.reveal-scale.active {
+  opacity: 1;
+  transform: scale(1);
+}

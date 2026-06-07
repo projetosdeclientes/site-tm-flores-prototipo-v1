@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TM Flores e Plantas — Início</title>
+  <meta name="description" content="TM Flores e Plantas: buquês frescos, plantas e encomendas personalizadas no Shopping Central Park Cotia. Peça pelo WhatsApp!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Open+Sans:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body>
+
+  <div class="bg-orbs-container" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="announcement-bar" role="marquee" aria-live="polite">
+    <div class="announcement-track">
+      <span class="announcement-pulse"></span>
+      <span class="announcement-text">
+        ✦ Buquê do seu jeito — mande a foto do que sonha e a gente faz acontecer.
+        <a href="encomendas.html" class="announcement-link">Ver como funciona →</a>
+      </span>
+      <span class="announcement-text" aria-hidden="true">
+        ✦ Buquê do seu jeito — mande a foto do que sonha e a gente faz acontecer.
+        <a href="encomendas.html" class="announcement-link" tabindex="-1">Ver como funciona →</a>
+      </span>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="TM Flores e Plantas" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Início</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-link nav-dropdown-toggle">Produtos <span class="dropdown-arrow">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <a href="buques.html" class="dropdown-item">🌹 Buquês</a>
+            <a href="plantas.html" class="dropdown-item">🌿 Plantas</a>
+          </div>
+        </li>
+        <li><a href="encomendas.html" class="nav-link">Encomendas</a></li>
+        <li><a href="sobre.html" class="nav-link">Sobre a Loja</a></li>
+      </ul>
+      <div class="nav-ctas">
+        <a href="https://www.instagram.com/tmfloreseplantas" target="_blank" rel="noopener" class="nav-social-btn btn-instagram-icon" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://wa.me/5511918475136?text=Olá!%20Vi%20o%20site%20e%20quero%20fazer%20um%20pedido!" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">WhatsApp</a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-menu-close" aria-label="Fechar menu">✕</button>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="buques.html">🌹 Buquês</a></li>
+        <li><a href="plantas.html">🌿 Plantas</a></li>
+        <li><a href="encomendas.html">Encomendas Personalizadas</a></li>
+        <li><a href="sobre.html">Sobre a Loja</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  </header>
+
+  <main>
+    <section class="hero-carousel" aria-label="Banners principais">
+      <div class="hero-track" id="heroTrack">
+        <div class="hero-slide active">
+          <div class="hero-parallax-layer">
+            <img src="https://images.unsplash.com/photo-1544485303-057d22b0f4cd?q=80&w=1920" alt="Entrega emocional">
+          </div>
+          <div class="hero-content">
+            <p class="hero-eyebrow">TM Flores e Plantas</p>
+            <h1 class="hero-headline">Flores que<br><em>falam pelo coração</em></h1>
+            <a href="https://wa.me/5511918475136" class="btn btn-whatsapp hero-cta">Fazer meu pedido</a>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <div class="hero-parallax-layer">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1920" alt="Entrega minimalista">
+          </div>
+          <div class="hero-content">
+            <p class="hero-eyebrow">Para quem você ama</p>
+            <h1 class="hero-headline">Um gesto <em>simples</em> que fica para sempre</h1>
+            <a href="buques.html" class="btn btn-primary hero-cta">Ver nossos buquês</a>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <div class="hero-parallax-layer">
+            <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1920" alt="Campo ao pôr do sol">
+          </div>
+          <div class="hero-content">
+            <p class="hero-eyebrow">Para os momentos únicos</p>
+            <h1 class="hero-headline">Flores que marcam <em>histórias reais</em></h1>
+            <a href="encomendas.html" class="btn btn-primary hero-cta">Fazer um pedido especial</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-dots">
+        <button class="hero-dot active" aria-label="Slide 1"></button>
+        <button class="hero-dot" aria-label="Slide 2"></button>
+        <button class="hero-dot" aria-label="Slide 3"></button>
+      </div>
+      <button class="hero-arrow hero-arrow-prev" aria-label="Slide anterior">‹</button>
+      <button class="hero-arrow hero-arrow-next" aria-label="Próximo slide">›</button>
+    </section>
+
+    <section class="products-section" id="maisVendidos">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Destaques</span>
+          <h2 class="section-title">Mais Vendidos</h2>
+        </div>
+        <div class="products-carousel-wrapper">
+          <div class="products-carousel reveal" id="carouselMaisVendidos">
+            <article class="product-card" data-product="buque-3-rosas">
+              <div class="product-card-images">
+                <img src="https://images.unsplash.com/photo-1562690868-60bbe7293e94?q=80&w=600" alt="Buquê com 3 Rosas" class="product-card-image">
+              </div>
+              <div class="product-card-body">
+                <h3 class="product-card-name">Buquê com 3 Rosas</h3>
+                <p class="product-card-desc">Amor, respeito e admiração em um único gesto. Com rosas frescas, folhagens e acabamento refinado.</p>
+                <div class="product-card-price"><span class="product-card-price-label">A partir de</span>R$ 69,90</div>
+                <a href="https://wa.me/5511918475136?text=Olá!%20Tenho%20interesse%20no%20Buquê%20com%203%20Rosas" class="btn btn-whatsapp product-card-cta" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+              </div>
+            </article>
+            <article class="product-card" data-product="buque-5-rosas">
+              <div class="product-card-images">
+                <img src="https://images.unsplash.com/photo-1596003903067-bf5762ad5c19?q=80&w=600" alt="Buquê com 5 Rosas" class="product-card-image">
+              </div>
+              <div class="product-card-body">
+                <h3 class="product-card-name">Buquê com 5 Rosas</h3>
+                <p class="product-card-desc">Cinco motivos para encantar quem você ama. Elegância e emoção em cada pétala.</p>
+                <div class="product-card-price">R$ 99,90</div>
+                <a href="https://wa.me/5511918475136?text=Olá!%20Tenho%20interesse%20no%20Buquê%20com%205%20Rosas" class="btn btn-whatsapp product-card-cta" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+              </div>
+            </article>
+            <article class="product-card" data-product="buque-12-rosas">
+              <div class="product-card-images">
+                <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?q=80&w=600" alt="Buquê com 12 Rosas" class="product-card-image">
+              </div>
+              <div class="product-card-body">
+                <h3 class="product-card-name">Buquê com 12 Rosas</h3>
+                <p class="product-card-desc">Um símbolo clássico de amor. Doze rosas selecionadas com acabamento refinado.</p>
+                <div class="product-card-price">R$ 234,90</div>
+                <a href="https://wa.me/5511918475136?text=Olá!%20Tenho%20interesse%20no%20Buquê%20com%2012%20Rosas" class="btn btn-whatsapp product-card-cta" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+              </div>
+            </article>
+            <article class="product-card" data-product="rosa-unitaria">
+              <div class="product-card-images">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600" alt="Rosa Unitária" class="product-card-image">
+              </div>
+              <div class="product-card-body">
+                <h3 class="product-card-name">Rosa Unitária</h3>
+                <p class="product-card-desc">Uma rosa. Uma mensagem. Um sentimento profundo.</p>
+                <div class="product-card-price">R$ 10,00</div>
+                <a href="https://wa.me/5511918475136?text=Olá!%20Tenho%20interesse%20em%20uma%20Rosa%20Unitária" class="btn btn-whatsapp product-card-cta" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+              </div>
+            </article>
+            <a href="buques.html" class="product-card-more">
+              <span class="product-card-more-icon">🌹</span>
+              <span>Ver todos</span>
+              <span class="product-card-more-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="store-teaser-section">
+      <div class="container">
+        <div class="store-teaser-grid">
+          <div class="store-teaser-image reveal-left">
+            <div class="store-teaser-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=800" alt="Loja" class="store-teaser-img">
+              <div class="store-teaser-badge">Fundada em 2024</div>
+            </div>
+          </div>
+          <div class="store-teaser-content reveal-right">
+            <span class="section-eyebrow">Nossa história</span>
+            <h2 class="section-title" style="text-align:left;">Ainda não conhece<br><em>a nossa loja?</em></h2>
+            <p class="store-teaser-text">Nascemos em 2024 com um sonho: levar beleza, emoção e cuidado para a vida das pessoas.</p>
+            <p class="store-teaser-script">"Florescendo histórias e fortalecendo laços."</p>
+            <a href="sobre.html" class="btn btn-primary btn-magnetic">Conheça nossa história</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-preview-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Quem já recebeu</span>
+          <h2 class="section-title">O que dizem sobre a gente</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Recebi o buquê de 12 rosas e me emocionei demais. As flores chegaram frescas."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">M</div>
+              <div><strong>Mariana S.</strong><span>Cliente</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Comprei como presente de aniversário. A floricultura é incrível, atendimento cuidadoso."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">C</div>
+              <div><strong>Carlos R.</strong><span>Cliente</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Pedi um buquê personalizado enviando a foto e ficou exatamente como sonhei."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">A</div>
+              <div><strong>Ana P.</strong><span>Cliente</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top: var(--space-10);">
+          <a href="sobre.html#depoimentos" class="btn btn-outline">Ver todos os depoimentos →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="TM Flores e Plantas" class="footer-logo">
+          <p class="footer-tagline">Florescendo histórias e fortalecendo laços.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/5511918475136" target="_blank" rel="noopener" class="social-btn social-btn-whatsapp" aria-label="WhatsApp">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/tmfloreseplantas" target="_blank" rel="noopener" class="social-btn social-btn-instagram" aria-label="Instagram">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3 class="footer-heading">Navegação</h3>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="buques.html">Buquês</a></li>
+            <li><a href="plantas.html">Plantas</a></li>
+            <li><a href="encomendas.html">Encomendas</a></li>
+            <li><a href="sobre.html">Sobre a Loja</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3 class="footer-heading">Contato</h3>
+          <div class="footer-contact-item">
+            <a href="https://wa.me/5511918475136" target="_blank" rel="noopener" style="color: var(--whatsapp); font-weight: 700;">(11) 91847-5136</a>
+          </div>
+          <div class="footer-contact-item">
+            <a href="https://www.instagram.com/tmfloreseplantas" target="_blank" rel="noopener">@tmfloreseplantas</a>
+          </div>
+          <div class="footer-hours">
+            <h4 class="footer-hours-title">Horário de Atendimento</h4>
+            <p>Seg a Sáb: <strong>10h às 22h</strong></p>
+            <p>Dom: <strong>12h às 20h</strong></p>
+          </div>
+        </div>
+        <div class="footer-location">
+          <h3 class="footer-heading">Onde Estamos</h3>
+          <p class="footer-address">Subsolo · Shopping Central Park Cotia<br>Vargem Grande Paulista — SP</p>
+          <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.1234!2d-46.9915545!3d-23.6428329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cfa79bd9be0649%3A0x59310925c559aeae!2sTM%20Flores%20e%20Plantas!5e0!3m2!1spt-BR!2sbr!4v1234567890" width="100%" height="120" style="border:0; border-radius:var(--radius-md);" allowfullscreen="" loading="lazy" title="Localização TM Flores e Plantas no Google Maps"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 TM Flores e Plantas. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="page-transition-overlay" id="pageTransitionOverlay"></div>
+  <div class="float-whatsapp" id="floatWhatsApp">
+    <a href="https://wa.me/5511918475136" target="_blank" rel="noopener">WA</a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="js/reveal.js" defer></script>
+  <script src="js/tilt-3d.js" defer></script>
+  <script src="js/product-carousel.js" defer></script>
+  <script src="js/hero-carousel.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TM Flores e Plantas — Plantas</title>
+  <meta name="description" content="Catálogo de plantas ornamentais na TM Flores e Plantas. Verde que transforma ambientes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Open+Sans:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/pages/products.css">
+</head>
+<body>
+
+  <div class="bg-orbs-container" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="TM Flores e Plantas" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Início</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-link nav-dropdown-toggle active">Produtos <span class="dropdown-arrow">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <a href="buques.html" class="dropdown-item">🌹 Buquês</a>
+            <a href="plantas.html" class="dropdown-item">🌿 Plantas</a>
+          </div>
+        </li>
+        <li><a href="encomendas.html" class="nav-link">Encomendas</a></li>
+        <li><a href="sobre.html" class="nav-link">Sobre a Loja</a></li>
+      </ul>
+      <div class="nav-ctas">
+        <a href="https://wa.me/5511918475136" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">WhatsApp</a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-menu-close" aria-label="Fechar menu">✕</button>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="buques.html">🌹 Buquês</a></li>
+        <li><a href="plantas.html">🌿 Plantas</a></li>
+        <li><a href="encomendas.html">Encomendas Personalizadas</a></li>
+        <li><a href="sobre.html">Sobre a Loja</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  </header>
+
+  <main>
+    <section class="category-hero category-hero--plants">
+      <div class="container">
+        <div class="category-hero-content reveal">
+          <span class="section-eyebrow">Verde que transforma</span>
+          <h1 class="category-hero-title">Plantas</h1>
+          <p class="category-hero-subtitle">Beleza que dura. Presentes que crescem com quem recebe.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-catalog-section">
+      <div class="container">
+        <div class="products-catalog-grid">
+          <!-- ORQUIDEA ROSA -->
+          <article class="product-card reveal" id="orquidea-rosa">
+            <div class="product-card-gallery"><img src="https://images.unsplash.com/photo-1599232458872-5060486e2aac?q=80&w=800" alt="Orquídea Rosa" class="product-card-image" loading="lazy"></div>
+            <div class="product-card-body">
+              <h2 class="product-card-name">Orquídea Rosa</h2>
+              <span class="product-card-type-badge">Planta</span>
+              <p class="product-card-desc">Símbolo de elegância e sofisticação. Transforma qualquer ambiente.</p>
+              <div class="product-card-price">Sob consulta</div>
+              <a href="https://wa.me/5511918475136?text=Olá!%20Tenho%20interesse%20na%20Orquídea%20Rosa" target="_blank" rel="noopener" class="btn btn-whatsapp product-card-cta">Consultar WhatsApp</a>
+            </div>
+          </article>
+          <!-- ORQUIDEA ROXA -->
+          <article class="product-card reveal" id="orquidea-roxa">
+            <div class="product-card-gallery"><img src="https://images.unsplash.com/photo-1599232458872-5060486e2aac?q=80&w=800" alt="Orquídea Roxa" class="product-card-image" loading="lazy"></div>
+            <div class="product-card-body">
+              <h2 class="product-card-name">Orquídea Roxa</h2>
+              <span class="product-card-type-badge">Planta</span>
+              <p class="product-card-desc">Flores exóticas e delicadas. Visual sofisticado e marcante.</p>
+              <div class="product-card-price">Sob consulta</div>
+              <a href="https://wa.me/5511918475136?text=Olá!%20Tenho%20interesse%20na%20Orquídea%20Roxa" target="_blank" rel="noopener" class="btn btn-whatsapp product-card-cta">Consultar WhatsApp</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="TM" class="footer-logo">
+          <p class="footer-tagline">Florescendo histórias.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-transition-overlay" id="pageTransitionOverlay"></div>
+  <script src="js/reveal.js" defer></script>
+  <script src="js/tilt-3d.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

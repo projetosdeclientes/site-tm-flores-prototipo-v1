@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TM Flores e Plantas — Encomendas Personalizadas</title>
+  <meta name="description" content="Peça seu buquê personalizado por foto na TM Flores e Plantas. O buquê dos seus sonhos em poucos passos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Open+Sans:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/pages/orders.css">
+</head>
+<body>
+
+  <div class="bg-orbs-container" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="TM Flores e Plantas" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Início</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-link nav-dropdown-toggle">Produtos <span class="dropdown-arrow">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <a href="buques.html" class="dropdown-item">🌹 Buquês</a>
+            <a href="plantas.html" class="dropdown-item">🌿 Plantas</a>
+          </div>
+        </li>
+        <li><a href="encomendas.html" class="nav-link active">Encomendas</a></li>
+        <li><a href="sobre.html" class="nav-link">Sobre a Loja</a></li>
+      </ul>
+      <div class="nav-ctas">
+        <a href="https://wa.me/5511918475136" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">WhatsApp</a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-menu-close" aria-label="Fechar menu">✕</button>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="buques.html">🌹 Buquês</a></li>
+        <li><a href="plantas.html">🌿 Plantas</a></li>
+        <li><a href="encomendas.html">Encomendas Personalizadas</a></li>
+        <li><a href="sobre.html">Sobre a Loja</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  </header>
+
+  <main>
+    <section class="orders-hero">
+      <div class="container">
+        <div class="orders-hero-content reveal">
+          <span class="section-eyebrow">Serviço exclusivo</span>
+          <h1 class="orders-hero-title">O buquê que você<br><em>sempre imaginou</em></h1>
+          <p class="orders-hero-subtitle">Mande a foto de um buquê que você amou. A gente faz acontecer.</p>
+          <a href="#como-funciona" class="btn btn-primary btn-magnetic">Ver como funciona ↓</a>
+        </div>
+        <div class="orders-hero-visual reveal" aria-hidden="true">
+          <div class="orders-hero-frame">
+            <div class="orders-hero-frame-inner">
+              <span class="orders-hero-icon">🌸</span>
+              <p class="orders-hero-frame-text">"Manda a foto<br>do buquê dos seus sonhos"</p>
+            </div>
+            <div class="orders-hero-frame-border"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works" id="como-funciona">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Simples assim</span>
+          <h2 class="section-title">Como Funciona</h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <div class="step-number">01</div>
+            <div class="step-icon">📸</div>
+            <h3 class="step-title">Escolha seu buquê</h3>
+            <p class="step-desc">Salve no celular a foto de um buquê que você amou em qualquer lugar.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-number">02</div>
+            <div class="step-icon">💬</div>
+            <h3 class="step-title">Mande pelo WhatsApp</h3>
+            <p class="step-desc">Mande a foto diretamente pelo nosso WhatsApp para avaliarmos.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-number">03</div>
+            <div class="step-icon">🌹</div>
+            <h3 class="step-title">A gente avalia</h3>
+            <p class="step-desc">Analisamos com cuidado e combinamos valor e prazo.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-number">04</div>
+            <div class="step-icon">🎁</div>
+            <h3 class="step-title">Receba seu buquê</h3>
+            <p class="step-desc">Confirmado o pedido, preparamos com carinho para você.</p>
+          </div>
+        </div>
+        <div class="how-it-works-cta reveal">
+          <p class="how-it-works-cta-text">Pronto pra começar?</p>
+          <a href="https://wa.me/5511918475136?text=Olá!%20Quero%20fazer%20um%20buquê%20personalizado" target="_blank" rel="noopener" class="btn btn-whatsapp btn-magnetic">Mandar minha foto agora</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="TM" class="footer-logo">
+          <p class="footer-tagline">Florescendo histórias.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-transition-overlay" id="pageTransitionOverlay"></div>
+  <script src="js/reveal.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Open Sans", "Helvetica Neue", sans-serif;
+  --font-script: "Great Vibes", cursive;
+
+  --color-gold-bright: #D4A840;
+  --color-gold-main: #C9A040;
+  --color-gold-dark: #8B6B1E;
+  --color-gold-text: #A07828;
+  
+  --color-purple-deep: #4A1575;
+  --color-purple-main: #8B5AB6;
+  --color-purple-medium: #9B70C0;
+  --color-purple-panel: #956AC0;
+  --color-purple-soft: #A670C0;
+  --color-lavender: #C4A8DC;
+  --color-lavender-light: #DDD0F0;
+  --color-lavender-ultra: #F0EAFF;
+
+  --color-cream: #FAF5EC;
+  --color-cream-warm: #F5EFE4;
+  --color-cream-dark: #EDE6D8;
+  
+  --color-white: #FFFFFF;
+  --color-black-rich: #1A1220;
+
+  --color-text-dark: #2D1A4A;
+  --color-text-medium: #6B4E8A;
+  --color-text-light: #9B8AB5;
+
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #128C7E;
+}
+
+:root {
+  --gold-gradient: linear-gradient(135deg, #D4A840 0%, #C9A040 45%, #8B6B1E 100%);
+  --gold-metallic: linear-gradient(180deg, #D4A840 0%, #C9A040 50%, #A07828 100%);
+  --instagram-gradient: linear-gradient(45deg, #833AB4, #FD1D1D, #F77737);
+  
+  --orb-purple: rgba(149, 106, 192, 0.13);
+  --orb-gold: rgba(201, 160, 64, 0.08);
+  --orb-lavender: rgba(196, 168, 220, 0.12);
+
+  --shadow-sm: 0 2px 8px rgba(74, 21, 117, 0.08);
+  --shadow-md: 0 4px 20px rgba(74, 21, 117, 0.12);
+  --shadow-lg: 0 8px 36px rgba(74, 21, 117, 0.16);
+  --shadow-xl: 0 16px 56px rgba(74, 21, 117, 0.20);
+  --shadow-card: 0 2px 12px rgba(74, 21, 117, 0.10), 0 1px 4px rgba(74, 21, 117, 0.06);
+  --shadow-card-hover: 0 12px 40px rgba(74, 21, 117, 0.18), 0 2px 8px rgba(74, 21, 117, 0.10);
+
+  --glass-bg: rgba(250, 245, 236, 0.80);
+  --glass-blur: blur(16px);
+  --glass-border: 1px solid rgba(201, 160, 64, 0.25);
+
+  --ease-silk: cubic-bezier(0.16, 1.00, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-text-dark font-sans antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+
+@layer components {
+  .bg-orbs-container {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: orb-breathe var(--dur) ease-in-out infinite alternate;
+  }
+
+  .orb-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(149, 106, 192, 0.13) 0%, transparent 70%);
+    top: -200px;
+    right: -150px;
+    --dur: 8s;
+    animation-delay: 0s;
+  }
+
+  .orb-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(196, 168, 220, 0.10) 0%, transparent 70%);
+    bottom: 10%;
+    left: -100px;
+    --dur: 10s;
+    animation-delay: -3s;
+  }
+
+  .orb-3 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(201, 160, 64, 0.07) 0%, transparent 70%);
+    top: 40%;
+    right: 20%;
+    --dur: 12s;
+    animation-delay: -6s;
+  }
+
+  .announcement-bar {
+    background: linear-gradient(90deg, var(--purple-deep) 0%, var(--purple-main) 50%, var(--purple-deep) 100%);
+    color: var(--lavender-light);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    overflow: hidden;
+    height: 36px;
+    display: flex;
+    align-items: center;
+  }
+
+  .announcement-track {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee-slide 24s linear infinite;
+  }
+
+  .announcement-text {
+    padding: 0 3rem;
+  }
+
+  .announcement-link {
+    color: var(--gold-main);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    transition: color 150ms;
+  }
+  .announcement-link:hover { color: #D4A840; }
+
+  .announcement-pulse {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold-main);
+    margin-right: 0.5rem;
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  .glass-nav {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-bottom: var(--glass-border);
+  }
+
+  .btn-whatsapp {
+    @apply bg-whatsapp text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-md;
+  }
+
+  .btn-instagram {
+    background: var(--instagram-gradient);
+    @apply text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-md;
+  }
+
+  .gold-text {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  /* Reveal animations */
+  .reveal-title, .reveal-stagger, .reveal-up, .reveal-fade, .reveal-left, .reveal-right, .reveal-scale {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s var(--ease-silk);
+  }
+
+  .reveal-title.active, .reveal-stagger.active, .reveal-up.active, .reveal-fade.active, .reveal-left.active, .reveal-right.active, .reveal-scale.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-left { transform: translateX(-30px); }
+  .reveal-right { transform: translateX(30px); }
+  .reveal-scale { transform: scale(0.9); }
+  .reveal-fade { transform: translateY(0); }
+  
+  .reveal-up.active {
+    animation: slide-up-reveal 1s var(--ease-silk) forwards;
+  }
+}
+
+@keyframes slide-up-reveal {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes marquee-slide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.6); }
+}
+
+@keyframes orb-breathe {
+  0%   { transform: scale(1)    translateY(0px);    opacity: 0.7; }
+  50%  { transform: scale(1.15) translateY(-20px);  opacity: 1; }
+  100% { transform: scale(0.9)  translateY(10px);   opacity: 0.5; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Utils */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
