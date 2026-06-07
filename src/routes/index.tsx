@@ -277,15 +277,14 @@ function Index() {
           
           <div className="products-carousel-wrapper">
             <div className="flex overflow-x-auto pb-10 gap-3 scrollbar-hide snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:overflow-visible products-carousel reveal-stagger px-4 md:px-0">
-              {[
-                products.find(p => p.id === "orquidea-rosa")!,
-                products.find(p => p.id === "orquidea-roxa")!,
-                products.find(p => p.id === "cesta-presente")!,
-              ].map((p, i) => (
-                <div key={i} className="snap-center min-w-[78vw] md:min-w-[260px] lg:min-w-0">
-                  <ProductCard {...p} />
-                </div>
-              ))}
+              {products
+                .filter(p => p.category === 'plantas')
+                .slice(0, 3)
+                .map((p) => (
+                  <div key={p.id} className="snap-center min-w-[78vw] md:min-w-[260px] lg:min-w-0">
+                    <ProductCard {...p} />
+                  </div>
+                ))}
               <div className="snap-center min-w-[78vw] md:min-w-[260px] lg:min-w-0">
                 <article className="product-card bg-[#F0EAFF] border-2 border-dashed border-[#C4A8DC] rounded-2xl p-8 flex flex-col items-center justify-center text-center h-full">
                     <span className="text-4xl mb-4">🌱</span>
