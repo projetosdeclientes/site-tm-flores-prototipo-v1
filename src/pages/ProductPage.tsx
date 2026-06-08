@@ -110,6 +110,11 @@ export function ProductPage() {
                       src={mainImage} 
                       alt={product.name} 
                       className="w-full h-full object-cover transition-all duration-500"
+                      style={{ 
+                        filter: thumbnails[activeThumb]?.filter,
+                        transform: thumbnails[activeThumb]?.transform,
+                        objectPosition: thumbnails[activeThumb]?.objectPosition
+                      }}
                     />
                     {/* Navigation Arrows for Mobile and Desktop */}
                     <button 
