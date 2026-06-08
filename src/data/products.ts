@@ -153,22 +153,6 @@ export const products: Product[] = [
     category: 'plantas'
   },
   {
-    id: "orquidea-rosa",
-    name: "Orquídea Rosa",
-    description: "Phalaenopsis rosa em vaso decorativo. Elegância que dura semanas.",
-    price: "Sob consulta",
-    images: ["https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800"],
-    category: 'plantas'
-  },
-  {
-    id: "orquidea-roxa",
-    name: "Orquídea Roxa",
-    description: "Em tom lilás intenso, sofisticação para qualquer ambiente.",
-    price: "Sob consulta",
-    images: ["https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800"],
-    category: 'plantas'
-  },
-  {
     id: "buque-misto-rosas-cravos",
     name: "Buquê Misto Premium",
     description: "Buquê sofisticado com um mix harmonioso de rosas vermelhas vibrantes e cravos rosa delicados. A composição é complementada por ramos de gypsophila, que trazem leveza e volume ao arranjo. Envolto em uma embalagem elegante com acabamento em tela vermelha e um imponente laço acetinado.",
