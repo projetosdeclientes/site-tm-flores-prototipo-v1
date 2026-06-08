@@ -26,21 +26,21 @@ export function ProductPage() {
   const thumbnails = [
     { 
       label: "Foto Principal", 
-      filter: product.category === 'plantas' ? "contrast(1.05) brightness(1.02)" : "none", 
+      filter: product.category === 'plantas' ? "contrast(1.05) brightness(1.05) saturate(1.1)" : "none", 
       objectPosition: "center 60%",
       transform: "none",
       description: "Visão frontal e detalhada do produto." 
     },
     { 
       label: "Detalhes", 
-      filter: product.category === 'plantas' ? "saturate(1.3) brightness(1.05)" : "saturate(1.5) brightness(1.06) contrast(1.12)", 
+      filter: product.category === 'plantas' ? "saturate(1.4) brightness(1.1) contrast(1.1)" : "saturate(1.5) brightness(1.06) contrast(1.12)", 
       objectPosition: "center 40%",
-      transform: "scale(1.45)",
+      transform: "scale(1.6)",
       description: "Destaque para a textura e vivacidade." 
     },
     { 
       label: "Cena", 
-      filter: "sepia(0.1) brightness(0.95) contrast(1.05)", 
+      filter: "sepia(0.15) brightness(0.9) contrast(1.1) saturate(1.1)", 
       objectPosition: "center 55%",
       transform: "none",
       description: "O produto em um ambiente real e aconchegante." 
@@ -109,11 +109,12 @@ export function ProductPage() {
                     <img 
                       src={mainImage} 
                       alt={product.name} 
-                      className="w-full h-full object-cover transition-all duration-500"
+                      className="w-full h-full object-cover transition-all duration-700 ease-in-out"
                       style={{ 
                         filter: thumbnails[activeThumb]?.filter,
                         transform: thumbnails[activeThumb]?.transform,
-                        objectPosition: thumbnails[activeThumb]?.objectPosition
+                        objectPosition: thumbnails[activeThumb]?.objectPosition,
+                        backgroundColor: activeThumb === 0 ? '#FFFFFF' : 'transparent'
                       }}
                     />
                     {/* Navigation Arrows for Mobile and Desktop */}
