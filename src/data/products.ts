@@ -190,7 +190,7 @@ export const products: Product[] = [
     tagline: "Um gesto doce que aquece o coração.",
     description: "Surpreenda quem você ama com a Cesta Carinho Especial. Composta por uma seleção deliciosa de chocolates, incluindo uma caixa Lacta 'Te Adoro', bombons Sonho de Valsa e uma barra de chocolate Suflair. Para tornar o presente ainda mais inesquecível, acompanha um adorável ursinho de pelúcia segurando um coração, tudo cuidadosamente arrumado em uma charmosa cesta de vime com acabamento em laço. O presente perfeito para expressar afeto e doçura.",
     price: "R$ 140,00",
-    images: ["/products/images/cesta-carinho-1.png"],
+    images: ["/products/images/cesta-carinho-v2.png"],
     category: 'cestas'
   },
 ];
