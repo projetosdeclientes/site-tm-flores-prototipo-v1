@@ -102,19 +102,19 @@ function SobrePage() {
             <div className="about-story-images reveal-right">
               <div className="about-images-grid grid grid-cols-2 gap-4">
                 <div className="about-image-main col-span-2 aspect-video rounded-3xl overflow-hidden shadow-2xl bg-lavender-ultra relative">
-                  <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=1000&auto=format&fit=crop" className="about-img w-full h-full object-cover" alt="Interior" />
+                  <img src="/about/images/historia-02.png" className="about-img w-full h-full object-cover" alt="Interior da Loja" />
                   
                   {/* Logo Watermark */}
                   <LogoCircle className="absolute top-4 left-4 w-20 h-20 opacity-90 shadow-lg border border-white/40" />
 
                   <div className="about-img-placeholder hidden" data-label="Foto interior principal" />
                 </div>
-                <div className="about-image-secondary aspect-square rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
-                  <img src="https://images.unsplash.com/photo-1554522437-124b89691d5f?q=80&w=800&auto=format&fit=crop" className="about-img w-full h-full object-cover" alt="Detalhes" />
+                <div className="about-image-secondary aspect-[3/4] rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
+                  <img src="/about/images/historia-01.png" className="about-img w-full h-full object-cover" alt="Logotipo e Buquê" />
                   <div className="about-img-placeholder hidden" data-label="Foto interior 2" />
                 </div>
-                <div className="about-image-secondary aspect-square rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
-                  <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?q=80&w=800&auto=format&fit=crop" className="about-img w-full h-full object-cover" alt="Arranjos" />
+                <div className="about-image-secondary aspect-[3/4] rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
+                  <img src="/about/images/historia-03.png" className="about-img w-full h-full object-cover" alt="Cliente Feliz" />
                   <div className="about-img-placeholder hidden" data-label="Foto interior 3" />
                 </div>
               </div>
