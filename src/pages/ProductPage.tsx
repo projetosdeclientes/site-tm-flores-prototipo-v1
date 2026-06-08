@@ -117,29 +117,33 @@ export function ProductPage() {
                         backgroundColor: activeThumb === 0 ? '#FFFFFF' : 'transparent'
                       }}
                     />
-                    {/* Navigation Arrows for Mobile and Desktop */}
-                    <button 
-                      onClick={prevImage}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/80 text-purple-deep flex items-center justify-center shadow-lg md:opacity-0 md:group-hover/gallery:opacity-100 transition-opacity"
-                    >
-                      <ArrowLeft size={20} />
-                    </button>
-                    <button 
-                      onClick={nextImage}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/80 text-purple-deep flex items-center justify-center shadow-lg md:opacity-0 md:group-hover/gallery:opacity-100 transition-opacity"
-                    >
-                      <ArrowRight size={20} />
-                    </button>
-                    
-                    {/* Dots for mobile */}
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10 md:hidden">
-                      {product.images.map((_, i) => (
-                        <div 
-                          key={i} 
-                          className={`w-2 h-2 rounded-full transition-all ${i === activeThumb ? 'bg-gold-main w-4' : 'bg-white/60'}`} 
-                        />
-                      ))}
-                    </div>
+                    {/* Navigation Arrows for Mobile and Desktop - Only show if multiple images */}
+                    {product.images.length > 1 && (
+                      <>
+                        <button 
+                          onClick={prevImage}
+                          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/80 text-purple-deep flex items-center justify-center shadow-lg md:opacity-0 md:group-hover/gallery:opacity-100 transition-opacity"
+                        >
+                          <ArrowLeft size={20} />
+                        </button>
+                        <button 
+                          onClick={nextImage}
+                          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/80 text-purple-deep flex items-center justify-center shadow-lg md:opacity-0 md:group-hover/gallery:opacity-100 transition-opacity"
+                        >
+                          <ArrowRight size={20} />
+                        </button>
+                        
+                        {/* Dots for mobile */}
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10 md:hidden">
+                          {product.images.map((_, i) => (
+                            <div 
+                              key={i} 
+                              className={`w-2 h-2 rounded-full transition-all ${i === activeThumb ? 'bg-gold-main w-4' : 'bg-white/60'}`} 
+                            />
+                          ))}
+                        </div>
+                      </>
+                    )}
                   </>
                 ) : (
                   <div className="w-full h-full flex flex-col items-center justify-center text-[#9B8AB5] gap-4 bg-[#F8F7FF]">
@@ -148,25 +152,29 @@ export function ProductPage() {
                   </div>
                 )}
               </div>
-              <div className="hidden md:flex gap-4">
-                {product.images.map((img, i) => (
-                  <button 
-                    key={i}
-                    onClick={() => setActiveThumb(i)}
-                    className={`relative w-24 aspect-square rounded-xl overflow-hidden transition-all duration-300 ${
-                      activeThumb === i ? 'border-[2.5px] border-[#C9A040] scale-105 shadow-md' : 'border-2 border-transparent opacity-70 hover:opacity-100'
-                    }`}
-                  >
-                    <div className="w-full h-full overflow-hidden">
-                      <img 
-                        src={img} 
-                        alt={`${product.name} - Foto ${i + 1}`} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </button>
-                ))}
-              </div>
+              
+              {/* Thumbnails - Only show if multiple images */}
+              {product.images.length > 1 && (
+                <div className="hidden md:flex gap-4">
+                  {product.images.map((img, i) => (
+                    <button 
+                      key={i}
+                      onClick={() => setActiveThumb(i)}
+                      className={`relative w-24 aspect-square rounded-xl overflow-hidden transition-all duration-300 ${
+                        activeThumb === i ? 'border-[2.5px] border-[#C9A040] scale-105 shadow-md' : 'border-2 border-transparent opacity-70 hover:opacity-100'
+                      }`}
+                    >
+                      <div className="w-full h-full overflow-hidden">
+                        <img 
+                          src={img} 
+                          alt={`${product.name} - Foto ${i + 1}`} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
 
