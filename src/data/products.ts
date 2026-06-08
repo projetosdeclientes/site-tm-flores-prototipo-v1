@@ -149,7 +149,7 @@ export const products: Product[] = [
     tagline: "A famosa Flor-da-Fortuna: cor vibrante e boas energias para o seu lar.",
     description: "O Mini Kalanchoe é uma suculenta encantadora, conhecida por sua resistência e floração exuberante. Suas pequenas flores agrupadas em tons vibrantes trazem vida e alegria a qualquer ambiente. Símbolo de happiness e prosperidade, é a planta ideal para quem busca beleza com pouca manutenção, adaptando-se perfeitamente a mesas, prateleiras e janelas iluminadas. Um presente delicado que transmite boas vibrações e dura por muito tempo.",
     price: "R$ 25,00",
-    images: ["/products/images/mini-kalanchoe-1.png", "/products/images/mini-kalanchoe-2.png"],
+    images: ["/products/images/mini-kalanchoe-1.png", "/products/images/mini-kalanchoe-2-new.png"],
     category: 'plantas'
   },
   {
