@@ -359,11 +359,11 @@ function Index() {
           
           <div className="flex overflow-x-auto lg:grid lg:grid-cols-3 gap-8 testimonials-grid reveal-stagger pb-8 scrollbar-hide snap-x px-4 md:px-0">
             {[1, 2, 3].map((num) => (
-              <div key={num} className=\"testimonial-card bg-white p-4 rounded-2xl shadow-card border border-gold-main/5 flex flex-col gap-6 min-w-[85vw] md:min-w-0 snap-center overflow-hidden\">
+              <div key={num} className="testimonial-card bg-white p-4 rounded-2xl shadow-card border border-gold-main/5 flex flex-col gap-6 min-w-[85vw] md:min-w-0 snap-center overflow-hidden">
                 <img 
                   src={`/testimonials/images/depoimento-0${num}.png`} 
                   alt={`Depoimento ${num}`}
-                  className=\"w-full h-auto object-contain rounded-xl\"
+                  className="w-full h-auto object-contain rounded-xl"
                 />
               </div>
             ))}
