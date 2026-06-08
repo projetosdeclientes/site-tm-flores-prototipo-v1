@@ -140,7 +140,7 @@ export const products: Product[] = [
     tagline: "Beleza tropical e resistência em uma versão compacta e encantadora.",
     description: "O Mini Antúrio (Anthurium andraeanum) é a escolha perfeita para quem busca elegância e durabilidade. Com suas flores em formato de coração, esta versão compacta traz o charme do tradicional antúrio para espaços menores, como mesas de centro, escritórios ou aparadores. Símbolo de hospitalidade e bem-estar, é uma planta de fácil manutenção, ideal para presentear ou decorar ambientes internos com um toque de natureza viva.",
     price: "R$ 35,00",
-    images: ["/products/images/mini-anturio-1.png", "/products/images/mini-anturio-2.png"],
+    images: ["/products/images/mini-anturio-1.png", "/products/images/mini-anturio-2-new.png"],
     category: 'plantas'
   },
   {
