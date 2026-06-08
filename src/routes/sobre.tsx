@@ -137,12 +137,12 @@ function SobrePage() {
 
           <div className="testimonials-prints-grid grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 reveal-stagger">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="testimonial-print-card bg-white rounded-3xl overflow-hidden shadow-card hover:translate-y-[-4px] transition-all cursor-pointer">
-                <div className="testimonial-print-placeholder flex flex-col items-center justify-center p-12 text-center bg-lavender-ultra/50 border-2 border-dashed border-lavender h-full">
-                  <span className="text-4xl mb-4">📸</span>
-                  <p className="text-text-medium font-bold text-sm mb-2">Print depoimento 0{i}</p>
-                  <p className="text-xs text-text-light italic">Aguardando envio pela cliente</p>
-                </div>
+              <div key={i} className="testimonial-print-card bg-white rounded-3xl overflow-hidden shadow-card hover:translate-y-[-4px] transition-all cursor-pointer border border-gold-main/5">
+                <img 
+                  src={`/testimonials/images/depoimento-0${i}.png`} 
+                  alt={`Print depoimento 0${i}`}
+                  className="w-full h-auto object-contain"
+                />
               </div>
             ))}
           </div>
