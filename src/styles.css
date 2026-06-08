@@ -72,6 +72,21 @@
   }
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+#root {
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+img, video, svg, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
 
 @layer components {
   .bg-orbs-container {
