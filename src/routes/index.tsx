@@ -331,13 +331,13 @@ function Index() {
             </div>
 
             <div className="relative group store-teaser-image reveal-left lg:order-1">
-              <div className="aspect-[4/3] md:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl store-teaser-img-wrapper relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl store-teaser-img-wrapper relative">
                 <img 
                   src="/products/images/interior-loja.jpg" 
                   alt="Interior da Loja" 
-
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 store-teaser-img"
+                  className="w-full h-auto block transition-transform duration-700 group-hover:scale-105 store-teaser-img"
                 />
+
                 
                 {/* Floating Logo Overlay */}
                 <LogoCircle className="absolute top-6 left-6 w-24 h-24 animate-float" />
