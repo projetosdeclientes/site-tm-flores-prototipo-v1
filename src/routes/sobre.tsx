@@ -261,7 +261,7 @@ function SobrePage() {
         </div>
       </section>
 
-      <Footer />
+      
     </main>
   )
 }
