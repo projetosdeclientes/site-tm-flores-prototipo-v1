@@ -26,22 +26,22 @@ export function ProductPage() {
   const thumbnails = [
     { 
       label: "Foto Principal", 
-      filter: product.category === 'plantas' ? "contrast(1.05) brightness(1.05) saturate(1.1)" : "none", 
+      filter: "none", 
       objectPosition: "center 60%",
       transform: "none",
       description: "Visão frontal e detalhada do produto." 
     },
     { 
       label: "Detalhes", 
-      filter: product.category === 'plantas' ? "saturate(1.4) brightness(1.1) contrast(1.1)" : "saturate(1.5) brightness(1.06) contrast(1.12)", 
-      objectPosition: "center 40%",
-      transform: "scale(1.6)",
+      filter: "none", 
+      objectPosition: "center center",
+      transform: "scale(1.1)",
       description: "Destaque para a textura e vivacidade." 
     },
     { 
       label: "Cena", 
-      filter: "sepia(0.15) brightness(0.9) contrast(1.1) saturate(1.1)", 
-      objectPosition: "center 55%",
+      filter: "none", 
+      objectPosition: "center center",
       transform: "none",
       description: "O produto em um ambiente real e aconchegante." 
     }
