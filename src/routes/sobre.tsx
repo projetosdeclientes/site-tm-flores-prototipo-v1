@@ -100,27 +100,27 @@ function SobrePage() {
             </div>
 
             <div className="about-story-images reveal-right">
-              <div className="about-images-grid flex flex-col gap-6">
-                <div className="about-image-item w-full rounded-3xl overflow-hidden shadow-2xl bg-lavender-ultra relative">
+              <div className="about-images-grid flex flex-col gap-8">
+                <div className="about-image-item w-full rounded-2xl overflow-hidden shadow-xl relative">
                   <img 
                     src="/about/images/historia-02.png" 
-                    className="about-img w-full h-auto block" 
+                    className="w-full h-auto block" 
                     alt="Fachada e Interior da Loja" 
                   />
                   <LogoCircle className="absolute top-4 left-4 w-12 h-12 md:w-20 md:h-20 opacity-90 shadow-lg border border-white/40" />
                 </div>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="about-image-item rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="about-image-item w-full rounded-2xl overflow-hidden shadow-lg">
                     <img 
                       src="/about/images/historia-01.png" 
-                      className="about-img w-full h-auto block" 
+                      className="w-full h-auto block" 
                       alt="Logo TM e Buquê" 
                     />
                   </div>
-                  <div className="about-image-item rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
+                  <div className="about-image-item w-full rounded-2xl overflow-hidden shadow-lg">
                     <img 
                       src="/about/images/historia-03.png" 
-                      className="about-img w-full h-auto block" 
+                      className="w-full h-auto block" 
                       alt="Cliente com Orquídeas" 
                     />
                   </div>
