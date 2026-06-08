@@ -113,8 +113,7 @@ export function ProductPage() {
                       style={{ 
                         filter: thumbnails[activeThumb]?.filter,
                         transform: thumbnails[activeThumb]?.transform,
-                        objectPosition: thumbnails[activeThumb]?.objectPosition,
-                        backgroundColor: activeThumb === 0 ? '#FFFFFF' : 'transparent'
+                        objectPosition: thumbnails[activeThumb]?.objectPosition
                       }}
                     />
                     {/* Navigation Arrows for Mobile and Desktop */}
