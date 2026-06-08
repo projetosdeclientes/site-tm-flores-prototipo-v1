@@ -358,37 +358,13 @@ function Index() {
           <SectionHeader eyebrow="Quem já recebeu" title="O que dizem sobre a gente" />
           
           <div className="flex overflow-x-auto lg:grid lg:grid-cols-3 gap-8 testimonials-grid reveal-stagger pb-8 scrollbar-hide snap-x px-4 md:px-0">
-            {[
-              {
-                name: "Mariana S.",
-                initial: "M",
-                text: "Recebi o buquê de 12 rosas e me emocionei demais. As flores chegaram frescas, a embalagem estava perfeita. Com certeza voltarei mais vezes!"
-              },
-              {
-                name: "Carlos R.",
-                initial: "C",
-                text: "Comprei como presente de aniversário. A floricultura é incrível, atendimento cuidadoso e as flores são lindas. Recomendo muito!"
-              },
-              {
-                name: "Ana P.",
-                initial: "A",
-                text: "Pedi um buquê personalizado enviando a foto e ficou exatamente como sonhei. Atendimento via WhatsApp super rápido e atencioso."
-              }
-            ].map((testimonial, i) => (
-              <div key={i} className="testimonial-card bg-white p-8 rounded-2xl shadow-card border border-gold-main/5 flex flex-col gap-6 min-w-[85vw] md:min-w-0 snap-center">
-                <div className="testimonial-stars flex text-gold-main gap-1">
-                  {[...Array(5)].map((_, j) => <Star key={j} size={16} fill="currentColor" />)}
-                </div>
-                <p className="testimonial-text italic text-text-medium leading-relaxed">"{testimonial.text}"</p>
-                <div className="testimonial-author flex items-center gap-4 mt-auto">
-                  <div className="testimonial-avatar w-10 h-10 rounded-full bg-lavender flex items-center justify-center font-bold text-purple-deep">
-                    {testimonial.initial}
-                  </div>
-                  <div>
-                    <p className="font-bold text-text-dark text-sm">{testimonial.name}</p>
-                    <p className="text-xs text-text-light">Cliente</p>
-                  </div>
-                </div>
+            {[1, 2, 3].map((num) => (
+              <div key={num} className=\"testimonial-card bg-white p-4 rounded-2xl shadow-card border border-gold-main/5 flex flex-col gap-6 min-w-[85vw] md:min-w-0 snap-center overflow-hidden\">
+                <img 
+                  src={`/testimonials/images/depoimento-0${num}.png`} 
+                  alt={`Depoimento ${num}`}
+                  className=\"w-full h-auto object-contain rounded-xl\"
+                />
               </div>
             ))}
           </div>
