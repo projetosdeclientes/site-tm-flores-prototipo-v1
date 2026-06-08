@@ -101,21 +101,29 @@ function SobrePage() {
 
             <div className="about-story-images reveal-right">
               <div className="about-images-grid grid grid-cols-2 gap-4">
-                <div className="about-image-main col-span-2 aspect-video rounded-3xl overflow-hidden shadow-2xl bg-lavender-ultra relative">
-                  <img src="/about/images/historia-02.png" className="about-img w-full h-full object-cover" alt="Interior da Loja" />
+                <div className="about-image-main col-span-2 aspect-[4/3] md:aspect-video rounded-3xl overflow-hidden shadow-2xl bg-lavender-ultra relative">
+                  <img 
+                    src="/about/images/historia-02.png" 
+                    className="about-img w-full h-full object-cover object-center" 
+                    alt="Fachada e Interior da Loja" 
+                  />
                   
                   {/* Logo Watermark */}
-                  <LogoCircle className="absolute top-4 left-4 w-20 h-20 opacity-90 shadow-lg border border-white/40" />
-
-                  <div className="about-img-placeholder hidden" data-label="Foto interior principal" />
+                  <LogoCircle className="absolute top-4 left-4 w-16 h-16 md:w-20 md:h-20 opacity-90 shadow-lg border border-white/40" />
                 </div>
                 <div className="about-image-secondary aspect-[3/4] rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
-                  <img src="/about/images/historia-01.png" className="about-img w-full h-full object-cover" alt="Logotipo e Buquê" />
-                  <div className="about-img-placeholder hidden" data-label="Foto interior 2" />
+                  <img 
+                    src="/about/images/historia-01.png" 
+                    className="about-img w-full h-full object-cover object-center" 
+                    alt="Logo TM e Buquê" 
+                  />
                 </div>
                 <div className="about-image-secondary aspect-[3/4] rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
-                  <img src="/about/images/historia-03.png" className="about-img w-full h-full object-cover" alt="Cliente Feliz" />
-                  <div className="about-img-placeholder hidden" data-label="Foto interior 3" />
+                  <img 
+                    src="/about/images/historia-03.png" 
+                    className="about-img w-full h-full object-cover object-center" 
+                    alt="Cliente com Orquídeas" 
+                  />
                 </div>
               </div>
             </div>
