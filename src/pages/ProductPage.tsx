@@ -109,11 +109,12 @@ export function ProductPage() {
                     <img 
                       src={mainImage} 
                       alt={product.name} 
-                      className="w-full h-full object-cover transition-all duration-500"
+                      className="w-full h-full object-cover transition-all duration-700 ease-in-out"
                       style={{ 
                         filter: thumbnails[activeThumb]?.filter,
                         transform: thumbnails[activeThumb]?.transform,
-                        objectPosition: thumbnails[activeThumb]?.objectPosition
+                        objectPosition: thumbnails[activeThumb]?.objectPosition,
+                        backgroundColor: activeThumb === 0 ? '#FFFFFF' : 'transparent'
                       }}
                     />
                     {/* Navigation Arrows for Mobile and Desktop */}
