@@ -135,14 +135,20 @@ function SobrePage() {
             </h2>
           </div>
 
-          <div className="testimonials-prints-grid grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 reveal-stagger">
+          <div className="testimonials-prints-grid grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 reveal-stagger max-w-5xl mx-auto">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="testimonial-print-card bg-white rounded-3xl overflow-hidden shadow-card hover:translate-y-[-4px] transition-all cursor-pointer border border-gold-main/5">
-                <img 
-                  src={`/testimonials/images/depoimento-0${i}.png`} 
-                  alt={`Print depoimento 0${i}`}
-                  className="w-full h-auto object-contain"
-                />
+              <div key={i} className="testimonial-print-card bg-white rounded-3xl overflow-hidden shadow-xl hover:translate-y-[-8px] transition-all duration-300 cursor-pointer border border-gold-main/10 ring-8 ring-white/50">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-purple-deep/5 group-hover:bg-transparent transition-colors duration-300" />
+                  <img 
+                    src={`/testimonials/images/depoimento-0${i}.png`} 
+                    alt={`Print depoimento 0${i}`}
+                    className="w-full h-auto object-contain relative z-10 p-2"
+                  />
+                  <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold text-gold-main shadow-sm z-20 border border-gold-main/20">
+                    DEPOIMENTO #0{i}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
