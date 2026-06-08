@@ -100,30 +100,30 @@ function SobrePage() {
             </div>
 
             <div className="about-story-images reveal-right">
-              <div className="about-images-grid grid grid-cols-2 gap-4">
-                <div className="about-image-main col-span-2 aspect-[4/3] md:aspect-video rounded-3xl overflow-hidden shadow-2xl bg-lavender-ultra relative">
+              <div className="about-images-grid flex flex-col gap-6">
+                <div className="about-image-item w-full rounded-3xl overflow-hidden shadow-2xl bg-lavender-ultra relative">
                   <img 
                     src="/about/images/historia-02.png" 
-                    className="about-img w-full h-full object-cover object-center" 
+                    className="about-img w-full h-auto block" 
                     alt="Fachada e Interior da Loja" 
                   />
-                  
-                  {/* Logo Watermark */}
-                  <LogoCircle className="absolute top-4 left-4 w-16 h-16 md:w-20 md:h-20 opacity-90 shadow-lg border border-white/40" />
+                  <LogoCircle className="absolute top-4 left-4 w-12 h-12 md:w-20 md:h-20 opacity-90 shadow-lg border border-white/40" />
                 </div>
-                <div className="about-image-secondary aspect-[3/4] rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
-                  <img 
-                    src="/about/images/historia-01.png" 
-                    className="about-img w-full h-full object-cover object-center" 
-                    alt="Logo TM e Buquê" 
-                  />
-                </div>
-                <div className="about-image-secondary aspect-[3/4] rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
-                  <img 
-                    src="/about/images/historia-03.png" 
-                    className="about-img w-full h-full object-cover object-center" 
-                    alt="Cliente com Orquídeas" 
-                  />
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="about-image-item rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
+                    <img 
+                      src="/about/images/historia-01.png" 
+                      className="about-img w-full h-auto block" 
+                      alt="Logo TM e Buquê" 
+                    />
+                  </div>
+                  <div className="about-image-item rounded-3xl overflow-hidden shadow-xl bg-lavender-ultra">
+                    <img 
+                      src="/about/images/historia-03.png" 
+                      className="about-img w-full h-auto block" 
+                      alt="Cliente com Orquídeas" 
+                    />
+                  </div>
                 </div>
               </div>
             </div>
