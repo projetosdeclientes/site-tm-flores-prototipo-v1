@@ -71,6 +71,7 @@ export function ProductCard({
       >
         <Link 
           to={(productsData.find(p => p.id === id)?.category === 'plantas' ? `/plantas/${id}` : `/buques/${id}`) as any} 
+
           className="block w-full h-full"
         >
           <img
