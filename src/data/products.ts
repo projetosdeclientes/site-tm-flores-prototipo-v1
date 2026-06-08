@@ -140,7 +140,7 @@ export const products: Product[] = [
     tagline: "Beleza tropical e resistência em uma versão compacta e encantadora.",
     description: "O Mini Antúrio (Anthurium andraeanum) é a escolha perfeita para quem busca elegância e durabilidade. Com suas flores em formato de coração e um vermelho vibrante, esta versão compacta traz o charme do tradicional antúrio para espaços menores, como mesas de centro, escritórios ou aparadores. Símbolo de hospitalidade e bem-estar, é uma planta de fácil manutenção, ideal para presentear ou decorar ambientes internos com um toque de natureza viva.",
     price: "R$ 35,00",
-    images: ["https://images.unsplash.com/photo-1592150621344-828ecef632c0?w=800&q=80&auto=format&fit=crop&bg=white", "https://images.unsplash.com/photo-1592150621344-828ecef632c0?w=800&q=80&auto=format&fit=crop&crop=focalpoint&fp-z=2.5", "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=800&q=80&auto=format&fit=crop"],
+    images: ["/products/images/mini-anturio-1.png", "/products/images/mini-anturio-2.png", "/products/images/mini-anturio-3.png"],
     category: 'plantas'
   },
   {
@@ -149,7 +149,7 @@ export const products: Product[] = [
     tagline: "A famosa Flor-da-Fortuna: cor vibrante e boas energias para o seu lar.",
     description: "O Mini Kalanchoe é uma suculenta encantadora, conhecida por sua resistência e floração exuberante. Suas pequenas flores agrupadas em tons vibrantes de laranja trazem vida e alegria a qualquer ambiente. Símbolo de felicidade e prosperidade, é a planta ideal para quem busca beleza com pouca manutenção, adaptando-se perfeitamente a mesas, prateleiras e janelas iluminadas. Um presente delicado que transmite boas vibrações e dura por muito tempo.",
     price: "R$ 25,00",
-    images: ["https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=800&q=80&auto=format&fit=crop&bg=white", "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=800&q=80&auto=format&fit=crop&crop=focalpoint&fp-z=2.2", "https://images.unsplash.com/photo-1520302630591-fd1c66ed11ef?w=800&q=80&auto=format&fit=crop"],
+    images: ["/products/images/mini-kalanchoe-1.png", "/products/images/mini-kalanchoe-2.png", "/products/images/mini-kalanchoe-3.png"],
     category: 'plantas'
   },
   {
