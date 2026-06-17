@@ -10,9 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreRouteImport } from './routes/sobre'
-import { Route as PlantasRouteImport } from './routes/plantas'
 import { Route as EncomendasRouteImport } from './routes/encomendas'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PlantasIndexRouteImport } from './routes/plantas.index'
 import { Route as BuquesIndexRouteImport } from './routes/buques/index'
 import { Route as PlantasSlugRouteImport } from './routes/plantas.$slug'
 import { Route as BuquesSlugRouteImport } from './routes/buques/$slug'
@@ -20,11 +20,6 @@ import { Route as BuquesSlugRouteImport } from './routes/buques/$slug'
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PlantasRoute = PlantasRouteImport.update({
-  id: '/plantas',
-  path: '/plantas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EncomendasRoute = EncomendasRouteImport.update({
@@ -37,15 +32,20 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PlantasIndexRoute = PlantasIndexRouteImport.update({
+  id: '/plantas/',
+  path: '/plantas/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BuquesIndexRoute = BuquesIndexRouteImport.update({
   id: '/buques/',
   path: '/buques/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlantasSlugRoute = PlantasSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => PlantasRoute,
+  id: '/plantas/$slug',
+  path: '/plantas/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const BuquesSlugRoute = BuquesSlugRouteImport.update({
   id: '/buques/$slug',
@@ -56,68 +56,69 @@ const BuquesSlugRoute = BuquesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/encomendas': typeof EncomendasRoute
-  '/plantas': typeof PlantasRouteWithChildren
   '/sobre': typeof SobreRoute
   '/buques/$slug': typeof BuquesSlugRoute
   '/plantas/$slug': typeof PlantasSlugRoute
   '/buques/': typeof BuquesIndexRoute
+  '/plantas/': typeof PlantasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/encomendas': typeof EncomendasRoute
-  '/plantas': typeof PlantasRouteWithChildren
   '/sobre': typeof SobreRoute
   '/buques/$slug': typeof BuquesSlugRoute
   '/plantas/$slug': typeof PlantasSlugRoute
   '/buques': typeof BuquesIndexRoute
+  '/plantas': typeof PlantasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/encomendas': typeof EncomendasRoute
-  '/plantas': typeof PlantasRouteWithChildren
   '/sobre': typeof SobreRoute
   '/buques/$slug': typeof BuquesSlugRoute
   '/plantas/$slug': typeof PlantasSlugRoute
   '/buques/': typeof BuquesIndexRoute
+  '/plantas/': typeof PlantasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/encomendas'
-    | '/plantas'
     | '/sobre'
     | '/buques/$slug'
     | '/plantas/$slug'
     | '/buques/'
+    | '/plantas/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/encomendas'
-    | '/plantas'
     | '/sobre'
     | '/buques/$slug'
     | '/plantas/$slug'
     | '/buques'
+    | '/plantas'
   id:
     | '__root__'
     | '/'
     | '/encomendas'
-    | '/plantas'
     | '/sobre'
     | '/buques/$slug'
     | '/plantas/$slug'
     | '/buques/'
+    | '/plantas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EncomendasRoute: typeof EncomendasRoute
-  PlantasRoute: typeof PlantasRouteWithChildren
   SobreRoute: typeof SobreRoute
   BuquesSlugRoute: typeof BuquesSlugRoute
+  PlantasSlugRoute: typeof PlantasSlugRoute
   BuquesIndexRoute: typeof BuquesIndexRoute
+  PlantasIndexRoute: typeof PlantasIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -127,13 +128,6 @@ declare module '@tanstack/react-router' {
       path: '/sobre'
       fullPath: '/sobre'
       preLoaderRoute: typeof SobreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/plantas': {
-      id: '/plantas'
-      path: '/plantas'
-      fullPath: '/plantas'
-      preLoaderRoute: typeof PlantasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/encomendas': {
@@ -150,6 +144,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/plantas/': {
+      id: '/plantas/'
+      path: '/plantas'
+      fullPath: '/plantas/'
+      preLoaderRoute: typeof PlantasIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/buques/': {
       id: '/buques/'
       path: '/buques'
@@ -159,10 +160,10 @@ declare module '@tanstack/react-router' {
     }
     '/plantas/$slug': {
       id: '/plantas/$slug'
-      path: '/$slug'
+      path: '/plantas/$slug'
       fullPath: '/plantas/$slug'
       preLoaderRoute: typeof PlantasSlugRouteImport
-      parentRoute: typeof PlantasRoute
+      parentRoute: typeof rootRouteImport
     }
     '/buques/$slug': {
       id: '/buques/$slug'
@@ -174,24 +175,14 @@ declare module '@tanstack/react-router' {
   }
 }
 
-interface PlantasRouteChildren {
-  PlantasSlugRoute: typeof PlantasSlugRoute
-}
-
-const PlantasRouteChildren: PlantasRouteChildren = {
-  PlantasSlugRoute: PlantasSlugRoute,
-}
-
-const PlantasRouteWithChildren =
-  PlantasRoute._addFileChildren(PlantasRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EncomendasRoute: EncomendasRoute,
-  PlantasRoute: PlantasRouteWithChildren,
   SobreRoute: SobreRoute,
   BuquesSlugRoute: BuquesSlugRoute,
+  PlantasSlugRoute: PlantasSlugRoute,
   BuquesIndexRoute: BuquesIndexRoute,
+  PlantasIndexRoute: PlantasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
