@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 import { Sprout } from 'lucide-react'
 import { WhatsAppIcon } from '@/components/WhatsAppIcon'
 
-export const Route = createFileRoute('/plantas/')({
+export const Route = createFileRoute('/plantas')({
   component: PlantasPage,
 })
 

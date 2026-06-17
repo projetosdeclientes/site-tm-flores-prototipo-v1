@@ -1,7 +1,3 @@
-#lovable-badge {
-  display: none !important;
-}
-
 @import "tailwindcss";
 
 @theme {

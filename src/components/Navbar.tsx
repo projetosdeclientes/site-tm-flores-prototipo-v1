@@ -26,7 +26,6 @@ export function Navbar() {
       dropdown: [
         { name: "Buquês", to: "/buques" },
         { name: "Plantas", to: "/plantas" },
-        { name: "Cestas e Chocolates", to: "/cestas" },
       ],
     },
     { name: "Encomendas", to: "/encomendas" },

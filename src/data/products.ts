@@ -4,7 +4,7 @@ export interface Product {
   description: string;
   price: string;
   images: string[];
-  category: 'buques' | 'plantas' | 'buques-mistos' | 'cestas';
+  category: 'buques' | 'plantas' | 'buques-mistos';
   tagline?: string;
   badge?: string;
 }
@@ -136,20 +136,36 @@ export const products: Product[] = [
   },
   {
     id: "mini-anturio",
-    name: "Mini Antúrio",
-    tagline: "Beleza tropical e resistência em uma version compacta e encantadora.",
-    description: "O Mini Antúrio (Anthurium andraeanum) é a escolha perfeita para quem busca elegância e durabilidade. Com suas flores em formato de coração, esta versão compacta traz o charme do tradicional antúrio para espaços menores, como mesas de centro, escritórios ou aparadores. Símbolo de hospitalidade e bem-estar, é uma planta de fácil manutenção, ideal para presentear ou decorar ambientes internos with um toque de natureza viva.",
+    name: "Mini Antúrio Vermelho",
+    tagline: "Beleza tropical e resistência em uma versão compacta e encantadora.",
+    description: "O Mini Antúrio (Anthurium andraeanum) é a escolha perfeita para quem busca elegância e durabilidade. Com suas flores em formato de coração e um vermelho vibrante, esta versão compacta traz o charme do tradicional antúrio para espaços menores, como mesas de centro, escritórios ou aparadores. Símbolo de hospitalidade e bem-estar, é uma planta de fácil manutenção, ideal para presentear ou decorar ambientes internos com um toque de natureza viva.",
     price: "R$ 35,00",
-    images: ["/products/images/mini-anturio-1.png"],
+    images: ["/products/images/mini-anturio-1.png", "/products/images/mini-anturio-2.png", "/products/images/mini-anturio-3.png"],
     category: 'plantas'
   },
   {
     id: "mini-kalanchoe",
-    name: "Mini Kalanchoe",
+    name: "Mini Kalanchoe Laranja",
     tagline: "A famosa Flor-da-Fortuna: cor vibrante e boas energias para o seu lar.",
-    description: "O Mini Kalanchoe é uma suculenta encantadora, conhecida por sua resistência e floração exuberante. Suas pequenas flores agrupadas em tons vibrantes trazem vida e alegria a qualquer ambiente. Símbolo de happiness e prosperidade, é a planta ideal para quem busca beleza com pouca manutenção, adaptando-se perfeitamente a mesas, prateleiras e janelas iluminadas. Um presente delicado que transmite boas vibrações e dura por muito tempo.",
+    description: "O Mini Kalanchoe é uma suculenta encantadora, conhecida por sua resistência e floração exuberante. Suas pequenas flores agrupadas em tons vibrantes de laranja trazem vida e alegria a qualquer ambiente. Símbolo de felicidade e prosperidade, é a planta ideal para quem busca beleza com pouca manutenção, adaptando-se perfeitamente a mesas, prateleiras e janelas iluminadas. Um presente delicado que transmite boas vibrações e dura por muito tempo.",
     price: "R$ 25,00",
-    images: ["/products/images/mini-kalanchoe-1.png"],
+    images: ["/products/images/mini-kalanchoe-1.png", "/products/images/mini-kalanchoe-2.png", "/products/images/mini-kalanchoe-3.png"],
+    category: 'plantas'
+  },
+  {
+    id: "orquidea-rosa",
+    name: "Orquídea Rosa",
+    description: "Phalaenopsis rosa em vaso decorativo. Elegância que dura semanas.",
+    price: "Sob consulta",
+    images: ["https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800"],
+    category: 'plantas'
+  },
+  {
+    id: "orquidea-roxa",
+    name: "Orquídea Roxa",
+    description: "Em tom lilás intenso, sofisticação para qualquer ambiente.",
+    price: "Sob consulta",
+    images: ["https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800"],
     category: 'plantas'
   },
   {
@@ -183,14 +199,5 @@ export const products: Product[] = [
     price: "Sob consulta",
     images: ["/products/images/buque-misto-sol-radiante-1.png", "/products/images/buque-misto-sol-radiante-2.png", "/products/images/buque-misto-sol-radiante-3.png"],
     category: 'buques-mistos'
-  },
-  {
-    id: "cesta-carinho-especial",
-    name: "Cesta Carinho Especial",
-    tagline: "Um gesto doce que aquece o coração.",
-    description: "Surpreenda quem você ama com a Cesta Carinho Especial. Composta por uma seleção deliciosa de chocolates, incluindo uma caixa Lacta 'Te Adoro', bombons Sonho de Valsa e uma barra de chocolate Suflair. Para tornar o presente ainda mais inesquecível, acompanha um adorável ursinho de pelúcia segurando um coração, tudo cuidadosamente arrumado em uma charmosa cesta de vime com acabamento em laço. O presente perfeito para expressar afeto e doçura.",
-    price: "R$ 140,00",
-    images: ["/products/images/cesta-carinho-v2.png"],
-    category: 'cestas'
   },
 ];

@@ -11,35 +11,20 @@ export function useScrollReveal() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-        } else {
-          // Optional: removing this to keep it consistent with the user's previous implementation if they prefer "one-way" reveal
-          // entry.target.classList.remove('active');
+          // Once it's revealed, we can stop observing it
+          observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    const observe = () => {
-      const revealElements = document.querySelectorAll(
-        '.reveal-title, .reveal-stagger, .reveal-up, .reveal-fade, .reveal-left, .reveal-right, .reveal-scale'
-      );
-      revealElements.forEach((el) => observer.observe(el));
-    };
+    const revealElements = document.querySelectorAll(
+      '.reveal-title, .reveal-stagger, .reveal-up, .reveal-fade, .reveal-left, .reveal-right, .reveal-scale'
+    );
 
-    observe();
-
-    // Create a MutationObserver to observe changes in the DOM and re-attach the IntersectionObserver
-    const mutationObserver = new MutationObserver(() => {
-      observe();
-    });
-
-    mutationObserver.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
+    revealElements.forEach((el) => observer.observe(el));
 
     return () => {
-      observer.disconnect();
-      mutationObserver.disconnect();
+      revealElements.forEach((el) => observer.unobserve(el));
     };
   }, []);
 }
