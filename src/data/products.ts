@@ -137,10 +137,10 @@ export const products: Product[] = [
   {
     id: "mini-anturio",
     name: "Mini Antúrio Vermelho",
-    tagline: "Beleza tropical e resistência em uma versão compacta e encantadora.",
-    description: "O Mini Antúrio (Anthurium andraeanum) é a escolha perfeita para quem busca elegância e durabilidade. Com suas flores em formato de coração e um vermelho vibrante, esta versão compacta traz o charme do tradicional antúrio para espaços menores, como mesas de centro, escritórios ou aparadores. Símbolo de hospitalidade e bem-estar, é uma planta de fácil manutenção, ideal para presentear ou decorar ambientes internos com um toque de natureza viva.",
+    tagline: "Um toque tropical em escala perfeita para qualquer cantinho.",
+    description: "O Mini Antúrio (Anthurium andraeanum) é uma versão compacta e delicada do antúrio tradicional, mantendo toda a exuberância da espécie em um tamanho ideal para mesas, aparadores e escrivaninhas. Suas inflorescências em formato de coração, de um vermelho intenso e brilhante, contrastam com folhas verdes lustrosas, trazendo personalidade e sofisticação a qualquer ambiente. Símbolo de hospitalidade, prosperidade e bem-estar, é uma planta resistente e de fácil cuidado — perfeita tanto para presentear quanto para começar uma coleção verde dentro de casa.",
     price: "R$ 35,00",
-    images: ["/products/images/mini-anturio-1.png", "/products/images/mini-anturio-2.png", "/products/images/mini-anturio-3.png"],
+    images: ["/products/images/mini-anturio-1.png", "/products/images/mini-anturio-2.png"],
     category: 'plantas'
   },
   {
