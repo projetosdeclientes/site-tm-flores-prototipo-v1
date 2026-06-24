@@ -1,30 +1,63 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
+import { useRouterState } from "@tanstack/react-router";
+
+const SELECTOR = '[class*="reveal"]';
 
 export function useScrollReveal() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
   useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px',
-    };
+    if (typeof window === "undefined") return;
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          // Once it's revealed, we can stop observing it
-          observer.unobserve(entry.target);
+    const activate = (el: Element) => el.classList.add("active");
+
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!("IntersectionObserver" in window) || prefersReduced) {
+      document.querySelectorAll(SELECTOR).forEach(activate);
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            activate(e.target);
+            io.unobserve(e.target);
+          }
         }
-      });
-    }, observerOptions);
-
-    const revealElements = document.querySelectorAll(
-      '.reveal-title, .reveal-stagger, .reveal-up, .reveal-fade, .reveal-left, .reveal-right, .reveal-scale'
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
     );
 
-    revealElements.forEach((el) => observer.observe(el));
+    const observeAll = () => {
+      document.querySelectorAll(SELECTOR).forEach((el) => {
+        if (!el.classList.contains("active")) io.observe(el);
+      });
+    };
+
+    observeAll();
+
+    const mo = new MutationObserver((muts) => {
+      for (const m of muts) {
+        m.addedNodes.forEach((node) => {
+          if (!(node instanceof Element)) return;
+          if (node.matches?.(SELECTOR)) io.observe(node);
+          node.querySelectorAll?.(SELECTOR).forEach((el) => {
+            if (!el.classList.contains("active")) io.observe(el);
+          });
+        });
+      }
+    });
+    mo.observe(document.body, { childList: true, subtree: true });
+
+    const failsafe = window.setTimeout(() => {
+      document.querySelectorAll(`${SELECTOR}:not(.active)`).forEach(activate);
+    }, 1500);
 
     return () => {
-      revealElements.forEach((el) => observer.unobserve(el));
+      io.disconnect();
+      mo.disconnect();
+      window.clearTimeout(failsafe);
     };
-  }, []);
+  }, [pathname]);
 }

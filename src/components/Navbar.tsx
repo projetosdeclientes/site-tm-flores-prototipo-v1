@@ -4,12 +4,15 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { InstagramIcon } from "./InstagramIcon";
 import { LogoCircle } from "./LogoCircle";
+import { useIsMobile } from "../hooks/use-mobile";
 
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [forceVisible, setForceVisible] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +21,21 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (e.clientY <= 80) {
+        setForceVisible(true);
+      } else if (e.clientY > 120 && window.scrollY > 100) {
+        setForceVisible(false);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [isMobile]);
 
   const navLinks = [
     { name: "Início", to: "/" },
@@ -35,8 +53,8 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 overflow-x-hidden ${
-          isScrolled 
+        className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
+          isScrolled || forceVisible
             ? "glass-nav py-3 opacity-100 translate-y-0" 
             : "py-6 opacity-0 -translate-y-full pointer-events-none"
         }`}

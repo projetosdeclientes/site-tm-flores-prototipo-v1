@@ -27,3 +27,9 @@ if (document.readyState === 'loading') {
 } else {
   initTilt3D();
 }
+
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted && typeof initTilt3D === 'function') {
+    initTilt3D();
+  }
+});
