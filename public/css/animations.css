@@ -10,7 +10,8 @@
 .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(35px);
+  will-change: transform;
   animation: orb-breathe var(--dur) ease-in-out infinite alternate;
 }
 
@@ -42,6 +43,10 @@
   right: 20%;
   --dur: 12s;
   animation-delay: -6s;
+}
+
+@media (max-width: 768px) {
+  .orb, .gradient-orb { display: none !important; }
 }
 
 @keyframes orb-breathe {

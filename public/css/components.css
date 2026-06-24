@@ -7,6 +7,7 @@
   z-index: 100;
   background: var(--cream);
   transition: background var(--dur-normal), box-shadow var(--dur-normal), top var(--dur-normal);
+  overflow: visible;
 }
 
 .site-header.scrolled {
@@ -26,6 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: visible;
 }
 
 .logo-img {
@@ -38,6 +40,7 @@
   list-style: none;
   gap: var(--space-8);
   margin: 0 auto;
+  overflow: visible;
 }
 
 @media (max-width: 1024px) {
@@ -186,7 +189,7 @@
 /* ─────────────────────────────────────────
    NAV DROPDOWN
 ───────────────────────────────────────── */
-.nav-dropdown { position: relative; }
+.nav-dropdown { position: relative; overflow: visible; }
 .nav-dropdown-toggle {
   display: flex;
   align-items: center;
@@ -202,24 +205,25 @@
 
 .nav-dropdown-menu {
   position: absolute;
-  top: calc(100% + var(--space-3));
-  left: 50%;
-  transform: translateX(-50%);
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  min-width: 220px;
+  margin-top: 8px;
   background: var(--white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   border: 1px solid rgba(201, 160, 64, 0.25);
   padding: var(--space-3);
-  min-width: 180px;
   opacity: 0;
   pointer-events: none;
-  transform: translateX(-50%) translateY(8px);
+  transform: translateY(8px);
   transition: opacity var(--dur-normal), transform var(--dur-normal) var(--ease-spring);
 }
 .nav-dropdown-menu.open {
   opacity: 1;
   pointer-events: all;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 .dropdown-item {
   display: block;
@@ -272,20 +276,6 @@
 
 .product-card:hover::before { opacity: 1; }
 .product-card:hover { box-shadow: var(--shadow-card-hover); }
-
-/* Mobile: cards sem fundo branco, mais quadrados e compactos */
-@media (max-width: 767px) {
-  .product-card {
-    background: transparent;
-    box-shadow: none;
-    border-radius: var(--radius-lg, 12px);
-  }
-  .product-card::before { display: none; }
-  .product-card:hover { box-shadow: none; }
-  .product-card-body { padding: var(--space-2); }
-  .product-card-name { font-size: var(--text-base); }
-  .product-card-price { font-size: var(--text-lg); }
-}
 
 .product-card-images {
   position: relative;

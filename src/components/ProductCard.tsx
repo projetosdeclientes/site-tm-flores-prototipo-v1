@@ -62,9 +62,9 @@ export function ProductCard({
   };
 
   return (
-    <article className="product-card group bg-transparent sm:bg-white rounded-lg sm:rounded-2xl overflow-hidden shadow-none sm:shadow-card hover:sm:shadow-card-hover transition-all duration-500 border-0 sm:border sm:border-gold-main/5 flex flex-col h-full cursor-pointer relative">
+    <article className="product-card group bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-500 border border-gold-main/5 flex flex-col h-full cursor-pointer relative">
       <div 
-        className="product-card-gallery relative aspect-square overflow-hidden rounded-lg sm:rounded-none"
+        className="product-card-gallery relative aspect-square overflow-hidden"
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
@@ -108,21 +108,21 @@ export function ProductCard({
         )}
       </div>
 
-      <div className="product-card-body p-2 sm:p-4 flex flex-col flex-grow">
+      <div className="product-card-body p-4 flex flex-col flex-grow">
         <Link 
           to={(productsData.find(p => p.id === id)?.category === 'plantas' ? `/plantas/${id}` : `/buques/${id}`) as any} 
           className="block"
         >
-          <h3 className="product-card-name font-serif text-sm sm:text-lg font-semibold text-text-dark mb-1 group-hover:text-purple-main transition-colors line-clamp-2">
+          <h3 className="product-card-name font-serif text-lg font-semibold text-text-dark mb-1 group-hover:text-purple-main transition-colors line-clamp-2">
             {name}
           </h3>
         </Link>
         
-        <div className="mt-0.5 mb-2 sm:mt-1 sm:mb-3">
+        <div className="mt-1 mb-3">
           {price && (
-            <div className="product-card-price text-[15px] sm:text-[17px] font-bold text-purple-deep font-sans">
+            <div className="product-card-price text-[17px] font-bold text-purple-deep font-sans">
               {priceLabel && (
-                <span className="text-[11px] sm:text-[13px] font-normal text-text-light mr-1">
+                <span className="text-[13px] font-normal text-text-light mr-1">
                   {priceLabel}
                 </span>
               )}
@@ -131,10 +131,10 @@ export function ProductCard({
           )}
         </div>
 
-        <div className="mt-auto flex flex-col sm:flex-row gap-1.5 sm:gap-2">
+        <div className="mt-auto flex flex-col sm:flex-row gap-2">
           <Link
             to={(productsData.find(p => p.id === id)?.category === 'plantas' ? `/plantas/${id}` : `/buques/${id}`) as any}
-            className="flex-1 justify-center text-[11px] sm:text-[13px] py-1.5 sm:py-2 px-3 sm:px-4 border-[1.5px] border-purple-main text-purple-main rounded-full font-semibold flex items-center gap-1 hover:bg-purple-main hover:text-white transition-all text-center"
+            className="flex-1 justify-center text-[13px] py-2 px-4 border-[1.5px] border-purple-main text-purple-main rounded-full font-semibold flex items-center gap-1 hover:bg-purple-main hover:text-white transition-all text-center"
           >
             Ver produto →
           </Link>
@@ -143,7 +143,7 @@ export function ProductCard({
             target="_blank"
             rel="noopener"
             onClick={(e) => e.stopPropagation()}
-            className="flex-1 justify-center text-[11px] sm:text-[13px] py-1.5 sm:py-2 px-3 sm:px-4 bg-whatsapp text-white rounded-full font-semibold flex items-center gap-1 transition-all hover:scale-105 flex justify-center"
+            className="flex-1 justify-center text-[13px] py-2 px-4 bg-whatsapp text-white rounded-full font-semibold flex items-center gap-1 transition-all hover:scale-105 flex justify-center"
           >
             <WhatsAppIcon size={16} />
             WhatsApp
