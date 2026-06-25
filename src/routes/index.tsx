@@ -8,7 +8,6 @@ import { ArrowRight, Star } from 'lucide-react'
 import { Leaf } from 'lucide-react'
 import { WhatsAppIcon } from '@/components/WhatsAppIcon'
 import { useEffect, useState } from 'react'
-import { LogoCircle } from '@/components/LogoCircle'
 import estufaHome from '@/assets/plantas/estufa-home.jpg'
 
 
@@ -397,11 +396,6 @@ function Index() {
                   alt="Interior da Loja" 
                   className="w-full h-auto block transition-transform duration-700 group-hover:scale-105 store-teaser-img"
                 />
-
-                
-                {/* Floating Logo Overlay */}
-                <LogoCircle className="absolute top-6 left-6 w-24 h-24 animate-float" />
-
 
                 <div className="absolute bottom-6 right-6 bg-gold-gradient p-3 px-5 rounded-full shadow-xl text-text-dark font-sans font-bold text-xs uppercase tracking-widest store-teaser-badge">
                   Fundada em 2024
