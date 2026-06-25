@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { InstagramIcon } from "./InstagramIcon";
 import { LogoCircle } from "./LogoCircle";
@@ -92,21 +93,36 @@ export function Navbar() {
                   </Link>
                 )}
 
-                {link.dropdown && dropdownOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-48">
-                    <div className="bg-white rounded-lg shadow-lg border border-gold-main/20 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
-                      {link.dropdown.map((item) => (
-                        <Link
-                          key={item.name}
-                          to={item.to}
-                          className="block px-6 py-3 text-sm font-semibold text-text-dark hover:bg-lavender-ultra hover:text-purple-main transition-colors"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                <AnimatePresence>
+                  {link.dropdown && dropdownOpen && (
+                    <motion.div
+                      className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-48"
+                      initial={{ opacity: 0, y: -8, scale: 0.96 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -8, scale: 0.96 }}
+                      transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                      style={{ transformOrigin: "top center" }}
+                    >
+                      <div className="bg-white rounded-lg shadow-lg border border-gold-main/20 overflow-hidden">
+                        {link.dropdown.map((item, i) => (
+                          <motion.div
+                            key={item.name}
+                            initial={{ opacity: 0, x: -6 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.05 + i * 0.05, duration: 0.2 }}
+                          >
+                            <Link
+                              to={item.to}
+                              className="block px-6 py-3 text-sm font-semibold text-text-dark hover:bg-lavender-ultra hover:text-purple-main transition-colors"
+                            >
+                              {item.name}
+                            </Link>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </nav>
