@@ -217,4 +217,17 @@ export const products: Product[] = [
     ],
     category: 'cestas-chocolates'
   },
+  {
+    id: "cesta-chocolamor-pelucia-bombons",
+    name: "Cesta Chocolamor com Pelúcia e Bombons",
+    tagline: "Um presente doce e afetuoso — perfeito para agradecer com carinho.",
+    description: "Encantadora e cheia de ternura, esta cesta de vime reúne ursinho de pelúcia bege com coração vermelho \"Te Amo\", chocolates Lacta Obrigado, Bis, Kinder Bueno White, Ferrero Rocher, Ouro Branco e bombons variados. A embalagem em celofane transparente e o grande laço pink deixam a composição delicada, alegre e especial. Ideal para aniversários, agradecimentos, declarações, Dia dos Namorados ou para surpreender alguém especial.",
+    price: "R$ 160,00",
+    images: [
+      "/products/images/cesta-chocolamor-pelucia-bombons-1.png",
+      "/products/images/cesta-chocolamor-pelucia-bombons-2.png"
+    ],
+    category: 'cestas-chocolates'
+  },
 ];
+
