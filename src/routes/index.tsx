@@ -9,6 +9,7 @@ import { Leaf } from 'lucide-react'
 import { WhatsAppIcon } from '@/components/WhatsAppIcon'
 import { useEffect, useState } from 'react'
 import { LogoCircle } from '@/components/LogoCircle'
+import estufaHome from '@/assets/plantas/estufa-home.jpg'
 
 
 export const Route = createFileRoute('/')({
@@ -353,7 +354,7 @@ function Index() {
             <div className="relative reveal-left">
               <div className="rounded-2xl overflow-hidden shadow-2xl relative aspect-[4/5]">
                 <img
-                  src="https://images.unsplash.com/photo-1463320726281-696a485928c7?q=80&w=1400&auto=format&fit=crop"
+                  src={estufaHome}
                   alt="Plantas da estufa TM Flores"
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
