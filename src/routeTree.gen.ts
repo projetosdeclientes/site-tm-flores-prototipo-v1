@@ -13,8 +13,10 @@ import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as EncomendasRouteImport } from './routes/encomendas'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PlantasIndexRouteImport } from './routes/plantas.index'
+import { Route as CestasChocolatesIndexRouteImport } from './routes/cestas-chocolates.index'
 import { Route as BuquesIndexRouteImport } from './routes/buques/index'
 import { Route as PlantasSlugRouteImport } from './routes/plantas.$slug'
+import { Route as CestasChocolatesSlugRouteImport } from './routes/cestas-chocolates.$slug'
 import { Route as BuquesSlugRouteImport } from './routes/buques/$slug'
 
 const SobreRoute = SobreRouteImport.update({
@@ -37,6 +39,11 @@ const PlantasIndexRoute = PlantasIndexRouteImport.update({
   path: '/plantas/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CestasChocolatesIndexRoute = CestasChocolatesIndexRouteImport.update({
+  id: '/cestas-chocolates/',
+  path: '/cestas-chocolates/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BuquesIndexRoute = BuquesIndexRouteImport.update({
   id: '/buques/',
   path: '/buques/',
@@ -45,6 +52,11 @@ const BuquesIndexRoute = BuquesIndexRouteImport.update({
 const PlantasSlugRoute = PlantasSlugRouteImport.update({
   id: '/plantas/$slug',
   path: '/plantas/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CestasChocolatesSlugRoute = CestasChocolatesSlugRouteImport.update({
+  id: '/cestas-chocolates/$slug',
+  path: '/cestas-chocolates/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BuquesSlugRoute = BuquesSlugRouteImport.update({
@@ -58,8 +70,10 @@ export interface FileRoutesByFullPath {
   '/encomendas': typeof EncomendasRoute
   '/sobre': typeof SobreRoute
   '/buques/$slug': typeof BuquesSlugRoute
+  '/cestas-chocolates/$slug': typeof CestasChocolatesSlugRoute
   '/plantas/$slug': typeof PlantasSlugRoute
   '/buques/': typeof BuquesIndexRoute
+  '/cestas-chocolates/': typeof CestasChocolatesIndexRoute
   '/plantas/': typeof PlantasIndexRoute
 }
 export interface FileRoutesByTo {
@@ -67,8 +81,10 @@ export interface FileRoutesByTo {
   '/encomendas': typeof EncomendasRoute
   '/sobre': typeof SobreRoute
   '/buques/$slug': typeof BuquesSlugRoute
+  '/cestas-chocolates/$slug': typeof CestasChocolatesSlugRoute
   '/plantas/$slug': typeof PlantasSlugRoute
   '/buques': typeof BuquesIndexRoute
+  '/cestas-chocolates': typeof CestasChocolatesIndexRoute
   '/plantas': typeof PlantasIndexRoute
 }
 export interface FileRoutesById {
@@ -77,8 +93,10 @@ export interface FileRoutesById {
   '/encomendas': typeof EncomendasRoute
   '/sobre': typeof SobreRoute
   '/buques/$slug': typeof BuquesSlugRoute
+  '/cestas-chocolates/$slug': typeof CestasChocolatesSlugRoute
   '/plantas/$slug': typeof PlantasSlugRoute
   '/buques/': typeof BuquesIndexRoute
+  '/cestas-chocolates/': typeof CestasChocolatesIndexRoute
   '/plantas/': typeof PlantasIndexRoute
 }
 export interface FileRouteTypes {
@@ -88,8 +106,10 @@ export interface FileRouteTypes {
     | '/encomendas'
     | '/sobre'
     | '/buques/$slug'
+    | '/cestas-chocolates/$slug'
     | '/plantas/$slug'
     | '/buques/'
+    | '/cestas-chocolates/'
     | '/plantas/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -97,8 +117,10 @@ export interface FileRouteTypes {
     | '/encomendas'
     | '/sobre'
     | '/buques/$slug'
+    | '/cestas-chocolates/$slug'
     | '/plantas/$slug'
     | '/buques'
+    | '/cestas-chocolates'
     | '/plantas'
   id:
     | '__root__'
@@ -106,8 +128,10 @@ export interface FileRouteTypes {
     | '/encomendas'
     | '/sobre'
     | '/buques/$slug'
+    | '/cestas-chocolates/$slug'
     | '/plantas/$slug'
     | '/buques/'
+    | '/cestas-chocolates/'
     | '/plantas/'
   fileRoutesById: FileRoutesById
 }
@@ -116,8 +140,10 @@ export interface RootRouteChildren {
   EncomendasRoute: typeof EncomendasRoute
   SobreRoute: typeof SobreRoute
   BuquesSlugRoute: typeof BuquesSlugRoute
+  CestasChocolatesSlugRoute: typeof CestasChocolatesSlugRoute
   PlantasSlugRoute: typeof PlantasSlugRoute
   BuquesIndexRoute: typeof BuquesIndexRoute
+  CestasChocolatesIndexRoute: typeof CestasChocolatesIndexRoute
   PlantasIndexRoute: typeof PlantasIndexRoute
 }
 
@@ -151,6 +177,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlantasIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cestas-chocolates/': {
+      id: '/cestas-chocolates/'
+      path: '/cestas-chocolates'
+      fullPath: '/cestas-chocolates/'
+      preLoaderRoute: typeof CestasChocolatesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/buques/': {
       id: '/buques/'
       path: '/buques'
@@ -163,6 +196,13 @@ declare module '@tanstack/react-router' {
       path: '/plantas/$slug'
       fullPath: '/plantas/$slug'
       preLoaderRoute: typeof PlantasSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cestas-chocolates/$slug': {
+      id: '/cestas-chocolates/$slug'
+      path: '/cestas-chocolates/$slug'
+      fullPath: '/cestas-chocolates/$slug'
+      preLoaderRoute: typeof CestasChocolatesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/buques/$slug': {
@@ -180,8 +220,10 @@ const rootRouteChildren: RootRouteChildren = {
   EncomendasRoute: EncomendasRoute,
   SobreRoute: SobreRoute,
   BuquesSlugRoute: BuquesSlugRoute,
+  CestasChocolatesSlugRoute: CestasChocolatesSlugRoute,
   PlantasSlugRoute: PlantasSlugRoute,
   BuquesIndexRoute: BuquesIndexRoute,
+  CestasChocolatesIndexRoute: CestasChocolatesIndexRoute,
   PlantasIndexRoute: PlantasIndexRoute,
 }
 export const routeTree = rootRouteImport
