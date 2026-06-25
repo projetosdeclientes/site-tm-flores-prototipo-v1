@@ -4,6 +4,14 @@ import { Footer } from '@/components/Footer'
 import { useEffect } from 'react'
 import { WhatsAppIcon } from '@/components/WhatsAppIcon'
 import { Sparkles, Leaf, Heart } from 'lucide-react'
+import orquideasImg from '@/assets/plantas/orquideas.jpg'
+import suculentasImg from '@/assets/plantas/suculentas.jpg'
+import anturiosImg from '@/assets/plantas/anturios.jpg'
+import bromeliasImg from '@/assets/plantas/bromelias.jpg'
+import samambaiasImg from '@/assets/plantas/samambaias.jpg'
+import kalanchoesImg from '@/assets/plantas/kalanchoes.jpg'
+import espadaImg from '@/assets/plantas/espada-sao-jorge.jpg'
+import rarasImg from '@/assets/plantas/plantas-raras.jpg'
 
 export const Route = createFileRoute('/plantas/')({
   component: PlantasPage,
@@ -12,15 +20,15 @@ export const Route = createFileRoute('/plantas/')({
 const WHATSAPP_MESSAGE = 'Oii, tudo bem? Gostaria de saber as opções de plantas disponíveis!'
 const WHATSAPP_URL = `https://wa.me/5511918475136?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
 
-const PLANT_TYPES: Array<{ emoji: string; name: string; note: string }> = [
-  { emoji: '🌸', name: 'Orquídeas', note: 'Phalaenopsis, Dendrobium e outras variedades.' },
-  { emoji: '🌿', name: 'Suculentas', note: 'Em vasinhos delicados, prontas para presentear.' },
-  { emoji: '❤️', name: 'Antúrios', note: 'Folhas brilhantes e flores em formato de coração.' },
-  { emoji: '🌺', name: 'Bromélias', note: 'Cores vibrantes que enchem o ambiente de vida.' },
-  { emoji: '🍃', name: 'Samambaias', note: 'Folhagem leve, perfeita para varandas e cantinhos.' },
-  { emoji: '🌼', name: 'Kalanchoes', note: 'Flores duradouras em tons quentes e românticos.' },
-  { emoji: '🪴', name: 'Espadas-de-São-Jorge', note: 'Robustas, modernas e cheias de simbolismo.' },
-  { emoji: '✿', name: 'Plantas raras', note: 'Pergunte: muitas vezes temos surpresas no estoque.' },
+const PLANT_TYPES: Array<{ image: string; name: string }> = [
+  { image: orquideasImg, name: 'Orquídeas' },
+  { image: suculentasImg, name: 'Suculentas' },
+  { image: anturiosImg, name: 'Antúrios' },
+  { image: bromeliasImg, name: 'Bromélias' },
+  { image: samambaiasImg, name: 'Samambaias' },
+  { image: kalanchoesImg, name: 'Kalanchoes' },
+  { image: espadaImg, name: 'Espadas-de-São-Jorge' },
+  { image: rarasImg, name: 'Plantas raras' },
 ]
 
 function PlantasPage() {
@@ -87,21 +95,25 @@ function PlantasPage() {
             {PLANT_TYPES.map((type) => (
               <article
                 key={type.name}
-                className="group relative bg-white rounded-3xl p-8 text-center border border-gold-main/10 shadow-card hover:shadow-card-hover transition-all duration-500 hover:-translate-y-1 overflow-hidden"
+                className="group relative bg-white rounded-3xl text-center border border-gold-main/10 shadow-card hover:shadow-card-hover transition-all duration-500 hover:-translate-y-1 overflow-hidden"
               >
                 <div
                   aria-hidden="true"
-                  className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#A8C4A0] via-gold-main to-purple-main opacity-60"
+                  className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#A8C4A0] via-gold-main to-purple-main opacity-60 z-10"
                 />
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-500">
-                  {type.emoji}
+                <div className="aspect-square overflow-hidden bg-cream">
+                  <img
+                    src={type.image}
+                    alt={type.name}
+                    loading="lazy"
+                    width={1024}
+                    height={1024}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-purple-deep mb-2">
+                <h3 className="font-serif text-xl font-semibold text-purple-deep py-5 px-4">
                   {type.name}
                 </h3>
-                <p className="text-sm text-text-medium leading-relaxed">
-                  {type.note}
-                </p>
               </article>
             ))}
           </div>
