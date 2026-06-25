@@ -5,6 +5,7 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { ProductCard, MoreCard } from '@/components/ProductCard'
 import { ArrowRight, Star } from 'lucide-react'
+import { Leaf } from 'lucide-react'
 import { WhatsAppIcon } from '@/components/WhatsAppIcon'
 import { useEffect, useState } from 'react'
 import { LogoCircle } from '@/components/LogoCircle'
@@ -303,6 +304,65 @@ function Index() {
                 </div>
               </div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção: Plantas — Estufa Romântica (teaser) */}
+      <section className="relative overflow-hidden py-24 bg-gradient-to-br from-cream via-[#F5EFE6] to-[#EDE4D3]">
+        <div aria-hidden="true" className="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-[#A8C4A0]/20 blur-3xl" />
+        <div aria-hidden="true" className="absolute -bottom-24 -right-24 w-[28rem] h-[28rem] rounded-full bg-gold-main/10 blur-3xl" />
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="reveal-right">
+              <span className="inline-flex items-center gap-2 text-gold-main font-sans font-bold uppercase tracking-[0.25em] text-xs mb-5">
+                <Leaf size={14} /> Estufa TM Flores
+              </span>
+              <h2 className="font-serif text-4xl md:text-6xl italic font-light text-purple-deep leading-[1.05] mb-6">
+                Plantas <span className="text-[#6B8E5A]">vivas</span>,<br />
+                cuidadas <span className="text-gold-main">à mão</span>.
+              </h2>
+              <p className="font-script text-3xl md:text-4xl text-purple-main mb-6 leading-snug">
+                "Onde o verde encontra o romântico."
+              </p>
+              <p className="text-lg text-text-medium leading-relaxed mb-10 max-w-xl">
+                Nossa coleção de plantas é viva e muda toda semana. Em vez de uma vitrine fixa,
+                conversa com a gente: contamos o que temos disponível agora — com foto, preço e cuidado.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://wa.me/5511918475136?text=Oii%2C%20tudo%20bem%3F%20Gostaria%20de%20saber%20as%20op%C3%A7%C3%B5es%20de%20plantas%20dispon%C3%ADveis!"
+                  target="_blank"
+                  rel="noopener"
+                  className="btn btn-whatsapp btn-magnetic inline-flex justify-center px-8 py-4"
+                >
+                  <WhatsAppIcon size={20} className="mr-2" />
+                  Ver plantas disponíveis
+                </a>
+                <Link
+                  to="/plantas"
+                  className="inline-flex items-center justify-center gap-3 bg-white border-2 border-purple-main/20 px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+                >
+                  <span className="font-serif italic text-lg text-purple-deep font-semibold">Conhecer a estufa</span>
+                  <ArrowRight size={18} className="text-purple-deep" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative reveal-left">
+              <div className="rounded-2xl overflow-hidden shadow-2xl relative aspect-[4/5]">
+                <img
+                  src="https://images.unsplash.com/photo-1463320726281-696a485928c7?q=80&w=1400&auto=format&fit=crop"
+                  alt="Plantas da estufa TM Flores"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute bottom-6 right-6 bg-gold-gradient p-3 px-5 rounded-full shadow-xl text-text-dark font-sans font-bold text-xs uppercase tracking-widest">
+                  Estoque vivo
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
