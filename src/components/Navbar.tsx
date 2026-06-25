@@ -43,6 +43,7 @@ export function Navbar() {
       name: "Produtos",
       dropdown: [
         { name: "Buquês", to: "/buques" },
+        { name: "Cestas & Chocolates", to: "/cestas-chocolates" },
         { name: "Plantas", to: "/plantas" },
       ],
     },

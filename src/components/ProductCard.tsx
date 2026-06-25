@@ -4,6 +4,14 @@ import { Link } from "@tanstack/react-router";
 import { products as productsData } from "@/data/products";
 import { useState } from "react";
 
+function categoryToPath(category: string | undefined, id: string): string {
+  switch (category) {
+    case 'plantas': return `/plantas/${id}`;
+    case 'cestas-chocolates': return `/cestas-chocolates/${id}`;
+    default: return `/buques/${id}`;
+  }
+}
+
 interface ProductCardProps {
   id: string;
   name: string;
