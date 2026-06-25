@@ -70,7 +70,7 @@ export function ProductCard({
         onTouchEnd={onTouchEnd}
       >
         <Link 
-          to={(productsData.find(p => p.id === id)?.category === 'plantas' ? `/plantas/${id}` : `/buques/${id}`) as any} 
+          to={categoryToPath(productsData.find(p => p.id === id)?.category, id) as any} 
           className="block w-full h-full"
         >
           <img
@@ -110,7 +110,7 @@ export function ProductCard({
 
       <div className="product-card-body p-4 flex flex-col flex-grow">
         <Link 
-          to={(productsData.find(p => p.id === id)?.category === 'plantas' ? `/plantas/${id}` : `/buques/${id}`) as any} 
+          to={categoryToPath(productsData.find(p => p.id === id)?.category, id) as any} 
           className="block"
         >
           <h3 className="product-card-name font-serif text-lg font-semibold text-text-dark mb-1 group-hover:text-purple-main transition-colors line-clamp-2">
@@ -133,7 +133,7 @@ export function ProductCard({
 
         <div className="mt-auto flex flex-col sm:flex-row gap-2">
           <Link
-            to={(productsData.find(p => p.id === id)?.category === 'plantas' ? `/plantas/${id}` : `/buques/${id}`) as any}
+            to={categoryToPath(productsData.find(p => p.id === id)?.category, id) as any}
             className="flex-1 justify-center text-[13px] py-2 px-4 border-[1.5px] border-purple-main text-purple-main rounded-full font-semibold flex items-center gap-1 hover:bg-purple-main hover:text-white transition-all text-center"
           >
             Ver produto →
