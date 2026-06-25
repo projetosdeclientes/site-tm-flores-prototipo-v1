@@ -229,5 +229,17 @@ export const products: Product[] = [
     ],
     category: 'cestas-chocolates'
   },
+  {
+    id: "cesta-abraco-amor-doce",
+    name: "Cesta Abraço de Amor Doce",
+    tagline: "Um presente que traduz carinho em cada detalhe com delicadeza.",
+    description: "Encantadora e afetiva, esta cesta de vime apresenta uma composição romântica com ursinho de pelúcia segurando coração vermelho escrito \"Amor\", acompanhada de chocolates Hershey's, Ouro Branco e Sonho de Valsa. O balão em formato de coração com a mensagem \"Te amo\" destaca a proposta apaixonada do presente. A embalagem em celofane transparente com laço decorativo completa o visual elegante e delicado. Ideal para aniversários, Dia dos Namorados, declarações de amor e momentos especiais de surpresa.",
+    price: "R$ 99,90",
+    images: [
+      "/products/images/cesta-abraco-amor-doce-1.png",
+      "/products/images/cesta-abraco-amor-doce-2.png"
+    ],
+    category: 'cestas-chocolates'
+  },
 ];
 
