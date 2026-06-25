@@ -205,4 +205,16 @@ export const products: Product[] = [
     ],
     category: 'cestas-chocolates'
   },
+  {
+    id: "cesta-amor-pelucia-bombons",
+    name: "Cesta Amor com Pelúcia e Bombons",
+    tagline: "Um gesto doce e carinhoso para encantar quem você ama.",
+    description: "Encantadora e cheia de carinho, esta cesta de vime traz uma composição romântica com embalagem em celofane transparente, grande laço vermelho, ursinho de pelúcia marrom com coração vermelho escrito \"AMOR!\", chocolates Ferrero Rocher, item sabor morango e bombons embalados em tons vibrantes. O visual transmite afeto, cuidado e delicadeza em cada detalhe. Ideal para aniversários, Dia dos Namorados, declarações, agradecimentos ou para surpreender alguém especial.",
+    price: "R$ 240,00",
+    images: [
+      "/products/images/cesta-amor-pelucia-bombons-1.png",
+      "/products/images/cesta-amor-pelucia-bombons-2.png"
+    ],
+    category: 'cestas-chocolates'
+  },
 ];
