@@ -135,24 +135,6 @@ export const products: Product[] = [
     category: 'buques'
   },
   {
-    id: "mini-anturio",
-    name: "Mini Antúrio Vermelho",
-    tagline: "Um toque tropical em escala perfeita para qualquer cantinho.",
-    description: "O Mini Antúrio (Anthurium andraeanum) é uma versão compacta e delicada do antúrio tradicional, mantendo toda a exuberância da espécie em um tamanho ideal para mesas, aparadores e escrivaninhas. Suas inflorescências em formato de coração, de um vermelho intenso e brilhante, contrastam com folhas verdes lustrosas, trazendo personalidade e sofisticação a qualquer ambiente. Símbolo de hospitalidade, prosperidade e bem-estar, é uma planta resistente e de fácil cuidado — perfeita tanto para presentear quanto para começar uma coleção verde dentro de casa.",
-    price: "R$ 35,00",
-    images: ["/products/images/mini-anturio-1.png", "/products/images/mini-anturio-2.png"],
-    category: 'plantas'
-  },
-  {
-    id: "mini-kalanchoe",
-    name: "Mini Kalanchoe Laranja",
-    tagline: "A famosa Flor-da-Fortuna: cor vibrante e boas energias para o seu lar.",
-    description: "O Mini Kalanchoe é uma suculenta encantadora, conhecida por sua resistência e floração exuberante. Suas pequenas flores agrupadas em tons vibrantes de laranja trazem vida e alegria a qualquer ambiente. Símbolo de felicidade e prosperidade, é a planta ideal para quem busca beleza com pouca manutenção, adaptando-se perfeitamente a mesas, prateleiras e janelas iluminadas. Um presente delicado que transmite boas vibrações e dura por muito tempo.",
-    price: "R$ 25,00",
-    images: ["/products/images/mini-kalanchoe-1.png", "/products/images/mini-kalanchoe-2.png", "/products/images/mini-kalanchoe-3.png"],
-    category: 'plantas'
-  },
-  {
     id: "buque-misto-rosas-cravos",
     name: "Buquê Misto Premium",
     description: "Buquê sofisticado com um mix harmonioso de rosas vermelhas vibrantes e cravos rosa delicados. A composição é complementada por ramos de gypsophila, que trazem leveza e volume ao arranjo. Envolto em uma embalagem elegante com acabamento em tela vermelha e um imponente laço acetinado.",

@@ -307,44 +307,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Seção: Plantas */}
-      <section className="py-24 bg-cream products-section border-t border-gold-main/5">
-        <div className="container mx-auto px-6">
-          <SectionHeader eyebrow="Verde" title="Plantas" />
-          
-          <div className="products-carousel-wrapper">
-            <div className="flex overflow-x-auto pb-10 gap-3 scrollbar-hide snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:overflow-visible products-carousel reveal-stagger px-4 md:px-0">
-              {products
-                .filter(p => p.category === 'plantas')
-                .slice(0, 4)
-                .map((p) => (
-                  <div key={p.id} className="snap-center min-w-[78vw] md:min-w-[260px] lg:min-w-0">
-                    <ProductCard {...p} />
-                  </div>
-                ))}
-              <div className="snap-center lg:hidden min-w-[78vw]">
-                <MoreCard to="/plantas" label="Ver todas as plantas" icon="🌱" />
-              </div>
-            </div>
-
-          </div>
-          <div className="mt-16 flex justify-center reveal-up">
-            <Link 
-              to="/plantas" 
-              className="group relative overflow-hidden bg-white border-2 border-purple-main/20 px-12 py-5 rounded-full shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 active:scale-95"
-            >
-              <div className="absolute inset-0 bg-lavender-ultra/40 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-              <div className="relative flex items-center gap-3">
-                <span className="font-serif italic text-xl text-purple-deep font-semibold">Descobrir plantas naturais</span>
-                <div className="w-10 h-10 rounded-full bg-purple-deep flex items-center justify-center text-white group-hover:bg-gold-main transition-colors duration-300">
-                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Seção: Conheça a Loja */}
       <section className="py-24 bg-cream-warm store-teaser-section">
         <div className="container mx-auto px-6">
