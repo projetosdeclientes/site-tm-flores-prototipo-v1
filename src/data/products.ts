@@ -199,7 +199,10 @@ export const products: Product[] = [
     tagline: "Um presente delicado, divertido e cheio de carinho para surpreender quem você ama.",
     description: "Cesta especial em formato de coração, montada com bombons selecionados Sonho de Valsa e Ouro Branco, laço decorativo, embalagem transparente e um toque especial de fofura com pelúcia temática. Uma opção charmosa e romântica para presentear em aniversários, Dia dos Namorados, Dia das Mães, datas comemorativas ou simplesmente para demonstrar carinho de um jeito doce e inesquecível.",
     price: "R$ 65,00",
-    images: ["/products/images/coracao-pelucia-bombons-1.png"],
+    images: [
+      "/products/images/coracao-pelucia-bombons-1.png",
+      "/products/images/coracao-pelucia-bombons-2.png"
+    ],
     category: 'cestas-chocolates'
   },
 ];
