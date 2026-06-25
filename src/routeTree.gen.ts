@@ -15,7 +15,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as PlantasIndexRouteImport } from './routes/plantas.index'
 import { Route as CestasChocolatesIndexRouteImport } from './routes/cestas-chocolates.index'
 import { Route as BuquesIndexRouteImport } from './routes/buques/index'
-import { Route as PlantasSlugRouteImport } from './routes/plantas.$slug'
 import { Route as CestasChocolatesSlugRouteImport } from './routes/cestas-chocolates.$slug'
 import { Route as BuquesSlugRouteImport } from './routes/buques/$slug'
 
@@ -49,11 +48,6 @@ const BuquesIndexRoute = BuquesIndexRouteImport.update({
   path: '/buques/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PlantasSlugRoute = PlantasSlugRouteImport.update({
-  id: '/plantas/$slug',
-  path: '/plantas/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const CestasChocolatesSlugRoute = CestasChocolatesSlugRouteImport.update({
   id: '/cestas-chocolates/$slug',
   path: '/cestas-chocolates/$slug',
@@ -71,7 +65,6 @@ export interface FileRoutesByFullPath {
   '/sobre': typeof SobreRoute
   '/buques/$slug': typeof BuquesSlugRoute
   '/cestas-chocolates/$slug': typeof CestasChocolatesSlugRoute
-  '/plantas/$slug': typeof PlantasSlugRoute
   '/buques/': typeof BuquesIndexRoute
   '/cestas-chocolates/': typeof CestasChocolatesIndexRoute
   '/plantas/': typeof PlantasIndexRoute
@@ -82,7 +75,6 @@ export interface FileRoutesByTo {
   '/sobre': typeof SobreRoute
   '/buques/$slug': typeof BuquesSlugRoute
   '/cestas-chocolates/$slug': typeof CestasChocolatesSlugRoute
-  '/plantas/$slug': typeof PlantasSlugRoute
   '/buques': typeof BuquesIndexRoute
   '/cestas-chocolates': typeof CestasChocolatesIndexRoute
   '/plantas': typeof PlantasIndexRoute
@@ -94,7 +86,6 @@ export interface FileRoutesById {
   '/sobre': typeof SobreRoute
   '/buques/$slug': typeof BuquesSlugRoute
   '/cestas-chocolates/$slug': typeof CestasChocolatesSlugRoute
-  '/plantas/$slug': typeof PlantasSlugRoute
   '/buques/': typeof BuquesIndexRoute
   '/cestas-chocolates/': typeof CestasChocolatesIndexRoute
   '/plantas/': typeof PlantasIndexRoute
@@ -107,7 +98,6 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/buques/$slug'
     | '/cestas-chocolates/$slug'
-    | '/plantas/$slug'
     | '/buques/'
     | '/cestas-chocolates/'
     | '/plantas/'
@@ -118,7 +108,6 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/buques/$slug'
     | '/cestas-chocolates/$slug'
-    | '/plantas/$slug'
     | '/buques'
     | '/cestas-chocolates'
     | '/plantas'
@@ -129,7 +118,6 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/buques/$slug'
     | '/cestas-chocolates/$slug'
-    | '/plantas/$slug'
     | '/buques/'
     | '/cestas-chocolates/'
     | '/plantas/'
@@ -141,7 +129,6 @@ export interface RootRouteChildren {
   SobreRoute: typeof SobreRoute
   BuquesSlugRoute: typeof BuquesSlugRoute
   CestasChocolatesSlugRoute: typeof CestasChocolatesSlugRoute
-  PlantasSlugRoute: typeof PlantasSlugRoute
   BuquesIndexRoute: typeof BuquesIndexRoute
   CestasChocolatesIndexRoute: typeof CestasChocolatesIndexRoute
   PlantasIndexRoute: typeof PlantasIndexRoute
@@ -191,13 +178,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BuquesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/plantas/$slug': {
-      id: '/plantas/$slug'
-      path: '/plantas/$slug'
-      fullPath: '/plantas/$slug'
-      preLoaderRoute: typeof PlantasSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/cestas-chocolates/$slug': {
       id: '/cestas-chocolates/$slug'
       path: '/cestas-chocolates/$slug'
@@ -221,7 +201,6 @@ const rootRouteChildren: RootRouteChildren = {
   SobreRoute: SobreRoute,
   BuquesSlugRoute: BuquesSlugRoute,
   CestasChocolatesSlugRoute: CestasChocolatesSlugRoute,
-  PlantasSlugRoute: PlantasSlugRoute,
   BuquesIndexRoute: BuquesIndexRoute,
   CestasChocolatesIndexRoute: CestasChocolatesIndexRoute,
   PlantasIndexRoute: PlantasIndexRoute,
@@ -229,13 +208,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
