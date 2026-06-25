@@ -241,5 +241,17 @@ export const products: Product[] = [
     ],
     category: 'cestas-chocolates'
   },
+  {
+    id: "cesta-love-choco",
+    name: "Cesta Love Choco",
+    tagline: "Um presente doce e romântico para declarar amor com delicadeza.",
+    description: "Encantadora e romântica, esta cesta de vime traz uma composição especial com ursinho de pelúcia amarelo segurando coração vermelho e xadrez com a palavra \"Amor\". A seleção de chocolates inclui caixa Lacta Te Adoro, barra de chocolate Suflair e bombons Sonho de Valsa. O acabamento em celofane transparente e o laço vermelho completam a apresentação com elegância. Ideal para aniversários, Dia dos Namorados, declarações de amor e surpresas especiais.",
+    price: "R$ 140,00",
+    images: [
+      "/products/images/cesta-love-choco-1.png",
+      "/products/images/cesta-love-choco-2.png"
+    ],
+    category: 'cestas-chocolates'
+  },
 ];
 
