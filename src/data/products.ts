@@ -218,3 +218,4 @@ export const products: Product[] = [
     category: 'cestas-chocolates'
   },
 ];
+
