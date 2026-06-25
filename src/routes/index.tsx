@@ -8,7 +8,6 @@ import { ArrowRight, Star } from 'lucide-react'
 import { Leaf } from 'lucide-react'
 import { WhatsAppIcon } from '@/components/WhatsAppIcon'
 import { useEffect, useState } from 'react'
-import { LogoCircle } from '@/components/LogoCircle'
 import estufaHome from '@/assets/plantas/estufa-home.jpg'
 
 
