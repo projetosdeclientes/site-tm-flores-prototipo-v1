@@ -186,9 +186,9 @@ export const products: Product[] = [
   },
   {
     id: "cesta-cafe-chocolates",
-    name: "Cesta Café & Chocolates",
-    tagline: "Um café da manhã encantador para começar o dia com doçura.",
-    description: "Uma cesta cuidadosamente montada para transformar momentos comuns em memórias afetivas. Combina seleção de chocolates finos, biscoitos artesanais e itens especiais para um café da tarde inesquecível, tudo apresentado em embalagem sofisticada com laço de cetim. Ideal para presentear em aniversários, datas comemorativas, agradecimentos ou simplesmente para surpreender alguém querido com um gesto cheio de carinho.",
+    name: "Coração Ouro Branco & Sonho de Valsa",
+    tagline: "Uma declaração doce em formato de coração com os bombons mais amados do Brasil.",
+    description: "Caixa especial em formato de coração dividida em duas bandas irresistíveis: de um lado, os clássicos bombons Ouro Branco com seu recheio cremoso de chocolate branco e castanhas; do outro, os inconfundíveis Sonho de Valsa, com wafer crocante e recheio de avelãs. Uma combinação perfeita para presentear quem você ama em datas românticas, aniversários, Dia dos Namorados, Dia das Mães ou simplesmente para transformar um dia comum em um momento inesquecível.",
     price: "R$ 79,90",
     images: ["/products/images/cesta-cafe-chocolates-1.png"],
     category: 'cestas-chocolates'
