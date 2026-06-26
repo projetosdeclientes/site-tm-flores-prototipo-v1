@@ -351,7 +351,7 @@ function Index() {
             </div>
 
             <div className="relative reveal-left">
-              <div className="rounded-2xl overflow-hidden shadow-2xl relative aspect-[4/5]">
+              <div className="rounded-2xl overflow-hidden shadow-2xl relative aspect-[4/5] lg:aspect-[4/5] max-w-md lg:max-w-sm mx-auto lg:ml-auto lg:mr-0">
                 <img
                   src={estufaHome}
                   alt="Plantas da estufa TM Flores"
