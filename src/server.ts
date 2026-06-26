@@ -17,6 +17,9 @@ type ServerEnvWithAssets = {
 
 let serverEntryPromise: Promise<ServerEntry> | undefined;
 
+const STATIC_ASSET_EXTENSION_PATTERN =
+  /\.(?:js|mjs|css|png|jpe?g|gif|webp|avif|svg|ico|woff2?|ttf|otf|eot|map|json|txt|xml|webmanifest)$/i;
+
 async function getServerEntry(): Promise<ServerEntry> {
   if (!serverEntryPromise) {
     serverEntryPromise = import("@tanstack/react-start/server-entry").then(
@@ -36,16 +39,31 @@ function getStaticAssetBinding(env: unknown): StaticAssetBinding | undefined {
 function isStaticAssetRequest(request: Request): boolean {
   const { pathname } = new URL(request.url);
 
-  return pathname.startsWith("/assets/") || /\.[a-zA-Z0-9][a-zA-Z0-9_-]*$/.test(pathname);
+  return pathname.startsWith("/assets/") || STATIC_ASSET_EXTENSION_PATTERN.test(pathname);
 }
 
 async function serveStaticAsset(request: Request, env: unknown): Promise<Response | undefined> {
   if (!isStaticAssetRequest(request)) return undefined;
 
   const assets = getStaticAssetBinding(env);
-  if (!assets) return undefined;
+  if (!assets) {
+    return new Response("Static asset not found", {
+      status: 404,
+      headers: { "content-type": "text/plain; charset=utf-8" },
+    });
+  }
 
-  return assets.fetch(request);
+  const response = await assets.fetch(request);
+  const contentType = response.headers.get("content-type") ?? "";
+
+  if (contentType.toLowerCase().includes("text/html")) {
+    return new Response("Static asset not found", {
+      status: 404,
+      headers: { "content-type": "text/plain; charset=utf-8" },
+    });
+  }
+
+  return response;
 }
 
 // h3 swallows in-handler throws into a normal 500 Response with body
