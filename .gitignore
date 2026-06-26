@@ -37,3 +37,6 @@ dist-ssr
 /index.css
 /Navbar.js
 /chunk.js
+/public/*.html
+/public/css/
+/public/js/
