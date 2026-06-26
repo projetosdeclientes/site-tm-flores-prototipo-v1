@@ -30,3 +30,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Stale build/static mirror artifacts must never be committed at project root.
+/index.html
+/index.js
+/index.css
+/Navbar.js
+/chunk.js
+/public/*.html
+/public/css/
+/public/js/
