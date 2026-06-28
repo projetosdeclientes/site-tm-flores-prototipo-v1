@@ -4,7 +4,7 @@ export interface Product {
   description: string;
   price: string;
   images: string[];
-  category: 'buques' | 'plantas' | 'buques-mistos' | 'cestas-chocolates';
+  category: 'buques' | 'plantas' | 'buques-mistos' | 'buques-noiva' | 'cestas-chocolates';
   tagline?: string;
   badge?: string;
 }
@@ -234,6 +234,51 @@ export const products: Product[] = [
       "/products/images/cesta-love-choco-2.png"
     ],
     category: 'cestas-chocolates'
+  },
+  {
+    id: "buque-noiva-candura",
+    name: "Buquê de Noiva Candura",
+    tagline: "Pureza e elegância para o seu grande dia",
+    description: "Uma composição nupcial atemporal formada por copos de leite brancos em plena floração, reunidos em um formato redondo e estruturado que exala delicadeza em cada detalhe. Os talos verdes firmes são envolvidos por uma fita de cetim branco impecável, criando um acabamento refinado que harmoniza com qualquer estilo de cerimônia. Ideal para noivas que escolhem a pureza do branco como expressão máxima de um momento único e inesquecível.",
+    price: "Sob consulta",
+    images: ["/products/images/buque-noiva-candura-1.png", "/products/images/buque-noiva-candura-2.png"],
+    category: 'buques-noiva'
+  },
+  {
+    id: "buque-noiva-chama",
+    name: "Buquê de Noiva Chama",
+    tagline: "Paixão e vida em cada pétala colorida",
+    description: "Um buquê nupcial vibrante e apaixonado que reúne a intensidade das rosas vermelhas com a suavidade das rosas pêssego, enriquecido por astromélias alaranjadas, margaridas brancas delicadas e folhagens verdes exuberantes. A composição redonda e volumosa transmite energia, romantismo e uma beleza que aquece os olhos em qualquer cerimônia. Perfeito para noivas que desejam um buquê ousado, moderno e repleto de personalidade.",
+    price: "Sob consulta",
+    images: ["/products/images/buque-noiva-chama-1.png", "/products/images/buque-noiva-chama-2.png"],
+    category: 'buques-noiva'
+  },
+  {
+    id: "buque-noiva-sublime",
+    name: "Buquê de Noiva Sublime",
+    tagline: "Clássico e romântico para celebrar o amor eterno",
+    description: "Uma obra-prima floral que combina rosas brancas cremosas em botão com a leveza etérea da gypsophila, criando um conjunto de aparência suave, romântica e verdadeiramente atemporal. A composição generosa e bem estruturada é finalizada com uma fita de cetim branco que une com delicadeza cada haste ao arranjo. Uma escolha clássica e emocionante para noivas que sonham com um casamento elegante e cheio de significado.",
+    price: "Sob consulta",
+    images: ["/products/images/buque-noiva-sublime-1.png", "/products/images/buque-noiva-sublime-2.png"],
+    category: 'buques-noiva'
+  },
+  {
+    id: "buque-noiva-encanto-rosa",
+    name: "Buquê de Noiva Encanto Rosa",
+    tagline: "Romantismo suave para um dia de conto de fadas",
+    description: "Uma composição delicada e encantadora que reúne rosas rosadas em plena abertura com a nuvem aérea da gypsophila branca, criando um contraste suave e irresistível que remete a um sonho nupcial. As hastes são envolvidas por uma elegante fita de cetim na mesma tonalidade rosada, harmonizando cada detalhe com perfeição. Perfeito para cerimônias românticas e femininas, este buquê é a escolha ideal para quem deseja carregar delicadeza em cada passo até o altar.",
+    price: "Sob consulta",
+    images: ["/products/images/buque-noiva-encanto-rosa-1.png", "/products/images/buque-noiva-encanto-rosa-2.png"],
+    category: 'buques-noiva'
+  },
+  {
+    id: "buque-noiva-lavanda-real",
+    name: "Buquê de Noiva Lavanda Real",
+    tagline: "Sofisticação e charme para uma noiva única",
+    description: "Uma composição nupcial rica e envolvente que une rosas roxas e malva com rosas brancas cremosas, astromélias pink vibrantes, espigas de lavanda perfumadas e delicados botões de lilás rosado. A paleta em tons de violeta, branco e rosa quente cria uma harmonia sofisticada e incomum que garante um buquê verdadeiramente exclusivo. Pensado para noivas de personalidade marcante e gosto refinado que desejam se destacar com beleza e originalidade.",
+    price: "Sob consulta",
+    images: ["/products/images/buque-noiva-lavanda-real-1.png", "/products/images/buque-noiva-lavanda-real-2.png"],
+    category: 'buques-noiva'
   },
 ];
 

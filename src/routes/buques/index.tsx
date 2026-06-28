@@ -67,6 +67,7 @@ function ProductSection({ title, products, initialCount = 8 }: { title: string; 
 function BuquesPage() {
   const buquesRosas = products.filter(p => p.category === 'buques');
   const buquesMistos = products.filter(p => p.category === 'buques-mistos');
+  const buquesNoiva = products.filter(p => p.category === 'buques-noiva');
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -85,6 +86,7 @@ function BuquesPage() {
         <div className="container mx-auto px-6">
           <ProductSection title="Buquês de Rosas" products={buquesRosas} />
           <ProductSection title="Buquês Mistos" products={buquesMistos} />
+          <ProductSection title="Buquês de Noiva" products={buquesNoiva} />
         </div>
       </section>
 
