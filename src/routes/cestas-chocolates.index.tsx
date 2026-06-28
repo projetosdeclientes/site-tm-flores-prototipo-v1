@@ -41,9 +41,9 @@ function CestasChocolatesPage() {
     <main className="min-h-screen">
       <Navbar />
       <CategoryHero 
-        eyebrow="Doçura que encanta"
+        eyebrow="Presentes especiais"
         title="Cestas & Chocolates"
-        subtitle="Presentes deliciosos para tornar qualquer momento especial. Cada cesta é montada com carinho para surpreender quem você ama."
+        subtitle="O presente perfeito une sabor e carinho. Cestas montadas com amor para surpreender quem você ama."
       />
 
       <section className="py-24 bg-cream products-catalog-section">
@@ -59,16 +59,16 @@ function CestasChocolatesPage() {
                 <Gift size={48} className="text-purple-main opacity-50 group-hover:scale-110 transition-transform placeholder-img" />
               </div>
               <div className="product-card-body">
-                <h2 className="product-card-name font-serif text-xl font-bold text-text-dark mb-4">Mais opções</h2>
+                <h2 className="product-card-name font-serif text-xl font-bold text-text-dark mb-4">Cestas personalizadas</h2>
                 <p className="product-card-desc text-text-medium text-sm leading-relaxed mb-8">
-                  Consulte disponibilidade
+                  Monte a sua combinação
                 </p>
                 <a 
                   href="https://wa.me/5511918475136?text=Olá! Quero saber quais cestas e chocolates vocês têm disponíveis!" 
                   className="btn btn-whatsapp w-full justify-center text-sm py-3 px-6 bg-whatsapp text-white rounded-full font-semibold flex items-center gap-2 transition-all hover:scale-105"
                 >
                   <WhatsAppIcon size={18} />
-                  Ver disponibilidade
+                  Consultar personalização
                 </a>
               </div>
             </article>
