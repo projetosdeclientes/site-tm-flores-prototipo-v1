@@ -4,7 +4,7 @@ export interface Product {
   description: string;
   price: string;
   images: string[];
-  category: 'buques' | 'plantas' | 'buques-mistos' | 'cestas-chocolates';
+  category: 'buques' | 'plantas' | 'buques-mistos' | 'buques-noiva' | 'cestas-chocolates';
   tagline?: string;
   badge?: string;
 }
